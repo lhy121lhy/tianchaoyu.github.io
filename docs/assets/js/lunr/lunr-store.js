@@ -178,22 +178,166 @@ var store = [{
         "tags": [],
         "url": "/tutorials/emme/network_add/",
         "teaser": null
-      },,{
+      },{
+        "title": "Welcome to tianchaoyu",
+        "excerpt":"this is markdown1   这个页面使用page1的布局  ","categories": ["css"],
+        "tags": [],
+        "url": "/css/2024/12/15/page1.html",
+        "teaser": null
+      },{
+        "title": "Welcome to tianchaoyu",
+        "excerpt":"this is page2 markdown   常见应用场景测试分析  ","categories": ["css"],
+        "tags": [],
+        "url": "/css/2024/12/15/page2.html",
+        "teaser": null
+      },{
+        "title": "基础语法",
+        "excerpt":"   authort:lhy     1、python与地理空间系统       地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。   地理信息系统（GIS，Geographic Information System）是一门综合性学科，结合地理学与地图学以及遥感和计算机科学，已经广泛的应用在不同的领域，是用于输入、存储、查询、分析和显示地理数据的计算机系统，随着GIS的发展，也有称GIS为“地理信息科学”（Geographic Information Science），近年来，也有称GIS为”地理信息服务”（Geographic Information service）。GIS是一种基于计算机的工具，它可以对空间信息进行分析和处理（简而言之，是对地球上存在的现象和发生的事件进行成图和分析）。 GIS 技术把地图这种独特的视觉化效果和地理分析功能与一般的数据库操作（例如查询和统计分析等）集成在一起。      来源于百度百科       常见空间数据标准格式：shapefile,DXF,DWG,DGN,ECW,MrSID,TIFF,JPG2000, KML, GML等   常见gis操作软件：arcgis,Qgis,transcad,emme,cad     2、python开发环境搭建       2.1、geopandas软件包安装      依次下载和安装三方软件包：gdal、Fiona、Pyproj、shapely            注：根据python软件版本下载对应版本的软件包，对于pip install package无法成功，需要手动下载三房软件包，下载网址：https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud            2.2、软件包手册      geopandas：https://geopandas.org/en/stable/getting_started/introduction.html   shapely：https://www.osgeo.cn/shapely/manual.html  ","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/delixinxi/",
+        "teaser": null
+      },{
+        "title": "环境配置",
+        "excerpt":"python 程序开发过程 python程序的执行过程可分为3步，首先是源代码编写，其次是程序编译与执行，最后的程序的封装与打包。 在源代码编写阶段需要选择合适的编译器，选择解释器版本，设计好自己的工程目录。 编译阶段，会通过解析器将源码转化为字节码，再有虚拟机将字节码转化为机器语言，最后才在硬件上运行。与编译性语言（c/c++）相比，多出了编译和链接的过程，性能会下降；Python并不是每次都需要转换字节码，解释器在转换之前会判断代码文件的修改时间是否与上一次转换后的字节码pyc文件的修改时间一致，若不一致才会重新转换。 程序执行完以后，进行程序封装与打包，根据使用场景，进行不同的代码管理。其中或涉及程序封装，程序加密，版本管理等操作。 python编译器选择 PyCharm： 优点： 支持智能代码补全、语法高亮和错误提示等功能。 内置调试工具和版本控制功能，便于团队协作和代码调试。 集成了很多第三方插件和库，支持多种Python Web框架。 缺点： 相比其他Python IDE，PyCharm较为笨重，需要一定的计算机性能和内存支持。 部分功能需要付费使用。 教程：PyCharm官方文档 Visual Studio Code (VSCode)： 优点： 轻量级的文本编辑器，支持多种编程语言，功能丰富。 支持自定义快捷键和主题。 内置Python插件，支持调试、智能补全、代码重构等功能。 缺点： 对于Python开发来说，有些功能不够完善，如自动导入等。 不支持像PyCharm一样的智能提示。 教程：VSCode官方文档 Jupyter Notebook： 优点： 交互性强，可以边编写代码边做数据分析和可视化。 有丰富的扩展库，支持多种数据科学和机器学习任务。 便于与其他人分享笔记本和代码。 缺点： 对于大型项目的开发来说，不太方便。 不适用于生产环境。 教程：Jupyter官方文档 Spyder： 优点： 专门针对数据科学和计算机模拟等领域开发，集成了很多科学计算相关的库。 内置调试工具和变量查看器等功能。 缺点： 界面较为简单，可能不够美观和友好。 教程：Spyder官方文档 笔者最开始使用的是spyder，现在基本都以pycharm和jupyter notebook为主。 入门学习推荐spyder和jupyter...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/basic-th/",
+        "teaser": null
+      },{
+        "title": "基础语法",
+        "excerpt":"数据类型 python 除了通用的数值、字符、布尔值等外，常见的就是列表、元组、字典、集合等，不同的数据类型具有不同的特性。 列表（Lists），有序的元素集合，可以包含不同类型的元素，用方括号[]表示，例如[1, ‘a’, 3.14]，可以按照序号进行索引，切片。 元组（Tuples）：类似于列表，但是不可变，用圆括号() 表示，例如(1, ‘a’, 3.14)，不可变的是说元素值不能修改。 字典（Dictionaries）：键值对集合，用花括号{}表示，{‘name’: ‘Alice’, ‘age’: 25}。 集合（Sets）：无序的元素集合，元素唯一，用花括号 {1,2,3}，可以利用集合特性进行数据去重。 类与继承 在Python中，类（class）是一种创建对象和封装数据的方式。类可以包含属性（变量）和方法（函数）。继承是面向对象编程的一个核心概念，它允许我们创建一个类（称为子类或派生类）来继承另一个类（称为基类或父类）的属性和方法。 类的定义与使用： class ClassName: def __init__(self, param1, param2): self.param1 = param1 self.param2 = param2 def method1(self): # 方法体 pass # 创建类的实例 obj = ClassName('value1', 'value2') ClassName是一个类名，__init__是一个特殊的方法，称为构造函数，用于初始化新创建的对象的状态。self参数是对当前对象实例的引用。method1是类的一个普通方法. 类继承： # 定义基类 class BaseClass: def __init__(self,...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/basic-yufa/",
+        "teaser": null
+      },{
+        "title": "数据加载",
+        "excerpt":"文件路径操作：依赖包os 文件遍历 import os path = r'G:\\' filenames = os.listdir(path) for filename in filenames: #输出文件名 print(filename) #输出完整路径 print(os.path.join(path,filename)) 判断文件是否存在 if not os.path.exists(\"./images\"): os.makedirs(\"./images\") # 路径拼接 os.path.join(task_folder, \"input/\").replace(\"\\\\\", \"/\") 文件拷贝 def copy_files(input_path, output_path): \"\"\"将一个路径的所有文件拷贝到另一个路径下\"\"\" for files in os.listdir(input_path): name = os.path.join(input_path, files) back_name = os.path.join(output_path, files) if os.path.isfile(name): if os.path.isfile(back_name): if...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/data-add/",
+        "teaser": null
+      },{
+        "title": "魔术函数",
+        "excerpt":"python中的下划线是一个特殊的字符，主要有两种用法： function,前后两个下划线，表示python中的魔术方法； function,下划线前缀和后缀，表示内部使用或者非公开接口； 1、魔术函数 在Python中，双下划线（”__“）用于标识特殊的魔术方法（Magic Methods）或双下划线方法（Dunder Methods）。这些方法具有特殊的名称和用途，它们不是通常意义上的普通方法，而是在对象生命周期中由Python调用的特殊方法。以下是一些常见的双下划线方法及其用途： __init__：这是一个构造函数，在创建对象时自动调用，用于对象的初始化。例如： pythonCopy code class MyClass: def __init__(self, arg1, arg2): self.arg1 = arg1 self.arg2 = arg2 __str__：这个方法用于返回对象的人类可读的字符串表示，通常用于print函数或str()函数的输出。例如： pythonCopy code class MyClass: def __str__(self): return f\"MyClass instance with attributes: {self.arg1}, {self.arg2}\" __repr__：这个方法用于返回对象的”官方”字符串表示，通常用于开发和调试中。例如： pythonCopy code class MyClass: def __repr__(self): return f\"MyClass({self.arg1}, {self.arg2})\" __len__：这个方法用于返回对象的长度，通常用于内置的len()函数。例如： pythonCopy code class...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/magic_function/",
+        "teaser": null
+      },{
+        "title": "邮件发送",
+        "excerpt":"1、邮件发送 # -*- coding: utf-8 -*- \"\"\" Created on 2020622 author:lhy 功能：发送信息到邮箱 \"\"\" import yagmail def send_message_by_email(message): \"\"\" 发送消息到邮箱 :param message: :return: \"\"\" yag = yagmail.SMTP(user='****@163.com', password='EPDDPCXHPBZCXMXC', host='smtp.163.com') # 发送邮件 yag.send(to=['****@qq.com'], subject='wuhan_model_error', contents=message) def send_file_by_email(subject, file_name): \"\"\" 发送文件到邮箱 :param subject: :param file_name: :return: \"\"\" yag = yagmail.SMTP(user='****@163.com', password='EPDDPCXHPBZCXMXC', host='smtp.163.com') #...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/email-send/",
+        "teaser": null
+      },{
+        "title": "错误提示",
+        "excerpt":"1、自定义错误 1) model_error.py # -*- coding: utf-8 -*- \"\"\" Created on Mon Sep 28 10:40:13 2020 自定义模块计算错误类 # @author: lhy # @Time : 2020/12/31 11:19 # @email : 742232975@qq.com \"\"\" class ModelError(Exception): \"\"\" 自定义错误类型 \"\"\" pass class FileError(ModelError): \"\"\" 文件输入类型错误 \"\"\" def __init__(self, key_error, error_message): self.message = \"{0}:{1}\".format(key_error, error_message) def...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/error_info/",
+        "teaser": null
+      },{
+        "title": "ftp文件传输",
+        "excerpt":"1、ftp文件上传和下载 # -*- coding: utf-8 -*- \"\"\" Created on 20201027 author:lhy #从ftp服务器下载文件 1&gt; 出行生成 \"\"\" from ftplib import FTP import os import traceback HOST = \"*.*.*.*\" USERNAME = \"model\" PASSWORD = \"***\" POER = \"1004\" class FtpObject(object): \"\"\"从ftp服务器读取文件\"\"\" def __init__(self, host, username, password, port): \"\"\" 初始化ftp :param host: ftp主机ip :param...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/ftp/",
+        "teaser": null
+      },{
+        "title": "模型分块",
+        "excerpt":"from itertools import islice  def chunk_list(it,limit):     it = iter(it)     return iter(lambda:list(islice(it,limit)),[])  ","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/islice/",
+        "teaser": null
+      },{
+        "title": "bat批命令",
+        "excerpt":"1、常见路径处理 1）cmd下进入某磁盘 先敲盘符； 在输入cd: E:\\pathcmd进入某目录 ```bash C:\\Users\\Administrator&gt;e: E:&gt;cd E:\\jupyter_app E:\\jupyter_app&gt; **2）bat常见路径相关命令** - %~dp0[获取当前路径] “d”为Drive的缩写，即为驱动器，磁盘、“p”为Path缩写，即为路径，目录 ```bash cd %~dp0 ：进入批处理所在目录 cd %~dp0bin\\ ：进入批处理所在目录的bin目录 %cd%[执行的路径]&gt; cd /d D:\\bat：进入D盘 某目录，如果已经在D盘则不需要/d命令;（/d不是盘符是路径） 执行路径和当前路径不一样； @rem cd %~dp0 cd /d D:\\bat start call print.bat echo %cd% echo hello world pause 2、bat常见命令 2.1、Echo 命令# 语法: echo [{on|off}] [message] ECHO...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/bat/",
+        "teaser": null
+      },{
+        "title": "管道",
+        "excerpt":"1、管道 1.1、什么是管道？ 管道在python中就是按照序列依次执行函数，前一个函数的输出作为下一个函数的输入。在表达形式上，更为简介。 ex：依次调用3个函数： def funtion_1(str): return str def funtion_2(str): return str def function_3(str): return str def pipline(str,function): return reduce(lambda x,y:y(x),function,str) if __name__ == \"__main__\": str1 = \"abcd\" # 依次调用 s = function_1(function_2(function_3(str1))) # 管道调用： result = pipeline(str, [function_1, function_2, function_3]) 1.2、fastcore包： 比较成熟的包fastcore,含有现成的pipline,无需自己写。 from fastcore.transform import Pipeline input_string = \"IT-is-a-test\\n\"...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/pipline/",
+        "teaser": null
+      },{
+        "title": "自动注释",
+        "excerpt":"技术路线：sphinx 1、sphinx简介 sphinx是一种基于python的文档工具，可以基于python源码中的注释，生成单独的接口文档。 2、文档生成 2.1、安装sphinx pip install sphinx # 安装包 pip install sphinx_rtd_theme # 安装主题包 2.2、生成模板 新建doc目录： 终端进入doc目录：cd ./doc 输入：sphinx-quickstart，根据需要输出选项； ```python Separate source and build directories (y/n) [n]:y # 源文件和目标文件分开 The project name will occur in several places in the built documentation. Project name: mymodel # 项目名称 Author name(s): lhy...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/sphinx/",
+        "teaser": null
+      },{
+        "title": "XML文件格式解析",
+        "excerpt":"1、xml文件基础  每个element对象都具有以下属性：     tag：string对象，表示数据代表的种类。   attrib：dictionary对象，表示附有的属性。   text：string对象，表示element的内容。   tail：string对象，表示element闭合之后的尾迹。   若干子元素（child elements）。   &lt;tag attrib1=1&gt;text&lt;/tag&gt;tail   1     2        3         4   2、解析XML文件   ","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/XML/",
+        "teaser": null
+      },{
+        "title": "内存硬盘监控",
+        "excerpt":"import psutil import logging logger = logging.getLogger(__name__) def check_memory_space(): total_G = psutil.virtual_memory().total/1024/1024 free_G = psutil.virtual_memory().free/1024/1024 used_G = psutil.virtual_memory().used /1024/1024 logging.info(\"total memory is {},free memory is {},used memory is {}\".format(total_G,free_G,used_G)) # return total_G, free_G, used_G def check_disk_space(path): \"\"\" 磁盘剩余空间检测 :return: \"\"\" disk_id = path.split(\"/\")[0] size_disk = psutil.disk_usage(disk_id) total_G = size_disk.total /...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/memory_space/",
+        "teaser": null
+      },{
+        "title": "pandas应用",
+        "excerpt":"1、pandas介绍 作为数据处理基础三件套（numpy、pandas、matplotlib）之一，Pandas库是一个免费、开源的第三方 Python库，是Python数据分析必不可少的工具之一。 pandas的设计初衷就是想复现在excel的功能并对其进行功能扩展。所以大部分excel能做的，pandas都能做，很多excel不能做的，pandas也能做。实话，要是excel对python的支持更好一点，如果VB的功能完全演变成python的接口，可能大部分工作直接excel就搞定了。excel还有的一个bug就是大文件数据无法操作。 2、pandas常见的功能 pandas安装，任意百度关键词 两种数据结构：series，dataframe series:有点类似于字典，可以由字典转化而来 import pandas as pd import numpy as np data = np.array(['a','b','c','d']) s = pd.Series(data，index=[2,3,4,7]) print(s) Out: 2 a 3 b 4 c 7 d dtype: object dataframe结构DataFrame 一个表格型的数据结构，既有行标签（index），又有列标签（columns），它也被称异构数据表，所谓异构，指的是表格中每列的数据类型可以不同，比如可以是字符串、整型或者浮点型等。如下图所示：整体结构和excel比较类似，左侧为行索引 ，上标题为列名。 3、dataframe常见操作 pandas的数据读取 Format Type Data Description Reader Writer text CSV(opens new window) read_csv...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/pandas/",
+        "teaser": null
+      },{
+        "title": "numpy应用",
+        "excerpt":"1、numpy介绍 pandas的操作就像excel进行数据处理一样，而numpy则是专注了数值计算。 2、numpy库的安装与使用 pip install numpy impor 3、数学操作 数据创建 ```python import numpy as np a = np.array([1,2,3]) print(a) 创建特殊数组 b = np.zeros((3,5)) ones_array = np.ones((2, 2)) full_array = np.full((2, 2), 8) - 数据切片 - 数组形状修改 ```python reshaped_array = a.reshape((1, 5)) 元素级别的加法、数组乘法，矩阵乘法 ```python 元素级别的加法 c = a + 10 print(c) 数组乘法（元素级别）...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/numpy/",
+        "teaser": null
+      },{
+        "title": "matlpotlib可视化",
+        "excerpt":"1、matplotlib Matplotlib是python的一个可视化库，用来绘制各种静态，动态，交互式的图表，应用广泛。 Matplotlib 可以绘制线图、散点图、等高线图、条形图、柱状图、3D 图形、甚至是图形动画等等。 1.1、Matplotlib的安装 pip更新：python -m pip install -U pip 安装： pip install -U matplotlib 应用：import matplotlib.pyplot as plt 1.2、Matplotlib的基本要素 x轴和y轴 水平和垂直的轴线 x轴和y轴刻度 刻度标示坐标轴的分隔，包括最小刻度和最大刻度 x轴和y轴刻度标签 表示特定坐标轴的值 绘图区域 实际绘图的区域 2、Matplotlib基础 Matplotlib有两种画图形式，面向对象和pyplot接口。 2.1、pyplot形式 输入： import matplotlib.pyplot as plt import numpy as np x = np.array([0, 2, 10]) plt.figure() plt.plot(x, x**2)...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/matlpotlib/",
+        "teaser": null
+      },{
+        "title": "多进程管理",
+        "excerpt":"1、多进程技术 from multiprocessing import Process import os # 定义要调用的方法 def async_fun(name, add): for arc in add: print(name + str(os.getpid()) + \" \" + arc) if __name__ == '__main__': my_tuple = (\"你好\", \"今天是个好日子\", \"天气真不错\") # 创建进程 process = Process(target=async_fun, args=(\"子进程\", my_tuple)) # 启动子进程 process.start() # 启动主进程 async_fun(\"主进程\", my_tuple) import multiprocessing import...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/mul-process/",
+        "teaser": null
+      },{
+        "title": "多线程管理",
+        "excerpt":"1、多线程技术 1.1、多线程基础 import threading import time exitFlag = 0 class myThread (threading.Thread): def __init__(self, threadID, name, delay): threading.Thread.__init__(self) self.threadID = threadID self.name = name self.delay = delay def run(self): print (\"开始线程：\" + self.name) print_time(self.name, self.delay, 5) print (\"退出线程：\" + self.name) def print_time(threadName, delay, counter): while counter: if exitFlag: threadName.exit() time.sleep(delay)...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/mul-threads/",
+        "teaser": null
+      },{
+        "title": "日志记录",
+        "excerpt":"python 日志输出记录通常采用内置的模块logging，其提供灵活的方式来输出日志信息，并且可以搭配不同的日志级别和输出格式。 1、日志操作基本步骤 1.1、模块导入 import logging 1.2、日志配置 设置日志级别，包括：DEBUG、INFO、WARNING、ERROR和CRITICAL。日志级别不仅用于标识消息的重要性，还用于控制日志的输出。当你设置一个日志器（Logger）或日志处理器（Handler）的级别时，只有等于或高于该级别的日志消息才会被处理和输出。 DEBUG：级别10，输出详细的信息，通常用于问题诊断。在开发和测试阶段非常有用，但在生产环境中可能会产生大量日志。 INFO：级别20，输出一般性的信息，如程序运行的状态、处理进度等。适合在生产环境中提供程序运行的概览。 WARNING：级别30，输出潜在的问题，但不会立即影响程序运行。例如，当某个操作可能不是最优解或者某些条件未满足时。 ERROR：级别40，输出由于严重问题导致的错误，这些错误可能会影响程序的部分功能，但不会导致程序完全停止。 CRITICAL：级别50，输出非常严重的问题，如程序无法继续运行的情况。这是最高级别的日志，通常用于报告紧急情况。 设置日志的格式，包括时间戳、日志级别、消息等。日志格式是通过Formatter类来设置的，它允许你指定日志消息的布局。 %(name)s: 显示日志器的名字。 %(levelno)s: 显示日志级别数字。 %(levelname)s: 显示日志级别名称（如INFO、ERROR等）。 %(pathname)s: 显示日志消息定义的文件的完整路径。 %(filename)s: 显示日志消息定义的文件的名称。 %(module)s: 显示包含日志消息的模块的名称。 %(lineno)d: 显示日志消息定义的代码行号。 %(funcName)s: 显示日志消息定义的函数的名称。 %(created)f: 显示当前的时间戳。 %(asctime)s: 显示时间，格式为%Y-%m-%d %H:%M:%S,uuu。 %(msecs)d: 显示毫秒。 %(relativeCreated)d: 显示自Logger创建以来的毫秒数。 %(thread)d: 显示线程ID。 %(threadName)s: 显示线程的名称。 %(process)d: 显示进程ID。 %(message)s: 显示日志消息。 formatter = logging.Formatter('%(asctime)s...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/log-book/",
+        "teaser": null
+      },{
+        "title": "minio文件传输",
+        "excerpt":"MinIO是一个高性能的分布式对象存储系统，它兼容Amazon S3云存储服务接口，非常适合于存储大容量非结构化的数据，例如图片、视频、日志文件、备份数据和容器/虚拟机镜像等 minIO服务安装与启动 参考教程minio安装 基于python的在线文件传输 # -*- coding: UTF-8 -*- \"\"\" Created on 2021 - 12 - 15 # @ 功能： 从minio上传和下载文件 # @author: lhy # @file: get_file_from_minio.py # @time: 2021/12/15 15:39 # @email: 742232975@qq.com \"\"\" from minio import Minio from minio.error import ResponseError import os import traceback import logging...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/minio/",
+        "teaser": null
+      },{
+        "title": "装饰器",
+        "excerpt":"1、装饰器定义 装饰器(Decorators)是 Python 的一个重要部分。简单地说：他们是修改其他函数的功能的函数。 要理解装饰器，首先理解对象，函数的嵌套 1.1、万物皆对象 def hi(name=\"yasoob\"): return \"hi \" + name print(hi()) # output: 'hi yasoob' # 我们甚至可以将一个函数赋值给一个变量，比如 greet = hi # 我们这里没有在使用小括号，因为我们并不是在调用hi函数 # 而是在将它放在greet变量里头。我们尝试运行下这个 print(greet()) # output: 'hi yasoob' # 如果我们删掉旧的hi函数，看看会发生什么！ del hi print(hi()) #outputs: NameError print(greet()) #outputs: 'hi yasoob' 1.2、函数中定义函数 def hi(name=\"yasoob\"): print(\"now you are inside...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/decorator/",
+        "teaser": null
+      },{
     "title": "About",
-    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "https://tianchaoyu.github.io/about/"
+    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "http://localhost:4000/about/"
   },{
     "title": "关于",
-    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C++ ⭐️⭐️   c ⭐️⭐️⭐️   js/css ⭐️⭐️️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具       transcad ⭐️⭐️⭐️⭐️⭐️   emme ⭐️⭐️⭐️⭐️⭐️   qgis ⭐️⭐️⭐️⭐️⭐️   Arcgis ⭐️⭐️⭐️...","url": "https://tianchaoyu.github.io/about/"
+    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C++ ⭐️⭐️   c ⭐️⭐️⭐️   js/css ⭐️⭐️️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具       transcad ⭐️⭐️⭐️⭐️⭐️   emme ⭐️⭐️⭐️⭐️⭐️   qgis ⭐️⭐️⭐️⭐️⭐️   Arcgis ⭐️⭐️⭐️...","url": "http://localhost:4000/about/"
   },{
     "title": "分类",
-    "excerpt":" ","url": "https://tianchaoyu.github.io/categories/"
+    "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
     "title": "标签",
-    "excerpt":" ","url": "https://tianchaoyu.github.io/tags/"
+    "excerpt":" ","url": "http://localhost:4000/tags/"
   },{
     "title": "工具",
-    "excerpt":"设计工具          图片处理工具              支持调整图片大小       支持添加水印       rgb转灰度图像           资源下载   ","url": "https://tianchaoyu.github.io/tools/"
+    "excerpt":"设计工具          图片处理工具              支持调整图片大小       支持添加水印       rgb转灰度图像           资源下载   ","url": "http://localhost:4000/tools/"
   },{
     "title": "技术教程",
-    "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
+    "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "http://localhost:4000/tutorials/"
   }]

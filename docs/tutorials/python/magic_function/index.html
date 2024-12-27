@@ -1,0 +1,443 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>魔术函数 - 技术博客</title>
+<meta name="description" content="python中的下划线是一个特殊的字符，主要有两种用法：">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="魔术函数">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/magic_function/">
+
+
+  <meta property="og:description" content="python中的下划线是一个特殊的字符，主要有两种用法：">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/magic_function/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/" class="active">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="魔术函数">
+    <meta itemprop="description" content="python中的下划线是一个特殊的字符，主要有两种用法：">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/magic_function/" itemprop="url">魔术函数
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1魔术函数">1、魔术函数</a><ul><li><a href="#2魔术函数的调用">2、魔术函数的调用</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p>python中的下划线是一个特殊的字符，主要有两种用法：</p>
+
+<ul>
+  <li><strong>function</strong>,前后两个下划线，表示python中的魔术方法；</li>
+  <li><em>function</em>,下划线前缀和后缀，表示内部使用或者非公开接口；</li>
+</ul>
+
+<h1 id="1魔术函数">1、魔术函数</h1>
+
+<p>在Python中，双下划线（”__“）用于标识特殊的魔术方法（Magic Methods）或双下划线方法（Dunder Methods）。这些方法具有特殊的名称和用途，它们不是通常意义上的普通方法，而是在对象生命周期中由Python调用的特殊方法。以下是一些常见的双下划线方法及其用途：</p>
+
+<ol>
+  <li><strong>__init__</strong>：这是一个构造函数，在创建对象时自动调用，用于对象的初始化。例如：
+    <pre><code class="language-plain">pythonCopy code
+class MyClass:
+ def __init__(self, arg1, arg2):
+     self.arg1 = arg1
+     self.arg2 = arg2
+</code></pre>
+  </li>
+  <li><strong>__str__</strong>：这个方法用于返回对象的人类可读的字符串表示，通常用于<strong>print</strong>函数或<strong>str()</strong>函数的输出。例如：
+    <pre><code class="language-plain">pythonCopy code
+class MyClass:
+ def __str__(self):
+     return f"MyClass instance with attributes: {self.arg1}, {self.arg2}"
+</code></pre>
+  </li>
+  <li><strong>__repr__</strong>：这个方法用于返回对象的”官方”字符串表示，通常用于开发和调试中。例如：
+    <pre><code class="language-plain">pythonCopy code
+class MyClass:
+ def __repr__(self):
+     return f"MyClass({self.arg1}, {self.arg2})"
+</code></pre>
+  </li>
+  <li><strong>__len__</strong>：这个方法用于返回对象的长度，通常用于内置的<strong>len()</strong>函数。例如：
+    <pre><code class="language-plain">pythonCopy code
+class MyList:
+ def __init__(self, data):
+     self.data = data
+    
+ def __len__(self):
+     return len(self.data)
+</code></pre>
+  </li>
+  <li><strong>__getitem__</strong>和<strong>__setitem__</strong>：这些方法用于实现对象的索引访问和赋值操作，通常用于支持类似于列表的索引操作。</li>
+  <li><strong>__eq__</strong>：这个方法用于定义对象之间的相等性比较，通常用于<strong>==</strong>操作符的行为。</li>
+  <li><strong>__lt__</strong>, <strong>__le__</strong>, <strong>__gt__</strong>, <strong>__ge__</strong>：这些方法用于定义对象之间的比较操作，分别对应于 <strong>&lt;</strong>, <strong>&lt;=</strong>, <strong>&gt;</strong>, <strong>&gt;=</strong> 操作符的行为。</li>
+  <li><strong>__add__</strong> 和 <strong>__sub__</strong>：这些方法用于定义对象之间的加法和减法操作，通常用于<strong>+</strong>和<strong>-</strong>操作符的行为。</li>
+  <li><strong>__call__</strong>：这个方法允许将对象像函数一样调用，它可以将一个类的实例变成可调用的对象。这只是一些常见的双下划线方法，Python中还有更多的魔术方法，每个魔术方法都有其特定的用途。你可以根据你的需要自定义这些方法来定制类的行为。这些魔术方法是Python面向对象编程中非常有用的特性。</li>
+</ol>
+
+<p><strong>all__是一个模块级别的变量，它被用来定义模块中哪些名称是导出的（即哪些名称是公有的，可以被from module import *这样的导入语句导入）。如果没有定义__all</strong>，那么所有的名称都会被导出。</p>
+<h2 id="2魔术函数的调用">2、魔术函数的调用</h2>
+
+<p>是的，魔术方法会在特定的情况下自动被Python解释器调用，而不需要你显式地调用它们。这些方法是Python中的特殊方法，它们具有预定的名称和行为，用于在对象的生命周期中执行特定的操作。
+以下是一些常见的魔术方法及其自动调用的时机：</p>
+
+<ol>
+  <li><strong>__init__</strong>：在创建对象时自动调用，用于对象的初始化。</li>
+  <li><strong>__str__</strong>：当使用<strong>print()</strong>函数或<strong>str()</strong>函数时自动调用，用于返回对象的人类可读的字符串表示。</li>
+  <li><strong>__repr__</strong>：当使用<strong>repr()</strong>函数或在交互式环境中输出对象时自动调用，用于返回对象的”官方”字符串表示。</li>
+  <li><strong>__len__</strong>：当使用内置的<strong>len()</strong>函数时自动调用，用于返回对象的长度。</li>
+  <li><strong>__getitem__</strong> 和 <strong>__setitem__</strong>：在进行索引访问或赋值操作时自动调用。</li>
+  <li><strong>__eq__</strong>：在进行相等性比较操作时自动调用，例如使用<strong>==</strong>操作符。</li>
+  <li><strong>__lt__</strong>, <strong>__le__</strong>, <strong>__gt__</strong>, <strong>__ge__</strong>：在进行比较操作时自动调用，例如使用<strong>&lt;</strong>, <strong>&lt;=</strong>, <strong>&gt;</strong>, <strong>&gt;=</strong> 操作符。</li>
+  <li><strong>__add__</strong> 和 <strong>__sub__</strong>：在进行加法和减法操作时自动调用，例如使用<strong>+</strong>和<strong>-</strong>操作符。</li>
+  <li><strong>__call__</strong>：当将对象像函数一样调用时自动调用，允许将对象变成可调用的。这些魔术方法在适当的情况下由Python解释器自动调用，以执行对象的特定操作。通过实现这些方法，你可以自定义类的行为，使其在不同的上下文中表现出特定的行为。这是Python面向对象编程中的强大功能之一。</li>
+</ol>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/data-add/" class="pagination--pager" title="数据加载
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/email-send/" class="pagination--pager" title="邮件发送
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

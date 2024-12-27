@@ -1,0 +1,531 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>装饰器 - 技术博客</title>
+<meta name="description" content="1、装饰器定义 装饰器(Decorators)是 Python 的一个重要部分。简单地说：他们是修改其他函数的功能的函数。 要理解装饰器，首先理解对象，函数的嵌套 1.1、万物皆对象">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="装饰器">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/decorator/">
+
+
+  <meta property="og:description" content="1、装饰器定义 装饰器(Decorators)是 Python 的一个重要部分。简单地说：他们是修改其他函数的功能的函数。 要理解装饰器，首先理解对象，函数的嵌套 1.1、万物皆对象">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/decorator/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/" class="active">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="装饰器">
+    <meta itemprop="description" content="1、装饰器定义装饰器(Decorators)是 Python 的一个重要部分。简单地说：他们是修改其他函数的功能的函数。要理解装饰器，首先理解对象，函数的嵌套1.1、万物皆对象">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/decorator/" itemprop="url">装饰器
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1装饰器定义">1、装饰器定义</a><ul><li><a href="#11万物皆对象">1.1、万物皆对象</a></li><li><a href="#12函数中定义函数">1.2、函数中定义函数</a></li><li><a href="#13函数中返回函数">1.3、函数中返回函数</a></li><li><a href="#14将函数作为参数进行传递">1.4、将函数作为参数进行传递</a></li></ul></li><li><a href="#2装饰器">2、装饰器</a><ul><li><a href="#21装饰器执行">2.1、装饰器执行</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="1装饰器定义">1、装饰器定义</h1>
+<p>装饰器(Decorators)是 Python 的一个重要部分。简单地说：他们是修改其他函数的功能的函数。
+要理解装饰器，首先理解对象，函数的嵌套</p>
+<h2 id="11万物皆对象">1.1、万物皆对象</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hi</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">yasoob</span><span class="sh">"</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sh">"</span><span class="s">hi </span><span class="sh">"</span> <span class="o">+</span> <span class="n">name</span>
+ 
+<span class="nf">print</span><span class="p">(</span><span class="nf">hi</span><span class="p">())</span>
+<span class="c1"># output: 'hi yasoob'
+</span> 
+<span class="c1"># 我们甚至可以将一个函数赋值给一个变量，比如
+</span><span class="n">greet</span> <span class="o">=</span> <span class="n">hi</span>
+<span class="c1"># 我们这里没有在使用小括号，因为我们并不是在调用hi函数
+# 而是在将它放在greet变量里头。我们尝试运行下这个
+</span> 
+<span class="nf">print</span><span class="p">(</span><span class="nf">greet</span><span class="p">())</span>
+<span class="c1"># output: 'hi yasoob'
+</span> 
+<span class="c1"># 如果我们删掉旧的hi函数，看看会发生什么！
+</span><span class="k">del</span> <span class="n">hi</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">hi</span><span class="p">())</span>
+<span class="c1">#outputs: NameError
+</span> 
+<span class="nf">print</span><span class="p">(</span><span class="nf">greet</span><span class="p">())</span>
+<span class="c1">#outputs: 'hi yasoob'
+</span></code></pre></div></div>
+<h2 id="12函数中定义函数">1.2、函数中定义函数</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hi</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">yasoob</span><span class="sh">"</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">now you are inside the hi() function</span><span class="sh">"</span><span class="p">)</span>
+ 
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">now you are in the greet() function</span><span class="sh">"</span>
+ 
+    <span class="k">def</span> <span class="nf">welcome</span><span class="p">():</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">now you are in the welcome() function</span><span class="sh">"</span>
+ 
+    <span class="nf">print</span><span class="p">(</span><span class="nf">greet</span><span class="p">())</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">welcome</span><span class="p">())</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">now you are back in the hi() function</span><span class="sh">"</span><span class="p">)</span>
+ 
+<span class="nf">hi</span><span class="p">()</span>
+<span class="c1">#output:now you are inside the hi() function
+#       now you are in the greet() function
+#       now you are in the welcome() function
+#       now you are back in the hi() function
+</span> 
+<span class="c1"># 上面展示了无论何时你调用hi(), greet()和welcome()将会同时被调用。
+# 然后greet()和welcome()函数在hi()函数之外是不能访问的，比如：
+</span> 
+<span class="nf">greet</span><span class="p">()</span>
+<span class="c1">#outputs: NameError: name 'greet' is not defined
+</span></code></pre></div></div>
+<h2 id="13函数中返回函数">1.3、函数中返回函数</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hi</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">yasoob</span><span class="sh">"</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">now you are in the greet() function</span><span class="sh">"</span>
+ 
+    <span class="k">def</span> <span class="nf">welcome</span><span class="p">():</span>
+        <span class="k">return</span> <span class="sh">"</span><span class="s">now you are in the welcome() function</span><span class="sh">"</span>
+ 
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="sh">"</span><span class="s">yasoob</span><span class="sh">"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">greet</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">welcome</span>
+ 
+<span class="n">a</span> <span class="o">=</span> <span class="nf">hi</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="c1">#outputs: &lt;function greet at 0x7f2143c01500&gt;
+</span> 
+<span class="c1">#上面清晰地展示了`a`现在指向到hi()函数中的greet()函数
+#现在试试这个
+</span> 
+<span class="nf">print</span><span class="p">(</span><span class="nf">a</span><span class="p">())</span>
+<span class="c1">#outputs: now you are in the greet() function
+</span></code></pre></div></div>
+<p>在 if/else 语句中我们返回 greet 和 welcome，而不是 greet() 和 welcome()。为什么那样？这是因为当你把一对小括号放在后面，这个函数就会执行；然而如果你不放括号在它后面，那它可以被到处传递，并且可以赋值给别的变量而不去执行它。</p>
+<h2 id="14将函数作为参数进行传递">1.4、将函数作为参数进行传递</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hi</span><span class="p">():</span>
+    <span class="k">return</span> <span class="sh">"</span><span class="s">hi dasda!</span><span class="sh">"</span>
+ 
+<span class="k">def</span> <span class="nf">doSomethingBeforeHi</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I am doing some boring work before executing hi()</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">func</span><span class="p">())</span>
+ 
+<span class="nf">doSomethingBeforeHi</span><span class="p">(</span><span class="n">hi</span><span class="p">)</span>
+<span class="c1">#outputs:I am doing some boring work before executing hi()
+#        hi yasoob!
+</span></code></pre></div></div>
+<h1 id="2装饰器">2、装饰器</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">a_new_decorator</span><span class="p">(</span><span class="n">a_func</span><span class="p">):</span>
+ 
+    <span class="k">def</span> <span class="nf">wrapTheFunction</span><span class="p">():</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I am doing some boring work before executing a_func()</span><span class="sh">"</span><span class="p">)</span>
+ 
+        <span class="nf">a_func</span><span class="p">()</span>
+ 
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I am doing some boring work after executing a_func()</span><span class="sh">"</span><span class="p">)</span>
+ 
+    <span class="k">return</span> <span class="n">wrapTheFunction</span>
+ 
+<span class="k">def</span> <span class="nf">a_function_requiring_decoration</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">I am the function which needs some decoration to remove my foul smell</span><span class="sh">"</span><span class="p">)</span>
+ 
+<span class="nf">a_function_requiring_decoration</span><span class="p">()</span>
+<span class="c1">#outputs: "I am the function which needs some decoration to remove my foul smell"
+</span> 
+<span class="n">a_function_requiring_decoration</span> <span class="o">=</span> <span class="nf">a_new_decorator</span><span class="p">(</span><span class="n">a_function_requiring_decoration</span><span class="p">)</span>
+<span class="c1">#now a_function_requiring_decoration is wrapped by wrapTheFunction()
+</span> 
+<span class="nf">a_function_requiring_decoration</span><span class="p">()</span>
+<span class="c1">#outputs:I am doing some boring work before executing a_func()
+#        I am the function which needs some decoration to remove my foul smell
+#        I am doing some boring work after executing a_func()
+</span></code></pre></div></div>
+<h2 id="21装饰器执行">2.1、装饰器执行</h2>
+
+<ul>
+  <li>装饰器在编译阶段就可是执行；</li>
+  <li>import 阶段，registry中就已经含有变量了
+```python
+registry = []
+funtion_name = []</li>
+</ul>
+
+<p>def register(func):
+    print(‘running register(%s)’ % func)
+    funtion_name.append(func.<strong>name</strong>)
+    registry.append(func)
+    return func</p>
+
+<p>@register
+def f1():
+    print(‘running f1()’)</p>
+
+<p>@register
+def f2():
+    print(‘running f2()’)</p>
+
+<p>def f3():
+    print(‘running f3()’)</p>
+
+<p>def main():
+    print(‘running main()’)
+    print(‘registry -&gt;’, registry)
+    # f1()
+    # f2()
+    # f3()</p>
+
+<p>if <strong>name</strong> == ‘<strong>main</strong>’:
+    # main()
+    print(“123”)
+    print(funtion_name)
+```</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/minio/" class="pagination--pager" title="minio文件传输
+">上一页</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

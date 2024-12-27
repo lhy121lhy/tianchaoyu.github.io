@@ -1,0 +1,718 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>matlpotlib可视化 - 技术博客</title>
+<meta name="description" content="1、matplotlib">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="matlpotlib可视化">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/matlpotlib/">
+
+
+  <meta property="og:description" content="1、matplotlib">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/matlpotlib/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/" class="active">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="matlpotlib可视化">
+    <meta itemprop="description" content="1、matplotlib">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/matlpotlib/" itemprop="url">matlpotlib可视化
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1matplotlib">1、matplotlib</a><ul><li><a href="#11matplotlib的安装">1.1、Matplotlib的安装</a></li><li><a href="#12matplotlib的基本要素">1.2、Matplotlib的基本要素</a></li></ul></li><li><a href="#2matplotlib基础">2、Matplotlib基础</a><ul><li><a href="#21pyplot形式">2.1、pyplot形式</a></li><li><a href="#22面向对象的形式">2.2、面向对象的形式</a></li><li><a href="#23常见设置">2.3、常见设置</a></li></ul></li><li><a href="#3matplotlib的简单案例">3、Matplotlib的简单案例</a><ul><li><a href="#31柱状图">3.1、柱状图</a></li><li><a href="#32曲线图">3.2、曲线图</a></li><li><a href="#33-饼图">3.3 饼图</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="1matplotlib">1、matplotlib</h2>
+
+<ul>
+  <li>Matplotlib是python的一个可视化库，用来绘制各种静态，动态，交互式的图表，应用广泛。</li>
+  <li>Matplotlib 可以绘制线图、散点图、等高线图、条形图、柱状图、3D 图形、甚至是图形动画等等。
+    <h3 id="11matplotlib的安装">1.1、Matplotlib的安装</h3>
+  </li>
+  <li>pip更新：python -m pip install -U pip</li>
+  <li>安装： pip install -U matplotlib</li>
+  <li>应用：import matplotlib.pyplot as plt
+    <h3 id="12matplotlib的基本要素">1.2、Matplotlib的基本要素</h3>
+  </li>
+  <li>x轴和y轴</li>
+  <li>水平和垂直的轴线</li>
+  <li>x轴和y轴刻度</li>
+  <li>刻度标示坐标轴的分隔，包括最小刻度和最大刻度</li>
+  <li>x轴和y轴刻度标签</li>
+  <li>表示特定坐标轴的值</li>
+  <li>绘图区域</li>
+  <li>实际绘图的区域
+    <h2 id="2matplotlib基础">2、Matplotlib基础</h2>
+  </li>
+</ul>
+
+<p>Matplotlib有两种画图形式，面向对象和pyplot接口。</p>
+
+<h3 id="21pyplot形式">2.1、pyplot形式</h3>
+
+<p>输入：</p>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([0, 2, 10])
+plt.figure()
+plt.plot(x, x**2)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.show()
+</code></pre>
+
+<p><img src="/assets/images/python/1652165250696-5c6a048b-86fc-4466-9d0d-9a722e674fca.png" alt="image.png" /></p>
+
+<h3 id="22面向对象的形式">2.2、面向对象的形式</h3>
+
+<p>输入：</p>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 2, 10)
+fig, ax = plt.subplots()
+ax.plot(x, x**2) # 折线图
+ax.set_xlabel('x') # 设置横坐标名称
+ax.set_ylabel('y') # 设置纵坐标标签
+ax.set_title("y = x^2") # 设置标题
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165264277-53259f5c-58bf-4540-8678-a14715354dfe.png" alt="image.png" /></p>
+
+<ul>
+  <li>注意：plt.subplots() 函数返回fig和ax，分别是Figure对象和Axes对象。前者代表画布，后者代表画布上的绘图区域，很显然画布和绘图区域是一对多的关系。
+    <h3 id="23常见设置">2.3、常见设置</h3>
+  </li>
+</ul>
+
+<p><strong>1)、绘画框设置：figure(num=None，figsize=None，dpi=None，facecolor=None，edgecolor=None，frameon=True)</strong></p>
+
+<ul>
+  <li>num：表示图形的编号或名称，数字代表编号，字符串表示名称。如果没有提供该参数，则会创建新的图形，并且这个图形的编号会增加；如果提供该参数，并且具有此id的图形已经存在，则会将其激活并返回对其的引用；若此图形不存在，则会创建并返回它。</li>
+  <li>figsize：用于设置画布的尺寸，宽度、高度以英寸为单位。</li>
+  <li>dpi：用于设置图形的分辨率。</li>
+  <li>facecolor：用于设置画板的背景颜色。</li>
+  <li>edgecolor：用于显示边框的颜色。</li>
+  <li>frameon：表示是否显示边框。</li>
+  <li>FigureClass：派生自matplotlib.figure.Figure的类，可以选择使用自定义的图形对象。</li>
+  <li>clear：若设为True且改图形已经存在，则它会被清除。
+**2)、X轴和Y轴的设置 **官方说明：</li>
+</ul>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+
+locs,labels  = plt.xticks（）# Get the current locations and labels.
+plt.xticks([0,1,2],['January','February','March'],rotation=20)#Set text labels and properties.
+plt.yticks([0,1,2],['January','February','March'],rotation=20)#Set text labels and properties.
+</code></pre>
+
+<p>demo:</p>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(0, 2, 10)
+fig, ax = plt.subplots()
+ax.plot(x, x**2) # 折线图
+ax.set_xlabel('x') # 设置横坐标名称
+ax.set_ylabel('y') # 设置纵坐标标签
+ax.set_title("y = x^2") # 设置标题
+
+plt.xticks([0,1,2],["a","b","c"],rotation=20)
+
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165283546-14eac8cf-7011-47e6-a0b1-77e19fc7de9f.png" alt="image.png" /></p>
+
+<p><strong>3）设置x轴和y轴的标签信息</strong></p>
+
+<pre><code class="language-plain">ax.set_xlabel('x') # 设置横坐标名称
+ax.set_ylabel('y') # 设置纵坐标标签
+</code></pre>
+
+<p><strong>4) 显示中文</strong></p>
+
+<pre><code class="language-plain">from pylab import *
+mpl.rcParams['font.sans-serif'] = ["SimHei"]
+</code></pre>
+
+<p><strong>5）添加注释</strong></p>
+
+<pre><code class="language-plain">ax.annotate('race interrupted', (61, 25),
+            xytext=(0.8, 0.9), textcoords='axes fraction',
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            fontsize=16,
+            horizontalalignment='right', verticalalignment='top')
+</code></pre>
+
+<h2 id="3matplotlib的简单案例">3、Matplotlib的简单案例</h2>
+
+<h3 id="31柱状图">3.1、柱状图</h3>
+
+<p>1）堆叠柱状</p>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+
+
+labels = ['G1', 'G2', 'G3', 'G4', 'G5']
+men_means = [20, 35, 30, 35, 27]
+women_means = [25, 32, 34, 20, 25]
+men_std = [2, 3, 4, 1, 2]
+women_std = [3, 5, 2, 3, 3]
+width = 0.35       # the width of the bars: can also be len(x) sequence
+
+fig, ax = plt.subplots()
+
+ax.bar(labels, men_means, width, yerr=men_std, label='Men')
+ax.bar(labels, women_means, width, yerr=women_std, bottom=men_means,
+       label='Women')
+
+ax.set_ylabel('Scores')
+ax.set_title('Scores by group and gender')
+ax.legend()
+
+plt.show()
+</code></pre>
+
+<p>结果：</p>
+
+<p><img src="/assets/images/python/1652165300640-f0ee607d-37f3-4f00-9edd-f8ffb41102ad.png" alt="image.png" /></p>
+
+<p>2）并列柱状</p>
+
+<pre><code class="language-plain">import matplotlib.pyplot as plt
+import numpy as np
+
+
+labels = ['G1', 'G2', 'G3', 'G4', 'G5']
+men_means = [20, 34, 30, 35, 27]
+women_means = [25, 32, 34, 20, 25]
+
+x = np.arange(len(labels))  # the label locations
+width = 0.35  # the width of the bars
+
+fig, ax = plt.subplots()
+rects1 = ax.bar(x - width/2, men_means, width, label='Men')
+rects2 = ax.bar(x + width/2, women_means, width, label='Women')
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_ylabel('Scores')
+ax.set_title('Scores by group and gender')
+ax.set_xticks(x)
+ax.set_xticklabels(labels)
+ax.legend()
+
+ax.bar_label(rects1, padding=3)
+ax.bar_label(rects2, padding=3)
+
+fig.tight_layout()
+
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165312082-9a6cb3e5-b99a-4967-ac71-05710ae8fe46.png" alt="image.png" /></p>
+
+<h3 id="32曲线图">3.2、曲线图</h3>
+
+<p>1）序列图</p>
+
+<pre><code class="language-plain">import numpy as np
+import matplotlib.pyplot as plt
+
+
+fig, (ax1, ax2) = plt.subplots(2, 1)
+# make a little extra space between the subplots
+fig.subplots_adjust(hspace=0.5)
+
+dt = 0.01
+t = np.arange(0, 30, dt)
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+
+nse1 = np.random.randn(len(t))                 # white noise 1
+nse2 = np.random.randn(len(t))                 # white noise 2
+r = np.exp(-t / 0.05)
+
+cnse1 = np.convolve(nse1, r, mode='same') * dt   # colored noise 1
+cnse2 = np.convolve(nse2, r, mode='same') * dt   # colored noise 2
+
+# two signals with a coherent part and a random part
+s1 = 0.01 * np.sin(2 * np.pi * 10 * t) + cnse1
+s2 = 0.01 * np.sin(2 * np.pi * 10 * t) + cnse2
+
+ax1.plot(t, s1, t, s2)
+ax1.set_xlim(0, 5)
+ax1.set_xlabel('time')
+ax1.set_ylabel('s1 and s2')
+ax1.grid(True)
+
+cxy, f = ax2.csd(s1, s2, 256, 1. / dt)
+ax2.set_ylabel('CSD (db)')
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165323071-ccb2b13a-32e6-402b-bcd9-290bb675d199.png" alt="image.png" /></p>
+
+<p>2） 曲线图</p>
+
+<pre><code class="language-plain">import numpy as np
+import matplotlib.pyplot as plt
+
+
+fig = plt.figure()
+x = np.arange(10)
+y = 2.5 * np.sin(x / 20 * np.pi)
+yerr = np.linspace(0.05, 0.2, 10)
+
+plt.errorbar(x, y + 3, yerr=yerr, label='both limits (default)')
+
+plt.errorbar(x, y + 2, yerr=yerr, uplims=True, label='uplims=True')
+
+plt.errorbar(x, y + 1, yerr=yerr, uplims=True, lolims=True,
+             label='uplims=True, lolims=True')
+
+upperlimits = [True, False] * 5
+lowerlimits = [False, True] * 5
+plt.errorbar(x, y, yerr=yerr, uplims=upperlimits, lolims=lowerlimits,
+             label='subsets of uplims and lolims')
+
+plt.legend(loc='lower right')
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165332786-c2d0c71d-67aa-4f3b-9894-8a0ecdf6dfba.png" alt="image.png" /></p>
+
+<h3 id="33-饼图">3.3 饼图</h3>
+
+<p>1）比例图</p>
+
+<pre><code class="language-plain">import numpy as np
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 3), subplot_kw=dict(aspect="equal"))
+
+recipe = ["375 g flour",
+          "75 g sugar",
+          "250 g butter",
+          "300 g berries"]
+
+data = [float(x.split()[0]) for x in recipe]
+ingredients = [x.split()[-1] for x in recipe]
+
+
+def func(pct, allvals):
+    absolute = int(np.round(pct/100.*np.sum(allvals)))
+    return "{:.1f}%\n({:d} g)".format(pct, absolute)
+
+
+wedges, texts, autotexts = ax.pie(data, autopct=lambda pct: func(pct, data),
+                                  textprops=dict(color="w"))
+
+ax.legend(wedges, ingredients,
+          title="Ingredients",
+          loc="center left",
+          bbox_to_anchor=(1, 0, 0.5, 1))
+
+plt.setp(autotexts, size=8, weight="bold")
+
+ax.set_title("Matplotlib bakery: A pie")
+
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165342689-7ebe2397-9d8f-49fb-bf81-8dde1b37d7e3.png" alt="image.png" /></p>
+
+<p>2） 饼图2</p>
+
+<pre><code class="language-plain">import numpy as np
+import matplotlib.pyplot as plt
+
+
+# Fixing random state for reproducibility
+np.random.seed(19680801)
+
+# Compute pie slices
+N = 20
+theta = np.linspace(0.0, 2 * np.pi, N, endpoint=False)
+radii = 10 * np.random.rand(N)
+width = np.pi / 4 * np.random.rand(N)
+colors = plt.cm.viridis(radii / 10.)
+
+ax = plt.subplot(projection='polar')
+ax.bar(theta, radii, width=width, bottom=0.0, color=colors, alpha=0.5)
+
+plt.show()
+</code></pre>
+
+<p>输出：</p>
+
+<p><img src="/assets/images/python/1652165353419-5e901e16-dcc8-49c3-b7fd-2812f8f399d7.png" alt="image.png" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/numpy/" class="pagination--pager" title="numpy应用
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/mul-process/" class="pagination--pager" title="多进程管理
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

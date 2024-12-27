@@ -1,0 +1,553 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>日志记录 - 技术博客</title>
+<meta name="description" content="python 日志输出记录通常采用内置的模块logging，其提供灵活的方式来输出日志信息，并且可以搭配不同的日志级别和输出格式。">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="日志记录">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/log-book/">
+
+
+  <meta property="og:description" content="python 日志输出记录通常采用内置的模块logging，其提供灵活的方式来输出日志信息，并且可以搭配不同的日志级别和输出格式。">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/log-book/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/" class="active">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="日志记录">
+    <meta itemprop="description" content="python 日志输出记录通常采用内置的模块logging，其提供灵活的方式来输出日志信息，并且可以搭配不同的日志级别和输出格式。">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/log-book/" itemprop="url">日志记录
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1日志操作基本步骤">1、日志操作基本步骤</a><ul><li><a href="#11模块导入">1.1、模块导入</a></li><li><a href="#12日志配置">1.2、日志配置</a></li></ul></li><li><a href="#2日志创建示例">2、日志创建示例</a><ul><li><a href="#21快速路创建日志">2.1、快速路创建日志</a></li><li><a href="#22基于配置文件进行创建">2.2、基于配置文件进行创建</a><ul><li><a href="#221配置文件config_logyaml">2.2.1、配置文件：config_log.yaml</a></li><li><a href="#222日志创建">2.2.2、日志创建</a></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p>python 日志输出记录通常采用内置的模块logging，其提供灵活的方式来输出日志信息，并且可以搭配不同的日志级别和输出格式。</p>
+
+<h1 id="1日志操作基本步骤">1、日志操作基本步骤</h1>
+<h2 id="11模块导入">1.1、模块导入</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">logging</span>
+</code></pre></div></div>
+
+<h2 id="12日志配置">1.2、日志配置</h2>
+
+<ul>
+  <li><strong>设置日志级别</strong>，包括：DEBUG、INFO、WARNING、ERROR和CRITICAL。日志级别不仅用于标识消息的重要性，还用于控制日志的输出。<strong>当你设置一个日志器（Logger）或日志处理器（Handler）的级别时，只有等于或高于该级别的日志消息才会被处理和输出。</strong></li>
+  <li><strong>DEBUG：级别10，</strong>输出详细的信息，通常用于问题诊断。在开发和测试阶段非常有用，但在生产环境中可能会产生大量日志。</li>
+  <li><strong>INFO：级别20，</strong>输出一般性的信息，如程序运行的状态、处理进度等。适合在生产环境中提供程序运行的概览。</li>
+  <li><strong>WARNING</strong>：<strong>级别</strong>30，输出潜在的问题，但不会立即影响程序运行。例如，当某个操作可能不是最优解或者某些条件未满足时。</li>
+  <li><strong>ERROR</strong>：<strong>级别</strong>40，输出由于严重问题导致的错误，这些错误可能会影响程序的部分功能，但不会导致程序完全停止。</li>
+  <li><strong>CRITICAL</strong>：<strong>级别</strong>50，输出非常严重的问题，如程序无法继续运行的情况。这是最高级别的日志，通常用于报告紧急情况。</li>
+  <li><strong>设置日志的格式</strong>，包括时间戳、日志级别、消息等。日志格式是通过Formatter类来设置的，它允许你指定日志消息的布局。</li>
+  <li>%(name)s: 显示日志器的名字。</li>
+  <li>%(levelno)s: 显示日志级别数字。</li>
+  <li>%(levelname)s: 显示日志级别名称（如INFO、ERROR等）。</li>
+  <li>%(pathname)s: 显示日志消息定义的文件的完整路径。</li>
+  <li>%(filename)s: 显示日志消息定义的文件的名称。</li>
+  <li>%(module)s: 显示包含日志消息的模块的名称。</li>
+  <li>%(lineno)d: 显示日志消息定义的代码行号。</li>
+  <li>%(funcName)s: 显示日志消息定义的函数的名称。</li>
+  <li>%(created)f: 显示当前的时间戳。</li>
+  <li>%(asctime)s: 显示时间，格式为%Y-%m-%d %H:%M:%S,uuu。</li>
+  <li>%(msecs)d: 显示毫秒。</li>
+  <li>%(relativeCreated)d: 显示自Logger创建以来的毫秒数。</li>
+  <li>%(thread)d: 显示线程ID。</li>
+  <li>%(threadName)s: 显示线程的名称。</li>
+  <li>%(process)d: 显示进程ID。</li>
+  <li>%(message)s: 显示日志消息。
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nc">Formatter</span><span class="p">(</span><span class="sh">'</span><span class="s">%(asctime)s - %(name)s - %(levelname)s - %(message)s</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>设置日志的输出位置。</strong>​
+​</li>
+</ul>
+
+<h1 id="2日志创建示例">2、日志创建示例</h1>
+<h2 id="21快速路创建日志">2.1、快速路创建日志</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nf">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="c1"># 日志设置
+</span><span class="n">logging</span><span class="p">.</span><span class="nf">basicConfig</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="sh">'</span><span class="s">./log.txt</span><span class="sh">'</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="p">.</span><span class="n">DEBUG</span><span class="p">,</span>
+                    <span class="nb">format</span><span class="o">=</span><span class="sh">'</span><span class="s">%(asctime)s -  %(filename)s - %(levelname)s - %(message)s</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">logging</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="sh">'</span><span class="s">This is debug message</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># 添加控制台输出
+</span><span class="n">console_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nc">StreamHandler</span><span class="p">()</span>
+<span class="n">console_handler</span><span class="p">.</span><span class="nf">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="p">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nc">Formatter</span><span class="p">(</span><span class="sh">'</span><span class="s">%(asctime)s - %(filename)s - %(levelname)s - %(message)s</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># 为控制台handler设置formatter
+</span><span class="n">console_handler</span><span class="p">.</span><span class="nf">setFormatter</span><span class="p">(</span><span class="n">formatter</span><span class="p">)</span>
+<span class="n">logger</span><span class="p">.</span><span class="nf">addHandler</span><span class="p">(</span><span class="n">console_handler</span><span class="p">)</span>
+
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="c1"># logging.info("this is a test")
+</span>    <span class="n">logger</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">tets</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="22基于配置文件进行创建">2.2、基于配置文件进行创建</h2>
+<p>​</p>
+<h3 id="221配置文件config_logyaml">2.2.1、配置文件：config_log.yaml</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">logging</span><span class="pi">:</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">disable_existing_loggers</span><span class="pi">:</span> <span class="kc">true</span>
+
+  <span class="na">root</span><span class="pi">:</span>
+    <span class="na">level</span><span class="pi">:</span> <span class="s">DEBUG</span>
+    <span class="na">handlers</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">console</span><span class="pi">,</span> <span class="nv">logfile</span><span class="pi">]</span>
+
+  <span class="na">loggers</span><span class="pi">:</span>
+    <span class="na">model</span><span class="pi">:</span>
+      <span class="na">level</span><span class="pi">:</span> <span class="s">DEBUG</span>
+      <span class="na">handlers</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">console</span><span class="pi">,</span> <span class="nv">logfile</span><span class="pi">]</span>
+      <span class="na">propagate</span><span class="pi">:</span> <span class="kc">false</span>
+
+  <span class="na">handlers</span><span class="pi">:</span>
+    <span class="na">logfile</span><span class="pi">:</span>
+      <span class="na">class</span><span class="pi">:</span> <span class="s">logging.FileHandler</span>
+      <span class="na">filename</span><span class="pi">:</span> <span class="s">None</span>
+      <span class="na">mode</span><span class="pi">:</span> <span class="s">a</span>
+      <span class="na">formatter</span><span class="pi">:</span> <span class="s">fileFormatter</span>
+      <span class="na">level</span><span class="pi">:</span> <span class="s">DEBUG</span>
+
+    <span class="na">console</span><span class="pi">:</span>
+      <span class="na">class</span><span class="pi">:</span> <span class="s">logging.StreamHandler</span>
+      <span class="na">stream</span><span class="pi">:</span> <span class="s">ext://sys.stdout</span>
+      <span class="na">formatter</span><span class="pi">:</span> <span class="s">simpleFormatter</span>
+      <span class="c1">#level: WARNING</span>
+      <span class="na">level</span><span class="pi">:</span>  <span class="s">INFO</span>
+
+  <span class="na">formatters</span><span class="pi">:</span>
+    <span class="na">simpleFormatter</span><span class="pi">:</span>
+      <span class="na">class</span><span class="pi">:</span> <span class="s">logging.Formatter</span>
+      <span class="na">format</span><span class="pi">:</span> <span class="s1">'</span><span class="s">%(asctime)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(levelname)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(name)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(message)s'</span>
+      <span class="na">datefmt</span><span class="pi">:</span> <span class="s1">'</span><span class="s">%Y-%m-%d</span><span class="nv"> </span><span class="s">%H:%M:%S'</span>
+
+    <span class="na">fileFormatter</span><span class="pi">:</span>
+      <span class="na">class</span><span class="pi">:</span> <span class="s">logging.Formatter</span>
+      <span class="na">format</span><span class="pi">:</span> <span class="s1">'</span><span class="s">%(asctime)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(levelname)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(name)s</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">%(message)s'</span>
+      <span class="na">datefmt</span><span class="pi">:</span> <span class="s1">'</span><span class="s">%Y-%m-%d</span><span class="nv"> </span><span class="s">%H:%M:%S'</span>
+</code></pre></div></div>
+
+<h3 id="222日志创建">2.2.2、日志创建</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">yaml</span>
+<span class="kn">import</span> <span class="n">logging</span>
+<span class="kn">import</span> <span class="n">logging.config</span>
+<span class="kn">import</span> <span class="n">sys</span>
+<span class="kn">from</span> <span class="n">log_test</span> <span class="kn">import</span> <span class="n">function_test</span>
+
+<span class="n">LOGGING_CONF_FILE_NAME</span> <span class="o">=</span> <span class="sh">'</span><span class="s">config.yaml</span><span class="sh">'</span>
+<span class="n">TOURMODEL_LOGGER</span> <span class="o">=</span> <span class="sh">"</span><span class="s">model</span><span class="sh">"</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nf">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">config_logger</span><span class="p">(</span><span class="n">outpath</span><span class="p">,</span> <span class="n">log_name</span><span class="p">,</span> <span class="n">basic</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+        配置日志文件，并输出开始信息
+
+        :param outpath: 项目输出位置
+        :param log_name: 日志文件名
+        :param basic: 需要已拼接，默认否
+        :return: None
+        </span><span class="sh">"""</span>
+    <span class="n">log_config_file</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">basic</span><span class="p">:</span>
+        <span class="n">log_config_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">outpath</span><span class="p">,</span> <span class="n">LOGGING_CONF_FILE_NAME</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="se">\\</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">)</span>
+        <span class="c1"># log_config_file = "./" + LOGGING_CONF_FILE_NAME
+</span>        <span class="c1"># print(log_config_file)
+</span>        <span class="k">if</span> <span class="n">log_config_file</span><span class="p">:</span>
+            <span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">log_config_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">config_dict</span> <span class="o">=</span> <span class="n">yaml</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="p">.</span><span class="n">UnsafeLoader</span><span class="p">)</span>
+                <span class="n">config_dict</span> <span class="o">=</span> <span class="n">config_dict</span><span class="p">[</span><span class="sh">'</span><span class="s">logging</span><span class="sh">'</span><span class="p">]</span>
+                <span class="n">config_dict</span><span class="p">.</span><span class="nf">setdefault</span><span class="p">(</span><span class="sh">'</span><span class="s">version</span><span class="sh">'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="n">config_dict</span><span class="p">[</span><span class="sh">"</span><span class="s">handlers</span><span class="sh">"</span><span class="p">][</span><span class="sh">"</span><span class="s">logfile</span><span class="sh">"</span><span class="p">][</span><span class="sh">"</span><span class="s">filename</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">log_name</span>  <span class="c1"># 根据任务名创建日志文件
+</span>
+                <span class="n">logging</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="nf">dictConfig</span><span class="p">(</span><span class="n">config_dict</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logging</span><span class="p">.</span><span class="nf">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="p">.</span><span class="n">INFO</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">)</span>
+
+        <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nf">getLogger</span><span class="p">(</span><span class="n">TOURMODEL_LOGGER</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">log_config_file</span><span class="p">:</span>
+            <span class="n">logger</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">Read logging configuration from: %s</span><span class="sh">"</span> <span class="o">%</span> <span class="n">log_config_file</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Configured logging using basicConfig</span><span class="sh">"</span><span class="p">)</span>
+            <span class="n">logger</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">Configured logging using basicConfig</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">out_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">../python-工程应用/2-python日志记录/</span><span class="sh">"</span>
+    <span class="nf">config_logger</span><span class="p">(</span><span class="n">out_path</span><span class="p">,</span> <span class="sh">"</span><span class="s">log.txt</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">function_test</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<ul>
+  <li>其他文件引用
+```python
+import logging</li>
+</ul>
+
+<p>def function_test():
+    “函数测试”
+    logging.info(“this is a test in other file”)
+```</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/mul-threads/" class="pagination--pager" title="多线程管理
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/minio/" class="pagination--pager" title="minio文件传输
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

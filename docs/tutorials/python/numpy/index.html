@@ -1,0 +1,470 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>numpy应用 - 技术博客</title>
+<meta name="description" content="1、numpy介绍">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="numpy应用">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/numpy/">
+
+
+  <meta property="og:description" content="1、numpy介绍">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/numpy/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/" class="active">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="numpy应用">
+    <meta itemprop="description" content="1、numpy介绍">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/numpy/" itemprop="url">numpy应用
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1numpy介绍">1、numpy介绍</a></li><li><a href="#2numpy库的安装与使用">2、numpy库的安装与使用</a></li><li><a href="#3数学操作">3、数学操作</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="1numpy介绍">1、numpy介绍</h2>
+
+<p>pandas的操作就像excel进行数据处理一样，而numpy则是专注了数值计算。</p>
+
+<h2 id="2numpy库的安装与使用">2、numpy库的安装与使用</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span>
+<span class="n">impor</span>
+</code></pre></div></div>
+
+<h2 id="3数学操作">3、数学操作</h2>
+<ul>
+  <li>数据创建
+```python
+import numpy as np
+a = np.array([1,2,3])
+print(a)</li>
+</ul>
+
+<h1 id="创建特殊数组">创建特殊数组</h1>
+<p>b = np.zeros((3,5))
+ones_array = np.ones((2, 2))</p>
+
+<p>full_array = np.full((2, 2), 8)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 数据切片
+- 数组形状修改
+```python
+reshaped_array = a.reshape((1, 5))
+</code></pre></div></div>
+<ul>
+  <li>元素级别的加法、数组乘法，矩阵乘法
+```python
+    <h1 id="元素级别的加法">元素级别的加法</h1>
+    <p>c = a + 10
+print(c)</p>
+  </li>
+</ul>
+
+<h1 id="数组乘法元素级别">数组乘法（元素级别）</h1>
+<p>d = a * b
+print(d)</p>
+
+<h1 id="矩阵乘法">矩阵乘法</h1>
+<p>e = np.dot(b, b.T)  # b 和 b 的转置的点积
+print(e)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 统计运算：均值，方差，求和
+```python
+# 计算平均值
+mean_value = np.mean(a)
+print(mean_value)
+
+# 计算标准差
+std_dev = np.std(a)
+print(std_dev)
+
+# 计算最大值和最小值
+max_value = np.max(a)
+min_value = np.min(a)
+print(max_value)
+print(min_value)
+</code></pre></div></div>
+<ul>
+  <li>线性代数
+```python
+    <h1 id="计算矩阵的逆">计算矩阵的逆</h1>
+    <p>inverse_b = np.linalg.inv(b)
+print(inverse_b)</p>
+  </li>
+</ul>
+
+<h1 id="计算矩阵的行列式">计算矩阵的行列式</h1>
+<p>det_b = np.linalg.det(b)
+print(det_b)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 随机数生成
+```python
+# 生成一个随机整数数组
+random_ints = np.random.randint(0, 10, size=(3, 3))
+print(random_ints)
+
+# 生成一个标准正态分布的随机数数组
+random_normals = np.random.randn(3, 3)
+print(random_normals)
+</code></pre></div></div>
+<ul>
+  <li>文件输入输出
+```python
+    <h1 id="保存数组到文件">保存数组到文件</h1>
+    <p>np.save(‘array.npy’, a)</p>
+  </li>
+</ul>
+
+<h1 id="从文件加载数组">从文件加载数组</h1>
+<p>loaded_array = np.load(‘array.npy’)
+print(loaded_array)
+```</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/pandas/" class="pagination--pager" title="pandas应用
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/matlpotlib/" class="pagination--pager" title="matlpotlib可视化
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

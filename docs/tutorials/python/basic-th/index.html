@@ -1,0 +1,660 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>环境配置 - 技术博客</title>
+<meta name="description" content="python 程序开发过程">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="环境配置">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/basic-th/">
+
+
+  <meta property="og:description" content="python 程序开发过程">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/basic-th/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/" class="active">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="环境配置">
+    <meta itemprop="description" content="python 程序开发过程">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/basic-th/" itemprop="url">环境配置
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#python-程序开发过程">python 程序开发过程</a><ul><li><a href="#python编译器选择">python编译器选择</a></li><li><a href="#python解释器选择">python解释器选择</a></li></ul></li><li><a href="#三方包安装">三方包安装</a><ul><li><a href="#终端操作">终端操作</a></li><li><a href="#镜像环境">镜像环境</a></li></ul></li><li><a href="#编码规范与工程管理">编码规范与工程管理</a><ul><li><a href="#编码规范">编码规范</a></li><li><a href="#工程目录管理推荐">工程目录管理推荐</a></li><li><a href="#模块依赖关系">模块依赖关系</a></li><li><a href="#如何正确导入包中的函数">如何正确导入包中的函数？</a></li><li><a href="#如何导入相关目录下的函数">如何导入相关目录下的函数？</a></li></ul></li><li><a href="#程序打包与封装">程序打包与封装</a><ul><li><a href="#封装工具pyinstaller">封装工具:pyinstaller</a><ul><li><a href="#安装">安装</a></li><li><a href="#使用">使用</a></li><li><a href="#生成带文件目录的可执行程序">生成带文件目录的可执行程序</a></li><li><a href="#添加软件图标">添加软件图标</a></li></ul></li><li><a href="#生成单个文件">生成单个文件</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="python-程序开发过程">python 程序开发过程</h1>
+
+<p>python程序的执行过程可分为3步，首先是源代码编写，其次是程序编译与执行，最后的程序的封装与打包。</p>
+
+<p><img src="/assets/images/python/python-process.JPG" alt="程序开发过程" /></p>
+
+<ul>
+  <li>在源代码编写阶段需要选择合适的编译器，选择解释器版本，设计好自己的工程目录。</li>
+  <li>编译阶段，会通过解析器将源码转化为字节码，再有虚拟机将字节码转化为机器语言，最后才在硬件上运行。与编译性语言（c/c++）相比，多出了编译和链接的过程，性能会下降；Python并不是每次都需要转换字节码，解释器在转换之前会判断代码文件的修改时间是否与上一次转换后的字节码pyc文件的修改时间一致，若不一致才会重新转换。</li>
+  <li>程序执行完以后，进行程序封装与打包，根据使用场景，进行不同的代码管理。其中或涉及程序封装，程序加密，版本管理等操作。</li>
+</ul>
+
+<h2 id="python编译器选择">python编译器选择</h2>
+<ul>
+  <li>PyCharm：
+    <ul>
+      <li>优点：
+        <ul>
+          <li>支持智能代码补全、语法高亮和错误提示等功能。</li>
+          <li>内置调试工具和版本控制功能，便于团队协作和代码调试。</li>
+          <li>集成了很多第三方插件和库，支持多种Python Web框架。</li>
+        </ul>
+      </li>
+      <li>缺点：
+        <ul>
+          <li>相比其他Python IDE，PyCharm较为笨重，需要一定的计算机性能和内存支持。</li>
+          <li>部分功能需要付费使用。</li>
+        </ul>
+      </li>
+      <li>教程：<a href="https://www.jetbrains.com/help/pycharm/">PyCharm官方文档</a></li>
+    </ul>
+  </li>
+  <li>Visual Studio Code (VSCode)：
+    <ul>
+      <li>优点：
+        <ul>
+          <li>轻量级的文本编辑器，支持多种编程语言，功能丰富。</li>
+          <li>支持自定义快捷键和主题。</li>
+          <li>内置Python插件，支持调试、智能补全、代码重构等功能。</li>
+        </ul>
+      </li>
+      <li>缺点：
+        <ul>
+          <li>对于Python开发来说，有些功能不够完善，如自动导入等。</li>
+          <li>不支持像PyCharm一样的智能提示。</li>
+        </ul>
+      </li>
+      <li>
+        <p>教程：<a href="https://code.visualstudio.com/">VSCode官方文档</a></p>
+      </li>
+      <li>Jupyter Notebook：
+        <ul>
+          <li>优点：
+            <ul>
+              <li>交互性强，可以边编写代码边做数据分析和可视化。</li>
+              <li>有丰富的扩展库，支持多种数据科学和机器学习任务。</li>
+              <li>便于与其他人分享笔记本和代码。</li>
+            </ul>
+          </li>
+          <li>缺点：
+            <ul>
+              <li>对于大型项目的开发来说，不太方便。</li>
+              <li>不适用于生产环境。</li>
+            </ul>
+          </li>
+          <li>教程：<a href="https://jupyter.org/">Jupyter官方文档</a></li>
+        </ul>
+      </li>
+      <li>Spyder：
+        <ul>
+          <li>优点：
+            <ul>
+              <li>专门针对数据科学和计算机模拟等领域开发，集成了很多科学计算相关的库。</li>
+              <li>内置调试工具和变量查看器等功能。</li>
+            </ul>
+          </li>
+          <li>缺点：
+            <ul>
+              <li>界面较为简单，可能不够美观和友好。</li>
+            </ul>
+          </li>
+          <li>教程：<a href="https://www.spyder-ide.org/">Spyder官方文档</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>笔者最开始使用的是spyder，现在基本都以pycharm和jupyter notebook为主。</p>
+<ul>
+  <li>入门学习推荐spyder和jupyter notebook,可以随时查看变量的值，方便调试，基础环境包较多，覆盖较多场景;</li>
+  <li>需求不明确，需要边写边测边分析，建议jupyter notebook；</li>
+  <li>工程化应用，需求复杂，需要打包上架，版本管理等，建议pycharm与VSCode。
+使用教程除了官方文库外，可参考如下：</li>
+  <li><a href="https://mp.weixin.qq.com/s/pGK7jsyp00j95YvFAJDDOw">jupyter教程</a></li>
+  <li><a href="https://mp.weixin.qq.com/s/IhFtosWjOhZ5cJ77X7XYfg">pycharm教程</a></li>
+  <li><a href="https://mp.weixin.qq.com/s/wAV4ulCthQPnbypDfhQczg">spyder教程</a></li>
+</ul>
+
+<h2 id="python解释器选择">python解释器选择</h2>
+<p>python过去一共有两个大的版本，python2和python3,两个无法兼容,现python2已经停止更新，建议使用python3.8及以上。
+当创建一个工程项目时，需要安装不同的三方包，若所有的工程都使用同一个解释器，项目变多，三方包就会特别多，很容易出现不同的包之间互相冲突，因此需要进行解释器环境管理。
+解释器环境分为本地真实环境和虚拟环境。</p>
+<ul>
+  <li>真实环境指真实下载安装的python，一般是下载的安装包直接安装路径，如果安装在项目工程目录下，可以随项目工程打包带走，适用于单机版软件，更换设备时无需环境配置。</li>
+  <li>虚拟的环境是创建隔离的Python，它允许你为每个项目创建一个独立的环境，从而避免不同项目之间的依赖冲突。虚拟环境的创建和管理方式与编译器软件有关，一般会选择基础编译器（真实环境下安装包安装位置），在基础编译器基础上进行三方包管理，不同工程项目的虚拟环境相互隔离，不会产生冲突。笔者习惯创建纯净版真实环境下的python包，并以它作为基础，作为其他项目虚拟环境创建基础。</li>
+</ul>
+
+<h1 id="三方包安装">三方包安装</h1>
+
+<h2 id="终端操作">终端操作</h2>
+<p>需要确定pip的位置，cmd进入终端，直接使用pip安装，一般会直接调用根目录的python环境中的pip，即加入环境变量中的python包，实际操作中，需调用时候环境下的pip，一般在/venv/Scripts下。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cd</span> <span class="n">venv</span><span class="o">/</span><span class="n">Scripts</span> <span class="c1"># 进入待安装环境下的目录
+</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>  <span class="c1"># 安装pandas
+</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.18</span><span class="p">.</span><span class="mi">0</span>  <span class="c1"># 指定pandas的版本
+</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span> <span class="o">-</span><span class="n">i</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">aliyun</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span>  <span class="c1"># 如果安装速度太慢，指定国内镜像源
+</span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span> <span class="c1"># 安装 requirements.txt 中的依赖
+</span>
+<span class="n">pip</span> <span class="nb">list</span>  <span class="c1"># 列出已经安装的包
+</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">package_name</span>  <span class="c1"># 使用conda 进行管理安装，需先激活conda环境
+</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">*</span><span class="p">.</span><span class="n">whl</span>  <span class="c1"># 安装下载到本地的
+# github下，三方包的安装，
+</span><span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h2 id="镜像环境">镜像环境</h2>
+<p>如果直接安装速度慢，可以尝试替换镜像源，镜像源可以参考如下：</p>
+<ul>
+  <li>清华镜像站：<a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></li>
+  <li>阿里云镜像站：<a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a></li>
+  <li>中科大镜像站：<a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+  <li>中国科技大学镜像站：<a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+  <li>中国科学技术大学镜像站：<a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></li>
+</ul>
+
+<h1 id="编码规范与工程管理">编码规范与工程管理</h1>
+
+<h2 id="编码规范">编码规范</h2>
+<p>python 源代码的编写具有一套强制性规则，像对齐，变量定义的风格，函数参数的顺序等，可以参考<a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>。</p>
+
+<h2 id="工程目录管理推荐">工程目录管理推荐</h2>
+
+<pre><code class="language-plain">project_name/
+|--data  # 存放数据，输入和输出数据
+|--doc  # 文档记录
+|--source/  # 源代码
+|  |-- module1/  # 模块1
+|  |  |--__init__.py
+|  |  |--module1_1.py  # 含有函数function1()
+|  |  |--modele1_2.py  # 含有函数function2()
+|  |--module2/  # 模块2
+|  |  |--__init__.py
+|  |  |--module2_1.py  # 含有函数function3()
+|  |  |--module2_2.py  # 含有函数function4()
+|  |--main.py  # 程序入口
+|--test  # 测试脚本
+|--venv  # 工程环境
+|--readme.md  # 工程说明
+</code></pre>
+
+<h2 id="模块依赖关系">模块依赖关系</h2>
+<h2 id="如何正确导入包中的函数">如何正确导入包中的函数？</h2>
+<p>假设 module1目录下__init__.py文件内容如下：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">.module1_1</span> <span class="kn">import</span> <span class="n">function1</span>
+<span class="kn">from</span> <span class="n">.module1_2</span> <span class="kn">import</span> <span class="n">function2</span>
+</code></pre></div></div>
+<p>module2目录下的__init__.py文件内容如下：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">.module2_1</span> <span class="kn">import</span> <span class="n">function3</span>
+<span class="kn">from</span> <span class="n">.module2_2</span> <span class="kn">import</span> <span class="n">function4</span>
+</code></pre></div></div>
+
+<p>则在main.py文件中可直接导入函数function1,function2,function3,function4</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">form</span> <span class="n">module1</span> <span class="kn">import</span> <span class="n">function1</span><span class="p">,</span><span class="n">function2</span>
+<span class="n">form</span> <span class="n">module2</span> <span class="kn">import</span> <span class="n">function3</span><span class="p">,</span><span class="n">function4</span>
+
+<span class="nf">function1</span><span class="p">()</span>
+<span class="nf">function2</span><span class="p">()</span>
+</code></pre></div></div>
+<p>加入在source下的一级目录加上__init__(),即将source当成一个包，则可在__init__()中加上</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">.module1</span> <span class="kn">import</span> <span class="n">function1</span><span class="p">,</span><span class="n">function2</span>
+<span class="kn">from</span> <span class="n">.module2</span> <span class="kn">import</span> <span class="n">function3</span><span class="p">,</span><span class="n">function4</span>
+</code></pre></div></div>
+<p>则可直接在直接：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">form</span> <span class="n">source</span> <span class="kn">import</span>  <span class="n">function1</span><span class="p">,</span><span class="n">function2</span><span class="p">,</span> <span class="n">function3</span><span class="p">,</span><span class="n">function4</span>
+</code></pre></div></div>
+
+<h2 id="如何导入相关目录下的函数">如何导入相关目录下的函数？</h2>
+<p>即module1_1.py中导入module2_2.py 中的函数function4()</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 错误导入方式
+</span><span class="kn">from</span> <span class="n">..module2</span> <span class="kn">import</span> <span class="n">function4</span>
+<span class="kn">from</span> <span class="n">..module2.module2_2</span> <span class="kn">import</span> <span class="n">function4</span>
+<span class="kn">from</span> <span class="n">source</span> <span class="kn">import</span> <span class="n">function4</span>
+
+<span class="nb">ImportError</span><span class="p">:</span> <span class="n">attempted</span> <span class="n">relative</span> <span class="kn">import</span> <span class="n">with</span> <span class="n">no</span> <span class="n">known</span> <span class="n">parent</span> <span class="n">package</span>
+
+<span class="c1"># 可行方式
+</span><span class="kn">from</span> <span class="n">source.module2.module2_2</span> <span class="kn">import</span> <span class="n">function4</span>
+<span class="kn">from</span> <span class="n">source.module2</span> <span class="kn">import</span> <span class="n">function4</span>
+</code></pre></div></div>
+
+<h1 id="程序打包与封装">程序打包与封装</h1>
+
+<p>项目打包分为两种类型：
+● 单文件类型，即所有源代码，依赖包都打包进exe文件中；迁移拷贝都只有一个文件；
+● 文件夹类型，封装源代码和依赖文件。</p>
+
+<h2 id="封装工具pyinstaller">封装工具:pyinstaller</h2>
+<h3 id="安装">安装</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">pyinstaller</span>
+</code></pre></div></div>
+
+<h3 id="使用">使用</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyinstaller</span> <span class="n">run</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div></div>
+<p>上述code会在工作目录生成build、dist文件夹和run.spec文件。</p>
+<ul>
+  <li>build目录，存放日志文件和工作文件</li>
+  <li>dist目录，存放可执行文件</li>
+  <li>run.spec,配置文件</li>
+</ul>
+
+<h3 id="生成带文件目录的可执行程序">生成带文件目录的可执行程序</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">-</span> <span class="n">pyinstall</span> <span class="o">-</span><span class="n">D</span> <span class="n">run</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div></div>
+<p>假如程序中依赖相关文件，或者含有外部数据，可在*.spec文件中进行修改
+主要修改参数：</p>
+<ul>
+  <li>datas：</li>
+  <li>pathex：</li>
+</ul>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+a = Analysis(
+    ['run.py'],
+    pathex=['E:/pycharm_app/yolo-app/'],
+    binaries=[],
+    datas=[('source/img/ui2.jpg',"source/img")],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+</code></pre></div></div>
+
+<h3 id="添加软件图标">添加软件图标</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyinstaller</span> <span class="o">--</span><span class="n">icon</span><span class="o">=</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">icon</span><span class="p">.</span><span class="n">ico</span> <span class="o">--</span><span class="n">onefile</span> <span class="n">your_script</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div></div>
+<p>或者直接写入spec文件：icon=”doc/ui.ico”</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+exe = EXE(
+    pyz,
+    a.scripts,
+    [],
+    exclude_binaries=True,
+    name='run',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    console=True,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon="doc/ui.ico"
+)
+
+</code></pre></div></div>
+<p>指定可执行文件生成位置：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">--</span><span class="n">distpath</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folderpyinstaller</span> <span class="o">--</span><span class="n">distpath</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span> <span class="n">your_script</span><span class="p">.</span><span class="n">spec</span>
+</code></pre></div></div>
+
+<h2 id="生成单个文件">生成单个文件</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pyinstall</span> <span class="o">-</span><span class="n">F</span> <span class="n">run</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/delixinxi/" class="pagination--pager" title="基础语法
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/basic-yufa/" class="pagination--pager" title="基础语法
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

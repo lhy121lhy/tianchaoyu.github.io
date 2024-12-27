@@ -1,0 +1,516 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>minio文件传输 - 技术博客</title>
+<meta name="description" content="MinIO是一个高性能的分布式对象存储系统，它兼容Amazon S3云存储服务接口，非常适合于存储大容量非结构化的数据，例如图片、视频、日志文件、备份数据和容器/虚拟机镜像等">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="minio文件传输">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/minio/">
+
+
+  <meta property="og:description" content="MinIO是一个高性能的分布式对象存储系统，它兼容Amazon S3云存储服务接口，非常适合于存储大容量非结构化的数据，例如图片、视频、日志文件、备份数据和容器/虚拟机镜像等">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/minio/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/" class="active">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="minio文件传输">
+    <meta itemprop="description" content="MinIO是一个高性能的分布式对象存储系统，它兼容Amazon S3云存储服务接口，非常适合于存储大容量非结构化的数据，例如图片、视频、日志文件、备份数据和容器/虚拟机镜像等">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/minio/" itemprop="url">minio文件传输
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#minio服务安装与启动">minIO服务安装与启动</a></li><li><a href="#基于python的在线文件传输">基于python的在线文件传输</a></li></ul>
+            </nav>
+          </aside>
+        
+        <p>MinIO是一个高性能的分布式对象存储系统，它兼容Amazon S3云存储服务接口，非常适合于存储大容量非结构化的数据，例如图片、视频、日志文件、备份数据和容器/虚拟机镜像等</p>
+
+<h1 id="minio服务安装与启动">minIO服务安装与启动</h1>
+
+<p>参考教程<a href="https://min.io/docs/minio/windows/index.html">minio安装</a></p>
+
+<h1 id="基于python的在线文件传输">基于python的在线文件传输</h1>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># -*- coding: UTF-8 -*-
+</span><span class="sh">"""</span><span class="s">
+Created on 2021 - 12 - 15
+# @ 功能：
+    从minio上传和下载文件
+# @author: lhy
+# @file: get_file_from_minio.py
+# @time: 2021/12/15 15:39
+# @email: 742232975@qq.com
+</span><span class="sh">"""</span>
+
+<span class="kn">from</span> <span class="n">minio</span> <span class="kn">import</span> <span class="n">Minio</span>
+<span class="kn">from</span> <span class="n">minio.error</span> <span class="kn">import</span> <span class="n">ResponseError</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">traceback</span>
+<span class="kn">import</span> <span class="n">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nf">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+
+<span class="n">HOST</span> <span class="o">=</span> <span class="sh">"</span><span class="s">*.*.*.*</span><span class="sh">"</span>
+<span class="n">USERNAME</span> <span class="o">=</span> <span class="sh">"</span><span class="s">***</span><span class="sh">"</span>
+<span class="n">PASSWORD</span> <span class="o">=</span> <span class="sh">"</span><span class="s">***</span><span class="sh">"</span>
+<span class="n">POER</span> <span class="o">=</span> <span class="sh">"</span><span class="s">***</span><span class="sh">"</span>
+
+
+<span class="n">minio_conf</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">endpoint</span><span class="sh">"</span><span class="p">:</span> <span class="sh">'</span><span class="s">*****</span><span class="sh">'</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">access_key</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">****</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">secret_key</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">****</span><span class="sh">"</span><span class="p">,</span>
+    <span class="sh">"</span><span class="s">secure</span><span class="sh">"</span><span class="p">:</span> <span class="bp">False</span>
+<span class="p">}</span>
+
+
+<span class="k">class</span> <span class="nc">MinioObject</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">网络</span><span class="sh">"""</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">minio_conf</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">minio_conf</span> <span class="o">=</span> <span class="n">minio_conf</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">minio_client</span> <span class="o">=</span> <span class="nc">Minio</span><span class="p">(</span><span class="n">minio_conf</span><span class="p">[</span><span class="sh">"</span><span class="s">endpoint</span><span class="sh">"</span><span class="p">],</span>
+                                  <span class="n">access_key</span><span class="o">=</span><span class="sh">"</span><span class="s">admin</span><span class="sh">"</span><span class="p">,</span>
+                                  <span class="n">secret_key</span><span class="o">=</span><span class="sh">"</span><span class="s">admin12345</span><span class="sh">"</span><span class="p">,</span>
+                                  <span class="n">secure</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">bucket_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">file-manage</span><span class="sh">"</span>
+        <span class="n">self</span><span class="p">.</span><span class="nf">check_bucket</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">check_bucket</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="n">check_exist</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">minio_client</span><span class="p">.</span><span class="nf">bucket_exists</span><span class="p">(</span><span class="sh">"</span><span class="s">file-manage</span><span class="sh">"</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">check_exist</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">minio_client</span><span class="p">.</span><span class="nf">make_bucket</span><span class="p">(</span><span class="sh">"</span><span class="s">model</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">upload_file</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">object_name</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">
+        上传文件
+        :param file_path:存储对象名称
+        :param file_name:本地文件对象
+        :return:
+        </span><span class="sh">"""</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">minio_client</span><span class="p">.</span><span class="nf">fput_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_name</span><span class="o">=</span><span class="n">object_name</span><span class="p">,</span><span class="n">file_path</span><span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">some error work</span><span class="sh">"</span><span class="p">,</span><span class="n">ex</span><span class="p">.</span><span class="n">message</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">upload failed</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">download_file</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="n">object_name</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">
+        下载文件
+        :param object_name:服务器名称
+        :param file_path:本地文件名称
+        :return:
+        </span><span class="sh">"""</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">minio_client</span><span class="p">.</span><span class="nf">fget_object</span><span class="p">(</span><span class="n">bucket_name</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="n">bucket_name</span><span class="p">,</span> <span class="n">object_name</span><span class="o">=</span><span class="n">object_name</span><span class="p">,</span> <span class="n">file_path</span> <span class="o">=</span><span class="n">file_path</span><span class="p">)</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">some error work</span><span class="sh">"</span><span class="p">,</span> <span class="n">ex</span><span class="p">.</span><span class="n">message</span><span class="p">)</span>
+            <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">download failed</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">download_file_from_minio</span><span class="p">(</span><span class="n">load_file_name</span><span class="p">,</span><span class="n">configs_path</span><span class="p">,</span> <span class="n">dict_option</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    下载文件到本地
+    :param load_file_name:下载文件名称
+    :param configs_path:本地路径
+    :param dict_option:任务ID
+    :return:
+    </span><span class="sh">"""</span>
+
+    <span class="n">minio</span> <span class="o">=</span> <span class="nc">MinioObject</span><span class="p">(</span><span class="n">minio_conf</span><span class="p">)</span>
+    <span class="n">start_file</span> <span class="o">=</span> <span class="sh">"</span><span class="s">model/</span><span class="sh">"</span><span class="o">+</span><span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">dict_option</span><span class="p">[</span><span class="sh">"</span><span class="s">userId</span><span class="sh">"</span><span class="p">],</span> <span class="n">dict_option</span><span class="p">[</span><span class="sh">"</span><span class="s">taskId</span><span class="sh">"</span><span class="p">],</span> <span class="sh">"</span><span class="s">input</span><span class="sh">"</span><span class="p">,</span> <span class="n">load_file_name</span><span class="p">])</span>
+    <span class="n">end_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">configs_path</span><span class="p">,</span> <span class="n">load_file_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nf">check_file_exist</span><span class="p">(</span><span class="n">start_file</span><span class="p">):</span>
+        <span class="c1"># print("the file is not exist in minio",start_file)
+</span>        <span class="n">logging</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">the file {} not exist in minio</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">load_file_name</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">logging</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">down file {} in minio</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">load_file_name</span><span class="p">))</span>
+        <span class="n">minio</span><span class="p">.</span><span class="nf">download_file</span><span class="p">(</span><span class="n">object_name</span><span class="o">=</span><span class="n">start_file</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">end_file</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">upload_file_to_minio</span><span class="p">(</span><span class="n">load_file_name</span><span class="p">,</span><span class="n">report_path</span><span class="p">,</span> <span class="n">dict_option</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">(output_file[</span><span class="sh">"</span><span class="s">mode_choice_report</span><span class="sh">"</span><span class="s">], self.report_path, get_json
+    上传文件到指定位置
+    :param ftp_file_path:
+    :param dst_file_path:
+    :return:
+    </span><span class="sh">"""</span>
+    <span class="n">minio</span> <span class="o">=</span> <span class="nc">MinioObject</span><span class="p">(</span><span class="n">minio_conf</span><span class="p">)</span>
+    <span class="n">end_path</span> <span class="o">=</span> <span class="sh">"</span><span class="s">model/</span><span class="sh">"</span> <span class="o">+</span> <span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">dict_option</span><span class="p">[</span><span class="sh">"</span><span class="s">userId</span><span class="sh">"</span><span class="p">],</span> <span class="n">dict_option</span><span class="p">[</span><span class="sh">"</span><span class="s">taskId</span><span class="sh">"</span><span class="p">],</span> <span class="sh">"</span><span class="s">output</span><span class="sh">"</span><span class="p">,</span> <span class="n">dict_option</span><span class="p">[</span><span class="sh">"</span><span class="s">subTaskId</span><span class="sh">"</span><span class="p">],</span><span class="n">load_file_name</span><span class="p">])</span>
+    <span class="n">start_path</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">report_path</span><span class="p">,</span> <span class="n">load_file_name</span><span class="p">)</span>
+    <span class="n">logging</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="sh">"</span><span class="s">upload file：{} to minio</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">load_file_name</span><span class="p">))</span>
+    <span class="n">minio</span><span class="p">.</span><span class="nf">upload_file</span><span class="p">(</span><span class="n">object_name</span><span class="o">=</span><span class="n">end_path</span><span class="p">,</span> <span class="n">file_path</span><span class="o">=</span><span class="n">start_path</span><span class="p">)</span>
+
+
+    <span class="k">def</span> <span class="nf">check_file_exist</span><span class="p">(</span><span class="n">minio_path_file</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">检查文件是否尊在</span><span class="sh">"""</span>
+    <span class="n">minio</span> <span class="o">=</span> <span class="nc">MinioObject</span><span class="p">(</span><span class="n">minio_conf</span><span class="p">)</span>
+    <span class="c1"># objects = minio.minio_client.list_objects(minio.bucket_name, recursive=True)
+</span>    <span class="n">exit_stats</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="c1"># path_name = os.path.join(minio_path, auto_skim_file)
+</span>    <span class="k">try</span><span class="p">:</span>
+   		<span class="n">minio</span><span class="p">.</span><span class="n">minio_client</span><span class="p">.</span><span class="nf">stat_object</span><span class="p">(</span><span class="n">minio</span><span class="p">.</span><span class="n">bucket_name</span><span class="p">,</span><span class="n">minio_path_file</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">exit_stats</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">there no target file in minio</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">exit_stats</span>
+
+
+    <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">'</span><span class="s">__main__</span><span class="sh">'</span><span class="p">:</span>
+        <span class="n">host</span> <span class="o">=</span> <span class="sh">"</span><span class="s">*.*.*.*</span><span class="sh">"</span>
+        <span class="n">username</span> <span class="o">=</span> <span class="sh">"</span><span class="s">model</span><span class="sh">"</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="sh">"</span><span class="s">****</span><span class="sh">"</span>
+        <span class="n">port</span> <span class="o">=</span> <span class="sh">"</span><span class="s">****</span><span class="sh">"</span>
+        <span class="n">ftp_file_path_input</span> <span class="o">=</span> <span class="sh">"</span><span class="s">/user/b4c6eaacdfa04a038805c35cbf24ccc6/input</span><span class="sh">"</span>
+        <span class="n">dst_file_path</span> <span class="o">=</span> <span class="sa">r</span><span class="sh">"</span><span class="s">E:\model\task_project\test</span><span class="sh">"</span>
+        <span class="n">file_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">M02_02_01.csv</span><span class="sh">"</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/log-book/" class="pagination--pager" title="日志记录
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/decorator/" class="pagination--pager" title="装饰器
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

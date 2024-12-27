@@ -1,0 +1,962 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>pandas应用 - 技术博客</title>
+<meta name="description" content="1、pandas介绍">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="pandas应用">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/pandas/">
+
+
+  <meta property="og:description" content="1、pandas介绍">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T11:35:49+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tutorials/python/pandas/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <span class="nav__sub-title">入门篇-环境配置与基础语法</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/basic-th/">环境配置</a></li>
+            
+              <li><a href="/tutorials/python/basic-yufa/">基础语法</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-数据分析与工程应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/python/data-add/">数据加载</a></li>
+            
+              <li><a href="/tutorials/python/pandas/" class="active">pandas应用</a></li>
+            
+              <li><a href="/tutorials/python/numpy/">numpy应用</a></li>
+            
+              <li><a href="/tutorials/python/matlpotlib/">matlpotlib可视化</a></li>
+            
+              <li><a href="/tutorials/python/mul-process/">多进程管理</a></li>
+            
+              <li><a href="/tutorials/python/mul-threads/">多线程管理</a></li>
+            
+              <li><a href="/tutorials/python/log-book/">日志记录</a></li>
+            
+              <li><a href="/tutorials/python/minio/">minio文件传输</a></li>
+            
+              <li><a href="/tutorials/python/decorator/">装饰器</a></li>
+            
+              <li><a href="/tutorials/python/magic_function/">魔术函数</a></li>
+            
+              <li><a href="/tutorials/python/email-send/">邮件发送</a></li>
+            
+              <li><a href="/tutorials/python/error_info/">错误提示</a></li>
+            
+              <li><a href="/tutorials/python/ftp/">ftp文件传输</a></li>
+            
+              <li><a href="/tutorials/python/islice/">模型分块</a></li>
+            
+              <li><a href="/tutorials/python/bat/">bat批命令</a></li>
+            
+              <li><a href="/tutorials/python/pipline/">管道</a></li>
+            
+              <li><a href="/tutorials/python/sphinx/">自动注释</a></li>
+            
+              <li><a href="/tutorials/python/XML/">XML文件格式解析</a></li>
+            
+              <li><a href="/tutorials/python/memory_space/">内存硬盘监控</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="pandas应用">
+    <meta itemprop="description" content="1、pandas介绍">
+    <meta itemprop="datePublished" content="2024-12-27T11:35:49+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tutorials/python/pandas/" itemprop="url">pandas应用
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1pandas介绍">1、pandas介绍</a></li><li><a href="#2pandas常见的功能">2、pandas常见的功能</a></li><li><a href="#3dataframe常见操作">3、dataframe常见操作</a><ul><li><a href="#31pandas的索引选取和过滤">3.1、pandas的索引，选取和过滤</a></li><li><a href="#32函数应用与映射mapapplymapapply">3.2、函数应用与映射：map、apply、mapapply</a></li><li><a href="#33数据拼接mergejoincontcat">3.3、数据拼接：merge,join,contcat</a></li><li><a href="#34dataframe行遍历">3.4、dataframe行遍历</a></li><li><a href="#35基于某列进行排序">3.5、基于某列进行排序</a></li></ul></li><li><a href="#4pandas的groupby的操作">4、pandas的groupby的操作：</a><ul><li><a href="#41groupby的其他操作">4.1、groupby的其他操作：</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h2 id="1pandas介绍">1、pandas介绍</h2>
+
+<p>作为数据处理基础三件套（numpy、pandas、matplotlib）之一，Pandas库是一个免费、开源的第三方 Python库，是Python数据分析必不可少的工具之一。</p>
+
+<p>pandas的设计初衷就是想复现在excel的功能并对其进行功能扩展。所以大部分excel能做的，pandas都能做，很多excel不能做的，pandas也能做。实话，要是excel对python的支持更好一点，如果VB的功能完全演变成python的接口，可能大部分工作直接excel就搞定了。excel还有的一个bug就是大文件数据无法操作。</p>
+
+<h2 id="2pandas常见的功能">2、pandas常见的功能</h2>
+
+<ul>
+  <li>pandas安装，任意百度关键词</li>
+  <li>两种数据结构：series，dataframe</li>
+  <li>series:有点类似于字典，可以由字典转化而来</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">b</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">c</span><span class="sh">'</span><span class="p">,</span><span class="sh">'</span><span class="s">d</span><span class="sh">'</span><span class="p">])</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">Series</span><span class="p">(</span><span class="n">data</span><span class="err">，</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span>
+<span class="mi">2</span>    <span class="n">a</span>
+<span class="mi">3</span>    <span class="n">b</span>
+<span class="mi">4</span>    <span class="n">c</span>
+<span class="mi">7</span>    <span class="n">d</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</code></pre></div></div>
+
+<ul>
+  <li>dataframe结构DataFrame 一个表格型的数据结构，既有行标签（index），又有列标签（columns），它也被称异构数据表，所谓异构，指的是表格中每列的数据类型可以不同，比如可以是字符串、整型或者浮点型等。如下图所示：整体结构和excel比较类似，左侧为行索引 ，上标题为列名。<img src="../../assets/images/python/2-Pandas数据处理.assert/1652163835555-3eb1c394-1897-47a8-a90b-650dcf57cc94.png" alt="image.png" /></li>
+</ul>
+
+<h2 id="3dataframe常见操作">3、dataframe常见操作</h2>
+
+<ul>
+  <li>pandas的数据读取</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Format Type</th>
+      <th>Data Description</th>
+      <th>Reader</th>
+      <th>Writer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>text</td>
+      <td>CSV(opens new window)</td>
+      <td>read_csv</td>
+      <td>to_csv</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>JSON(opens new window)</td>
+      <td>read_json</td>
+      <td>to_json</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>HTML(opens new window)</td>
+      <td>read_html</td>
+      <td>to_html</td>
+    </tr>
+    <tr>
+      <td>text</td>
+      <td>Local clipboard</td>
+      <td>read_clipboard</td>
+      <td>to_clipboard</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>MS Excel(opens new window)</td>
+      <td>read_excel</td>
+      <td>to_excel</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>OpenDocument(opens new window)</td>
+      <td>read_excel</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>HDF5 Format(opens new window)</td>
+      <td>read_hdf</td>
+      <td>to_hdf</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Feather Format(opens new window)</td>
+      <td>read_feather</td>
+      <td>to_feather</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Parquet Format(opens new window)</td>
+      <td>read_parquet</td>
+      <td>to_parquet</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Msgpack(opens new window)</td>
+      <td>read_msgpack</td>
+      <td>to_msgpack</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Stata(opens new window)</td>
+      <td>read_stata</td>
+      <td>to_stata</td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>SAS(opens new window)</td>
+      <td>read_sas</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>binary</td>
+      <td>Python Pickle Format(opens new window)</td>
+      <td>read_pickle</td>
+      <td>to_pickle</td>
+    </tr>
+    <tr>
+      <td>SQL(opens new window)</td>
+      <td>SQL</td>
+      <td>read_sql</td>
+      <td>to_sql</td>
+    </tr>
+    <tr>
+      <td>SQL</td>
+      <td>Google Big Query(opens new window)</td>
+      <td>read_gbq</td>
+      <td>to_gbq</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>pandas的index对向</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>类型</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>index</td>
+      <td>最泛化的index对象，轴标签表示为python对象的数组</td>
+    </tr>
+    <tr>
+      <td>int64index</td>
+      <td>针对整数的特殊index</td>
+    </tr>
+    <tr>
+      <td>MultiIndex</td>
+      <td>层次化对象，多层索引</td>
+    </tr>
+    <tr>
+      <td>DatatimeIndex</td>
+      <td>纳秒级时间戳</td>
+    </tr>
+    <tr>
+      <td>PeriodIndex</td>
+      <td>针对period数据（时间间隔）的特殊index</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="31pandas的索引选取和过滤">3.1、pandas的索引，选取和过滤</h3>
+
+<pre><code class="language-plain">import pandas as pd
+data = pd.DataFrame([[1,2,3],[3,4,5],[2,3,4]],columns=["a","b","c"])
+data
+Out[4]: 
+   a  b  c
+0  1  2  3
+1  3  4  5
+2  2  3  4
+</code></pre>
+
+<ul>
+  <li><strong>1) 取行，连续取行</strong></li>
+</ul>
+
+<pre><code class="language-plain">data[1:2]  # 行号，与index有关
+Out[7]: 
+   a  b  c
+1  3  4  5
+</code></pre>
+
+<ul>
+  <li><strong>iloc：安标签取行，可跨行索引</strong></li>
+</ul>
+
+<pre><code class="language-plain">data.loc[[0,2]]
+Out[21]: 
+   a  b  c
+0  1  2  3
+2  2  3  4
+</code></pre>
+
+<ul>
+  <li><strong>2) 取列</strong>输入:
+    <pre><code class="language-plain">data["a"],data[["a","b"]]
+Out[12]: 
+(0    1
+ 1    3
+ 2    2
+ Name: a, dtype: int64,
+  a  b
+ 0  1  2
+ 1  3  4
+ 2  2  3)
+</code></pre>
+  </li>
+  <li><strong>3）安条件取值</strong>输入：
+    <pre><code class="language-plain">data[data["b"]&gt;2]
+Out[15]: 
+ a  b  c
+1  3  4  5
+2  2  3  4
+</code></pre>
+  </li>
+</ul>
+
+<h3 id="32函数应用与映射mapapplymapapply">3.2、函数应用与映射：map、apply、mapapply</h3>
+
+<ul>
+  <li>map()、apply()、mapapply()三者的区别总结如下：map()：只能作用于Series中的每个元素；apply()：既可以作用于Series中的每个元素，也可以作用于DataFrame中的行或列；applymap()：只能作用于DataFrame中的每个元素</li>
+  <li>map函数：主要是运用在Series中，用来对Series中的元素进行转化se.map(arg, na_action=None)参数说明：· arg:函数、字典或序列对应的映射· na_action: 是否忽略NA，默认None</li>
+</ul>
+
+<pre><code class="language-plain">se1 =pd.Series({'a':1,'b':2,'c':3,'d':4})
+se2 =pd.Series({1:11,2:22,3:33,4:44})
+se1.map(se2)
+</code></pre>
+
+<p>输出：</p>
+
+<pre><code class="language-plain">Out[5]: 
+a    11
+b    22
+c    33
+d    44
+dtype: int64
+
+
+df["c"] = df["a"].apply(lambda x: x[0:@])
+</code></pre>
+
+<ul>
+  <li>apply函数：来调用一个函数(Python method)，让此函数对数据对象进行批量处理
+输入：</li>
+</ul>
+
+<pre><code class="language-plain">df =pd.DataFrame([[1,2,3],[3,4,5],[3,2,4]],columns=["a","b","c"])
+df
+Out[8]: 
+   a  b  c
+0  1  2  3
+1  3  4  5
+2  3  2  4
+</code></pre>
+
+<p>输入：</p>
+
+<pre><code class="language-plain">df.apply(np.sum,axis=1)
+Out[12]: 
+0     6
+1    12
+2     9
+dtype: int64
+</code></pre>
+
+<ul>
+  <li>applymap函数：类似于map,针对所有元素
+    <h3 id="33数据拼接mergejoincontcat">3.3、数据拼接：merge,join,contcat</h3>
+  </li>
+</ul>
+
+<p>Pandas包的merge、join、concat方法可以完成数据的合并和拼接，merge方法主要基于两个dataframe的共同列进行合并，join方法主要基于两个dataframe的索引进行合并，concat方法是对series或dataframe进行行拼接或列拼接。</p>
+
+<ul>
+  <li><strong>merge函数</strong>
+pandas的merge方法是基于共同列，将两个dataframe连接起来。merge方法的主要参数：</li>
+</ul>
+
+<p>left/right：左/右位置的dataframe。how：数据合并的方式。left：基于左dataframe列的数据合并；right：基于右dataframe列的数据合并；outer：基于列的数据外合并（取并集）；inner：基于列的数据内合并（取交集）；默认为’inner’。on：用来合并的列名，这个参数需要保证两个dataframe有相同的列名。left_on/right_on：左/右dataframe合并的列名，也可为索引，数组和列表。left_index/right_index：是否以index作为数据合并的列名，True表示是。sort：根据dataframe合并的keys排序，默认是。suffixes：若有相同列且该列没有作为合并的列，可通过suffixes设置该列的后缀名，一般为元组和列表类型。</p>
+
+<p><strong>1.内连接:指定索引列，安固定列取交集</strong></p>
+
+<pre><code class="language-plain">import pandas as pd
+import numpy as np
+
+df1 = pd.DataFrame({'alpha':['A','B','B','C','D','E'],'feature1':[1,1,2,3,3,1],
+            'feature2':['low','medium','medium','high','low','high']})
+# 定义df2
+df2 = pd.DataFrame({'alpha':['A','A','B','F'],'pazham':['apple','orange','pine','pear'],
+            'kilo':['high','low','high','medium'],'price':np.array([5,6,5,7])})
+# print(df1)
+# print(df2)
+# 基于共同列alpha的内连接
+df3 = pd.merge(df1,df2,how='inner',on='alpha')
+df3
+</code></pre>
+
+<p><strong>2.外连接：基于指定列的并集</strong></p>
+
+<pre><code class="language-plain">df1 = pd.DataFrame({'alpha':['A','B','B','C','D','E'],'feature1':[1,1,2,3,3,1],
+                'feature2':['low','medium','medium','high','low','high']})
+# 定义df2
+df2 = pd.DataFrame({'alpha':['A','A','B','F'],'pazham':['apple','orange','pine','pear'],
+                        'kilo':['high','low','high','medium'],'price':np.array([5,6,5,7])})
+# 基于共同列alpha的内连接
+df4 = pd.merge(df1,df2,how='outer',on='alpha')
+df4
+</code></pre>
+
+<p><strong>3.左连接:以指定列为准，进行补充</strong></p>
+
+<pre><code class="language-plain">df1 = pd.DataFrame({'alpha':['A','B','B','C','D','E'],'feature1':[1,1,2,3,3,1],
+    'feature2':['low','medium','medium','high','low','high']})
+# 定义df2
+df2 = pd.DataFrame({'alpha':['A','A','B','F'],'pazham':['apple','orange','pine','pear'],
+                        'kilo':['high','low','high','medium'],'price':np.array([5,6,5,7])})
+# 基于共同列alpha的左连接
+df5 = pd.merge(df1,df2,how='left',on='alpha')
+df5
+</code></pre>
+
+<p><strong>4.右连接:</strong></p>
+
+<pre><code class="language-plain">df1 = pd.DataFrame({'alpha':['A','B','B','C','D','E'],'feature1':[1,1,2,3,3,1],
+'feature2':['low','medium','medium','high','low','high']})
+# 定义df2
+df2 = pd.DataFrame({'alpha':['A','A','B','F'],'pazham':['apple','orange','pine','pear'],
+                        'kilo':['high','low','high','medium'],'price':np.array([5,6,5,7])})
+# 基于共同列alpha的右连接
+df6 = pd.merge(df1,df2,how='right',on='alpha')
+df6
+</code></pre>
+
+<ul>
+  <li><strong>join方法</strong>join方法是基于index连接dataframe，merge方法是基于column连接，连接方法有内连接，外连接，左连接和右连接，与merge一致。index与index的连接</li>
+</ul>
+
+<pre><code class="language-plain">caller = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3', 'K4', 'K5'], 'A': ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']})
+other = pd.DataFrame({'key': ['K0', 'K1', 'K2'],'B': ['B0', 'B1', 'B2']})
+print(caller)
+print(other)
+# lsuffix和rsuffix设置连接的后缀名
+caller.join(other,lsuffix='_caller', rsuffix='_other',how='inner')
+</code></pre>
+
+<ul>
+  <li><strong>concat</strong>concat方法是拼接函数，有行拼接和列拼接，默认是行拼接，拼接方法默认是外拼接（并集），拼接的对象是pandas数据类型。</li>
+</ul>
+
+<ol>
+  <li><strong>行拼接</strong></li>
+</ol>
+
+<pre><code class="language-plain">df1 = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3', 'K4', 'K5'], 'A': ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']})
+df2 = pd.DataFrame({'key': ['K0', 'K1', 'K2'],'B': ['B0', 'B1', 'B2']})
+print(df1)
+print(df2)
+# 行拼接
+pd.concat([df1,df2])
+&gt;&gt;&gt;
+  key    A    B
+0  K0   A0  NaN
+1  K1   A1  NaN
+2  K2   A2  NaN
+3  K3   A3  NaN
+4  K4   A4  NaN
+5  K5   A5  NaN
+0  K0  NaN   B0
+1  K1  NaN   B1
+2  K2  NaN   B2
+
+</code></pre>
+
+<p><strong>2.列拼接</strong></p>
+
+<pre><code class="language-plain">pd.concat([df1,df2],axis=1)
+</code></pre>
+<h3 id="34dataframe行遍历">3.4、dataframe行遍历</h3>
+
+<pre><code class="language-plain">for i,r in df.iterrows():
+
+ print(i,'-- ',r)
+
+</code></pre>
+
+<pre><code class="language-plain">count=0
+
+for tup in df.itertuples():
+
+ print(tup[0],'-- ',tup[1::],type(tup[1:]))
+
+ count+=1
+
+ if count 5:
+
+ break
+</code></pre>
+
+<h3 id="35基于某列进行排序">3.5、基于某列进行排序</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="p">.</span><span class="nf">sort_values</span><span class="p">([</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">],</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+</code></pre></div></div>
+<p>sort_values参数及其含义：</p>
+
+<ul>
+  <li>axis	若axis=0或’index’，则按照列中数据大小排序；若axis=1或’columns’，则按照索引中数据大小排序，默认axis=0</li>
+  <li>ascending：是否按指定列的数组升序排列，默认为True，升序排列</li>
+  <li>inplace：是否用排序后数据替换原来数据，默认为False，不替换</li>
+  <li>na_position：na_position {‘first’,‘last’}，设定缺失值的显示位置在首部还是尾部
+    <h2 id="4pandas的groupby的操作">4、pandas的groupby的操作：</h2>
+  </li>
+</ul>
+
+<p>pandas的groupby操作就是按照属性列进行分组</p>
+
+<pre><code class="language-plain">import pandas as pd
+
+data = pd.DataFrame([["a",1,2],["b",2,3],["c",1,2],["a",4,5],["c",4,6]],columns=["com","age","num"])
+data
+Out[4]: 
+  com  age  num
+0   a    1    2
+1   b    2    3
+2   c    1    2
+3   a    4    5
+4   c    4    6
+data.groupby(["com"])
+Out[5]: &lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x00000121CDE25970&gt;
+</code></pre>
+
+<ul>
+  <li>groupby:输出的直接对象为groupby对象</li>
+</ul>
+
+<pre><code class="language-plain">for class_,df in data.groupby(["com"]):
+    print(class_)
+    print(df)
+Out:
+a
+  com  age  num
+0   a    1    2
+3   a    4    5
+b
+  com  age  num
+1   b    2    3
+c
+  com  age  num
+ # 直接转化为dataframe
+ pf1=data.groupby(["com"]).reset_index()
+</code></pre>
+
+<h3 id="41groupby的其他操作">4.1、groupby的其他操作：</h3>
+
+<p>groupby对象是用来分组的，分完组以后，想针对分完的组做其他操作，比如求某列的和，平均值等</p>
+
+<p><strong>1) 对某列求和</strong></p>
+
+<pre><code class="language-plain">data.groupby(["com"])["age"].sum()
+
+Out:
+com
+a    5
+b    2
+c    5
+Name: age, dtype: int64
+type(data.groupby(["com"])["age"].sum())
+
+Out:
+  pandas.core.series.Series
+</code></pre>
+
+<p><strong>2）求和后转换成dataframe</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span><span class="p">.</span><span class="nf">groupby</span><span class="p">([</span><span class="sh">"</span><span class="s">com</span><span class="sh">"</span><span class="p">])[</span><span class="sh">"</span><span class="s">age</span><span class="sh">"</span><span class="p">].</span><span class="nf">sum</span><span class="p">().</span><span class="nf">reset_index</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">sum_age</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">Out</span><span class="p">:</span>
+<span class="n">com</span>  <span class="n">sum_age</span>
+<span class="mi">0</span>   <span class="n">a</span>        <span class="mi">5</span>
+<span class="mi">1</span>   <span class="n">b</span>        <span class="mi">2</span>
+<span class="mi">2</span>   <span class="n">c</span>        <span class="mi">5</span>
+</code></pre></div></div>
+
+<p><strong>3) agg聚合函数应用</strong></p>
+
+<pre><code class="language-plain">data.groupby(["com"])["age"].agg([max,min])
+Out[12]:
+     max  min
+com
+a      4    1
+b      2    2
+c      4    1
+</code></pre>
+
+<p><strong>4）transform的应用</strong>用于计算某类别下，不同成分的占比非常方便</p>
+
+<pre><code class="language-plain">data['avg_age'] = data.groupby('com')['age'].transform('mean')
+data
+Out[14]:
+  com  age  num  avg_age
+0   a    1    2      2.5
+1   b    2    3      2.0
+2   c    1    2      2.5
+3   a    4    5      2.5
+4   c    4    6      2.5
+</code></pre>
+
+<p><strong>5）apply函数应用</strong></p>
+
+<p>计算某公司年龄最大的</p>
+
+<pre><code class="language-plain">def get_oldest_staff(x):
+    df = x.sort_values(by = 'age',ascending=True)
+    return df.iloc[-1,:]
+	
+	
+oldest_staff = data.groupby('com').apply(get_oldest_staff)
+oldest_staff
+Out[17]: 
+    com  age  num  avg_age
+com                       
+a     a    4    5      2.5
+b     b    2    3      2.0
+c     c    4    6      2.5
+</code></pre>
+
+<p>其他应用</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">da</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">c</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">da</span><span class="p">[[</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">,</span><span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="p">]].</span><span class="nf">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+<h1 id="5应用示例">5、应用示例</h1>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">file_name</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">configs_path</span><span class="p">,</span> <span class="n">k_factor_file</span><span class="p">).</span><span class="nf">replace</span><span class="p">(</span><span class="sh">"</span><span class="se">\\</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">/</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">pddata</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="sh">"</span><span class="s">python</span><span class="sh">"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">purposes</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span><span class="nf">set</span><span class="p">(</span><span class="n">pddata</span><span class="p">[</span><span class="sh">"</span><span class="s">Purpose</span><span class="sh">"</span><span class="p">]))</span>
+<span class="n">modes</span> <span class="o">=</span>  <span class="nf">list</span><span class="p">(</span><span class="nf">set</span><span class="p">(</span><span class="n">pddata</span><span class="p">[</span><span class="sh">"</span><span class="s">Modes</span><span class="sh">"</span><span class="p">]))</span>
+
+<span class="n">df_ciy</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">([</span><span class="n">self</span><span class="p">.</span><span class="n">zone_table</span><span class="p">[</span><span class="sh">"</span><span class="s">U_factor</span><span class="sh">"</span><span class="p">],</span> <span class="nf">list</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">taz_id</span><span class="p">)]).</span><span class="n">T</span>
+<span class="n">df_ciy</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">city_id</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">taz_id</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="c1"># 创建小区矩阵
+</span><span class="n">taz_num</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">taz_id</span><span class="p">)</span>
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">([</span><span class="n">taz_num</span><span class="p">,</span> <span class="n">taz_num</span><span class="p">])</span>
+<span class="n">df_taz</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">taz_id</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">taz_id</span><span class="p">))</span>
+<span class="c1"># 矩阵变三列式
+</span><span class="n">df_taz_reset</span> <span class="o">=</span> <span class="n">df_taz</span><span class="p">.</span><span class="nf">stack</span><span class="p">().</span><span class="nf">reset_index</span><span class="p">().</span><span class="nf">rename</span><span class="p">(</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">level_0</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">FROM_taz</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">level_1</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">TO_taz</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">level_2</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Values</span><span class="sh">"</span><span class="p">})</span>
+<span class="n">df_taz_reset</span><span class="p">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="sh">"</span><span class="s">FROM_taz</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">TO_taz</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Values</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="c1"># 三列式匹配城市ID
+</span><span class="n">df_taz_city_from</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">df_taz_reset</span><span class="p">,</span>
+                            <span class="n">df_ciy</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">city_id</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">city_id_from</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">taz_id</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">FROM_taz</span><span class="sh">"</span><span class="p">}),</span>
+                            <span class="n">on</span><span class="o">=</span><span class="sh">"</span><span class="s">FROM_taz</span><span class="sh">"</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="sh">"</span><span class="s">left</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">df_taz_city_FROM_to</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">df_taz_city_from</span><span class="p">,</span>
+                               <span class="n">df_ciy</span><span class="p">.</span><span class="nf">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">city_id</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">city_id_to</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">taz_id</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">TO_taz</span><span class="sh">"</span><span class="p">}),</span>
+                               <span class="n">on</span><span class="o">=</span><span class="sh">"</span><span class="s">TO_taz</span><span class="sh">"</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="sh">"</span><span class="s">left</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">df_taz_city_FROM_to</span><span class="p">[</span><span class="sh">"</span><span class="s">city_from_to</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_taz_city_FROM_to</span><span class="p">[</span><span class="sh">"</span><span class="s">city_id_from</span><span class="sh">"</span><span class="p">]</span> <span class="o">+</span> <span class="sh">"</span><span class="s">_</span><span class="sh">"</span> <span class="o">+</span> <span class="n">df_taz_city_FROM_to</span><span class="p">[</span>
+    <span class="sh">"</span><span class="s">city_id_to</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">pddata</span><span class="p">[</span><span class="sh">"</span><span class="s">city_from_to</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pddata</span><span class="p">[[</span><span class="sh">"</span><span class="s">FROM</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">TO</span><span class="sh">"</span><span class="p">]].</span><span class="nf">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sh">"</span><span class="s">_</span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="sh">"</span><span class="s">FROM</span><span class="sh">"</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="sh">"</span><span class="s">TO</span><span class="sh">"</span><span class="p">]]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># 基于索引匹配
+</span><span class="n">df_taz_city_FROM_TO</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">merge</span><span class="p">(</span><span class="n">df_taz_city_FROM_to</span><span class="p">,</span> <span class="n">pddata</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="sh">"</span><span class="s">city_from_to</span><span class="sh">"</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="sh">"</span><span class="s">left</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">k_factor_dict</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">purpose</span> <span class="ow">in</span> <span class="n">purposes</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">mode</span> <span class="ow">in</span> <span class="n">modes</span><span class="p">:</span>
+        <span class="n">key_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">_</span><span class="sh">"</span><span class="p">.</span><span class="nf">join</span><span class="p">([</span><span class="n">purpose</span><span class="p">,</span><span class="n">mode</span><span class="p">])</span>
+        <span class="n">df_purpose_mode</span> <span class="o">=</span> <span class="n">df_taz_city_FROM_TO</span><span class="p">[(</span><span class="n">df_taz_city_FROM_TO</span><span class="p">[</span><span class="sh">"</span><span class="s">Purpose</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="n">purpose</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_taz_city_FROM_TO</span><span class="p">[</span><span class="sh">"</span><span class="s">Modes</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="n">mode</span><span class="p">)]</span>
+        <span class="n">k_factor_data</span> <span class="o">=</span> <span class="n">df_purpose_mode</span><span class="p">.</span><span class="nf">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="sh">"</span><span class="s">FROM_taz</span><span class="sh">"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="sh">"</span><span class="s">TO_taz</span><span class="sh">"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="sh">"</span><span class="s">K_factor</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">k_factor_dict</span><span class="p">[</span><span class="n">key_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">k_factor_data</span><span class="p">.</span><span class="n">values</span>
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:35:49+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/python/memory_space/" class="pagination--pager" title="内存硬盘监控
+">上一页</a>
+    
+    
+      <a href="/tutorials/python/numpy/" class="pagination--pager" title="numpy应用
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
