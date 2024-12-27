@@ -1,0 +1,573 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>公交分配 - 技术博客</title>
+<meta name="description" content="以下，以emme的交通分配为例">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="公交分配">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/emme/transit%20assignment/">
+
+
+  <meta property="og:description" content="以下，以emme的交通分配为例">
+
+
+
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T10:39:51+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/emme/transit%20assignment/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/tutorials/_emme/"><span class="nav__sub-title">入门篇-软件介绍</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/basic-info/">内容概要</a></li>
+            
+              <li><a href="/tutorials/emme/elements-info/">基本要素</a></li>
+            
+              <li><a href="/tutorials/emme/create_project/">工程创建</a></li>
+            
+              <li><a href="/tutorials/emme/software/">操作界面</a></li>
+            
+              <li><a href="/tutorials/emme/network-edit/">网络编辑</a></li>
+            
+              <li><a href="/tutorials/emme/image_table/">图表展示</a></li>
+            
+              <li><a href="/tutorials/emme/field_calculate/">字段计算</a></li>
+            
+              <li><a href="/tutorials/emme/field_matrix/">属性与矩阵</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-分配与接口开发</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/traffic%20assignment/">道路交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/transit%20assignment/" class="active">公交分配</a></li>
+            
+              <li><a href="/tutorials/emme/api/">api开发方法</a></li>
+            
+              <li><a href="/tutorials/emme/api_example/">开发实例</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">高阶篇-案例实施</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/create-emme-project/">快速创建emme工程</a></li>
+            
+              <li><a href="/tutorials/emme/path_analysis/">路径检测分析</a></li>
+            
+              <li><a href="/tutorials/emme/select_link/">select link分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim/">公交skim分析</a></li>
+            
+              <li><a href="/tutorials/emme/network_add/">路网更新</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">应用篇-场景应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/suyuan_analysis/">道路分配-溯源分析</a></li>
+            
+              <li><a href="/tutorials/emme/network-manager/">道路分配-道路管控</a></li>
+            
+              <li><a href="/tutorials/emme/chayihua_fare/">道路分配-差异化收费</a></li>
+            
+              <li><a href="/tutorials/emme/hecheng_road/">道路分配-合乘车道分析</a></li>
+            
+              <li><a href="/tutorials/emme/trip_length/">道路分配-出行距离分析</a></li>
+            
+              <li><a href="/tutorials/emme/jieduan_analysis/">道路分配-截断分析</a></li>
+            
+              <li><a href="/tutorials/emme/list_analysis/">道路分配-遍历分析</a></li>
+            
+              <li><a href="/tutorials/emme/road_fare/">道路分配-道路收费模型</a></li>
+            
+              <li><a href="/tutorials/emme/multi_assigment/">公交分配-多模式交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/must_mode/">公交分配-必须使用某种交通方式</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim_analysis/">公交分配-公交阻抗分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_yingyong/">公交分配-公交应用</a></li>
+            
+              <li><a href="/tutorials/emme/transit_network/">公交分配-公交网络分析</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="公交分配">
+    <meta itemprop="description" content="以下，以emme的交通分配为例">
+    <meta itemprop="datePublished" content="2024-12-27T10:39:51+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://tianchaoyu.github.io/tutorials/emme/transit%20assignment/" itemprop="url">公交分配
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1emme常见公交分配方法">1、EMME常见公交分配方法</a></li><li><a href="#2公交分配设置方法extended-transit-assignment">2、公交分配设置方法—Extended transit assignment</a><ul><li><a href="#21网络和需求设置network-and-demand">2.1、网络和需求设置——network and demand</a></li><li><a href="#22时间和费用times-and-costs">2.2、时间和费用——Times and costs</a><ul><li><a href="#1-等车时间waiting-time">1)	等车时间——waiting time</a></li><li><a href="#2登车时间boarding-time">2）登车时间——Boarding time</a></li><li><a href="#3车内时间in-vehicle-time">3）车内时间——In-vehicle time</a></li><li><a href="#4-车内费用in-vehicle-cost可选可不选">4) 车内费用——In-vehicle cost:可选可不选</a></li><li><a href="#5辅助公交的时间和费用">5）辅助公交的时间和费用</a></li></ul></li><li><a href="#3journey-levels">3、Journey levels</a><ul><li><a href="#1transit-rules可以设置各种方式之间的换乘规则和费用">1）Transit rules：可以设置各种方式之间的换乘规则和费用</a></li><li><a href="#2time-and-cost">2）Time and cost</a></li></ul></li><li><a href="#4起点流量分布flow-distribution-at-origins">4、起点流量分布——flow distribution at origins</a><ul><li><a href="#1-起点流量选择">1) 起点流量选择：</a></li></ul></li><li><a href="#5辅助公交选择在regular-node点的流量分布一般默认">5、辅助公交选择在regular node点的流量分布——一般默认</a></li><li><a href="#6线路之间的流量分布">6、线路之间的流量分布</a></li><li><a href="#7连杆之间的路径禁止">7、连杆之间的路径禁止</a></li><li><a href="#8circular-lines环线">8、circular lines——环线</a></li><li><a href="#9结果">9、结果</a></li><li><a href="#10并行设置">10、并行设置</a></li></ul></li><li><a href="#3公交分配结果统计分析skiming">3、公交分配结果统计分析——skiming</a><ul><li><a href="#31综合阻抗">3.1、综合阻抗</a></li><li><a href="#32mode-subset">3.2、mode subset</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p>以下，以emme的交通分配为例</p>
+
+<h2 id="1emme常见公交分配方法">1、EMME常见公交分配方法</h2>
+
+<p>Emme提供了一系列的交通任务，以评估交通政策，包括车辆容量，拥挤，票价计划，班次，时间表等，并用于模拟世界上一些最复杂的公共交通系统。Emme传输分配包括发布时可用的最快和唯一的基于多线程的基于频率的交通分配。</p>
+
+<ul>
+  <li><strong>Extended Transit Assignment</strong>多模式，多路径的交通分配，可以概括标准的交通分配（最佳策略），从而可以明确建模起点连接器的选择，对在公共站点选择交通服务的行进时间（除了行进路程）的敏感性等 。 还节省了策略并提供了复杂的分配后分析功能.</li>
+  <li><strong>Congested Transit Assignment</strong>:使用流量相关成本函数对车辆拥堵进行建模的公交分配。 link成本对运输量的依赖性可能表示由于乘客数量而导致运输车辆的速度降低，或者包括随车辆变得拥挤而增加的不舒适项的广义成本。</li>
+  <li><strong>Capacitated Transit Assignment</strong>使用连续平均法（MSA）来获得与交通路段拥堵相对应的交通流量的交通分配。 车辆拥挤功能（如在拥挤的交通分配工具中一样）以及由于过境车辆的容量而导致的停车等待时间增加被用于建模降低的舒适度水平以及停车等待时间的增加.</li>
+  <li><strong>Stochastic Transit Assignment</strong>一种随机交通分配，可计算多个基于策略的分配的平均值，其中使用选择的分配因子中的一个来干扰路段的行驶时间，感知的行进距离和/或感知因子。</li>
+  <li><strong>Deterministic Transit Assignment</strong>完整的时间表分配，其中将详细的出发和到达信息合并到最佳路径中。 它明确考虑了有关早退和迟到的选择。 对于在整个郊区和城际应用的计划时间内在不同的行程上运行的服务（例如国家或地区服务）很有用。 这对于运筹学也很有用。 尚未在Modeller中实现。 有关更多信息，请参见Emme Prompt手册4.5.9，确定性运输分配。</li>
+  <li><strong>Disaggregate Transit Assignment</strong>允许对各个过境旅行进行详细分析的分配，其中将起点和终点指定为精确的坐标或节点号，而不是区域号。 尚未在Modeller中实现。 有关更多信息，请参见《 Emme Prompt手册4.5.8，公交行程的详细分析》。
+    <h2 id="2公交分配设置方法extended-transit-assignment">2、公交分配设置方法—Extended transit assignment</h2>
+  </li>
+</ul>
+
+<h3 id="21网络和需求设置network-and-demand">2.1、网络和需求设置——network and demand</h3>
+
+<ul>
+  <li>可选多种transit,接驳mode如果多选，可能会出现只选最快速度的那种方式
+<img src="/assets/images/emme/1667286078961-c1a3553b-f87b-454b-84be-970c6ba5097d.png" alt="ta_网络设置.png" /></li>
+</ul>
+
+<p>说明：mode的设置主要包括transit和aux_transit，transit为main modes,aux为辅助公交，即接驳。操作时，根据实际情况进行选择。例如：</p>
+
+<p><img src="/assets/images/emme/1667286138553-2f44b216-3df5-45f3-b6f3-48f8503a8351.png" alt="image.png" /></p>
+
+<h3 id="22时间和费用times-and-costs">2.2、时间和费用——Times and costs</h3>
+
+<h4 id="1-等车时间waiting-time">1)	等车时间——waiting time</h4>
+
+<p><img src="/assets/images/emme/1667286151950-adad0197-31b4-46d1-a881-276a2042b8dd.png" alt="image.png" /></p>
+
+<ul>
+  <li>Source of effective headways:有效发车间隔</li>
+  <li>Headway fraction:等车时间=发车间隔*headway fraction</li>
+  <li>Perception factor:等车时间权重，经验值2.5</li>
+  <li>Spread factor:扩散系数，线路分配比例，越大，分配的线路越多
+    <h4 id="2登车时间boarding-time">2）登车时间——Boarding time</h4>
+  </li>
+</ul>
+
+<p><img src="/assets/images/emme/1667286159989-64801787-e5df-405c-85e6-7e28c7c229c9.png" alt="image.png" /></p>
+
+<p>登车时间的设置既可以为全局设置也可以是基于node、line、segment的设置</p>
+
+<ul>
+  <li>设置：惩罚参数（数值）和影响因子
+    <h4 id="3车内时间in-vehicle-time">3）车内时间——In-vehicle time</h4>
+  </li>
+</ul>
+
+<p><img src="/assets/images/emme/1667286168135-ed726873-c112-4ce1-bf3e-2bb1ed9a1f9d.png" alt="image.png" /></p>
+
+<p>可以是固定值也可以是基于link、line、transit等的某列属性</p>
+
+<h4 id="4-车内费用in-vehicle-cost可选可不选">4) 车内费用——In-vehicle cost:可选可不选</h4>
+<p><img src="/assets/images/emme/1667286183082-4ee2a26e-9e97-4bc2-a210-e429c6480356.png" alt="image.png" /></p>
+
+<ul>
+  <li>emme的轨道站间的费用，在分配阶段无法使用站间费用矩阵，因此将轨道的费用按站间的距离，拟合的成收费曲线，因此emme中的费用可以分为上车基础票价（boarding cost）和车内费用(in vehicle cost)两部分.
+基于link、line、transit等的某列属性</li>
+</ul>
+
+<h4 id="5辅助公交的时间和费用">5）辅助公交的时间和费用</h4>
+<p><img src="/assets/images/emme/1667286206367-c2772ae6-b4cd-428d-b702-464890da36d9.png" alt="image.png" /></p>
+
+<ul>
+  <li>接驳时间和接驳费用
+    <h3 id="3journey-levels">3、Journey levels</h3>
+    <p><img src="/assets/images/emme/1667286216559-f3e226aa-e6b2-484b-8ad4-f5267113be59.png" alt="image.png" /></p>
+  </li>
+</ul>
+
+<h4 id="1transit-rules可以设置各种方式之间的换乘规则和费用">1）Transit rules：可以设置各种方式之间的换乘规则和费用</h4>
+<p>旅程等级提供了一种设施，可以根据旅行者使用的特定交通方式顺序，改变他们在旅途中所经历的一般成本。行程等级由用户定义，并允许明确建模：公交票价整合方案，例如联合模式出行的免费/折扣换乘或票价回扣例如，从可靠的交通路线信息中减少初次登机的等待时间必须使用或强制运输方式，即旅客被迫使用特定的运输方式，或多种运输方式的组合或顺序。</p>
+
+<ul>
+  <li>根据实际情况设置不同的journey level；</li>
+  <li>Destination reachable表示该层是否可直达目的地；</li>
+  <li>Next journey level的选择：
+    <h4 id="2time-and-cost">2）Time and cost</h4>
+  </li>
+</ul>
+
+<h3 id="4起点流量分布flow-distribution-at-origins">4、起点流量分布——flow distribution at origins</h3>
+
+<h4 id="1-起点流量选择">1) 起点流量选择：</h4>
+
+<p><img src="/assets/images/emme/1667286240645-3360a4a3-d338-481e-b6c9-a896153ef8e6.png" alt="image.png" /></p>
+
+<p>流量分布：优化策略和logit分布，或者按照固定比例</p>
+
+<h3 id="5辅助公交选择在regular-node点的流量分布一般默认">5、辅助公交选择在regular node点的流量分布——一般默认</h3>
+<p><img src="/assets/images/emme/1667286252090-06c5d0cb-1215-439e-9955-61e6cf1496c1.png" alt="image.png" /></p>
+
+<h3 id="6线路之间的流量分布">6、线路之间的流量分布</h3>
+<p><img src="/assets/images/emme/1667286264180-c82050be-e4b8-4294-ae0c-589fa217c48e.png" alt="image.png" /></p>
+
+<h3 id="7连杆之间的路径禁止">7、连杆之间的路径禁止</h3>
+<p><img src="/assets/images/emme/1667286273322-09bbb3e0-d52d-495d-a971-277bf9b4f7ba.png" alt="image.png" /></p>
+
+<h3 id="8circular-lines环线">8、circular lines——环线</h3>
+
+<ul>
+  <li>环线线路终点全部下车</li>
+  <li>环线线路终点部分下车</li>
+  <li>部分环线终点部分下车
+<img src="/assets/images/emme/1667286285624-eb84db43-661f-4635-99c9-dec1aa4599f1.png" alt="image.png" /></li>
+</ul>
+
+<h3 id="9结果">9、结果</h3>
+<p><img src="/assets/images/emme/1667286924782-3d3e052c-063c-4006-a6fb-8329d31f6e5f.png" alt="image.png" /></p>
+
+<h3 id="10并行设置">10、并行设置</h3>
+
+<h2 id="3公交分配结果统计分析skiming">3、公交分配结果统计分析——skiming</h2>
+<p>​</p>
+<h3 id="31综合阻抗">3.1、综合阻抗</h3>
+
+<ul>
+  <li>总阻抗与总时间</li>
+  <li>实际等车时间</li>
+  <li>第一次等车时间</li>
+  <li>实际总的等车时间</li>
+  <li>可以接受的等车时间</li>
+  <li>可以接受的第一次等车时间</li>
+  <li>可以接受的总的等车时间
+    <h3 id="32mode-subset">3.2、mode subset</h3>
+  </li>
+  <li>Modes的选择</li>
+  <li>Mode的选择</li>
+  <li>距离矩阵</li>
+  <li>平均等车次数——average boardings</li>
+  <li>实际时间——actual times</li>
+  <li>实际第一次登车时间</li>
+  <li>实际总的等车时间</li>
+  <li>实际在车时间</li>
+  <li>实际辅助公交时间</li>
+  <li>实际费用——actual cost</li>
+  <li>实际第一次登车费用</li>
+  <li>实际总的等车费用</li>
+  <li>实际在车费用</li>
+  <li>实际辅助公交费用</li>
+  <li>可以接受的时间</li>
+  <li>可以接受的实际第一次登车时间</li>
+  <li>可以接受的实际总的等车时间</li>
+  <li>可以接受的实际在车时间</li>
+  <li>可以接受的实际辅助公交时间</li>
+  <li>可以接受的费用</li>
+  <li>可以接受的实际第一次登车费用</li>
+  <li>可以接受的实际总的等车费用</li>
+  <li>可以接受的实际在车费用</li>
+  <li>可以接受的实际辅助公交费用</li>
+  <li>并行计算设置</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T10:39:51+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/emme/traffic%20assignment/" class="pagination--pager" title="道路交通分配
+">上一页</a>
+    
+    
+      <a href="/tutorials/emme/api/" class="pagination--pager" title="api开发方法
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

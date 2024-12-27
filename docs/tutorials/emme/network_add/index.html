@@ -1,0 +1,494 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>路网更新 - 技术博客</title>
+<meta name="description" content="背景与路线 背景与问题 emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。 技术路线与方法">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="路网更新">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/emme/network_add/">
+
+
+  <meta property="og:description" content="背景与路线 背景与问题 emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。 技术路线与方法">
+
+
+
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T10:39:51+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/emme/network_add/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/tutorials/_emme/"><span class="nav__sub-title">入门篇-软件介绍</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/basic-info/">内容概要</a></li>
+            
+              <li><a href="/tutorials/emme/elements-info/">基本要素</a></li>
+            
+              <li><a href="/tutorials/emme/create_project/">工程创建</a></li>
+            
+              <li><a href="/tutorials/emme/software/">操作界面</a></li>
+            
+              <li><a href="/tutorials/emme/network-edit/">网络编辑</a></li>
+            
+              <li><a href="/tutorials/emme/image_table/">图表展示</a></li>
+            
+              <li><a href="/tutorials/emme/field_calculate/">字段计算</a></li>
+            
+              <li><a href="/tutorials/emme/field_matrix/">属性与矩阵</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-分配与接口开发</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/traffic%20assignment/">道路交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/transit%20assignment/">公交分配</a></li>
+            
+              <li><a href="/tutorials/emme/api/">api开发方法</a></li>
+            
+              <li><a href="/tutorials/emme/api_example/">开发实例</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">高阶篇-案例实施</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/create-emme-project/">快速创建emme工程</a></li>
+            
+              <li><a href="/tutorials/emme/path_analysis/">路径检测分析</a></li>
+            
+              <li><a href="/tutorials/emme/select_link/">select link分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim/">公交skim分析</a></li>
+            
+              <li><a href="/tutorials/emme/network_add/" class="active">路网更新</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">应用篇-场景应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/suyuan_analysis/">道路分配-溯源分析</a></li>
+            
+              <li><a href="/tutorials/emme/network-manager/">道路分配-道路管控</a></li>
+            
+              <li><a href="/tutorials/emme/chayihua_fare/">道路分配-差异化收费</a></li>
+            
+              <li><a href="/tutorials/emme/hecheng_road/">道路分配-合乘车道分析</a></li>
+            
+              <li><a href="/tutorials/emme/trip_length/">道路分配-出行距离分析</a></li>
+            
+              <li><a href="/tutorials/emme/jieduan_analysis/">道路分配-截断分析</a></li>
+            
+              <li><a href="/tutorials/emme/list_analysis/">道路分配-遍历分析</a></li>
+            
+              <li><a href="/tutorials/emme/road_fare/">道路分配-道路收费模型</a></li>
+            
+              <li><a href="/tutorials/emme/multi_assigment/">公交分配-多模式交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/must_mode/">公交分配-必须使用某种交通方式</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim_analysis/">公交分配-公交阻抗分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_yingyong/">公交分配-公交应用</a></li>
+            
+              <li><a href="/tutorials/emme/transit_network/">公交分配-公交网络分析</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="路网更新">
+    <meta itemprop="description" content="背景与路线背景与问题emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。技术路线与方法">
+    <meta itemprop="datePublished" content="2024-12-27T10:39:51+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://tianchaoyu.github.io/tutorials/emme/network_add/" itemprop="url">路网更新
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#背景与路线">背景与路线</a><ul><li><a href="#背景与问题">背景与问题</a></li><li><a href="#技术路线与方法">技术路线与方法</a></li></ul></li><li><a href="#emme文件导入和转换">emme文件导入和转换</a></li><li><a href="#emme文件导出">emme文件导出</a></li><li><a href="#手动进行边界修改">手动进行边界修改</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="背景与路线">背景与路线</h1>
+<h2 id="背景与问题">背景与问题</h2>
+<p>emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。</p>
+<h2 id="技术路线与方法">技术路线与方法</h2>
+
+<ul>
+  <li>三方软件编辑道路网络：可使用arcgis,gsis,Transcad等GIS软件</li>
+  <li>通过三方软件或者自定义脚本接口，将路网文件转化为中间脚本文件：线路拓扑及线型走向文件；</li>
+  <li>新建test sceneria 场景，通过EMME modduller工具文件，导入拓扑和线型文件；（也可以直接通过emme工具，将shp文件导入到emme中）；</li>
+  <li>坐标系转化，将导入的文件从经纬度左边转化为投影坐标；</li>
+  <li>利用modeller，将文件导出；</li>
+  <li>更新场景，将拓扑和线型文件导入新场景中，</li>
+  <li>手动编辑局部区域网络；</li>
+  <li>
+    <p>道路额外属性更新；# 基础网络处理</p>
+  </li>
+  <li>1）基于TC、arcgis、路网处理</li>
+  <li>2）EMME新建空工程；</li>
+  <li>3）使用工具shapefile to emme conversion</li>
+  <li>
+    <p><img src="./6.5.5-局部路网更新.assert/1668420387592-db471b6c-9e0c-444d-8b95-1ecec0fb12d6.png" alt="image.png" /></p>
+  </li>
+  <li>4）选择shp文件</li>
+  <li>
+    <p><img src="./6.5.5-局部路网更新.assert/1668423643701-aabd6c92-b481-4bcc-96f3-aa8384b75998.png" alt="image.png" /></p>
+  </li>
+  <li>5）属性选择</li>
+  <li>
+    <p><img src="./6.5.5-局部路网更新.assert/1668424615300-d63b896f-6ff6-4915-a233-27535c4d8f58.png" alt="image.png" /></p>
+  </li>
+  <li>6）中间文件保存</li>
+  <li>node id编号，最好绕过已有编号区段；</li>
+  <li>基础文件保存basenet.in，点层和线层文件；</li>
+  <li>shape线型文件保存:link_shp.db；</li>
+  <li><img src="./6.5.5-局部路网更新.assert/1668424682220-36da41d4-c144-4b02-807f-11790a6c103a.png" alt="image.png" />
+    <h1 id="emme文件导入和转换">emme文件导入和转换</h1>
+    <p>1）定义方式类型
+<img src="./6.5.5-局部路网更新.assert/1668424985114-00ec168a-db82-499c-8221-b8d500a1e585.png" alt="image.png" /></p>
+  </li>
+</ul>
+
+<p>2）导入基础base文件，见上面basenet.in
+<img src="./6.5.5-局部路网更新.assert/1668425099945-36acbf3d-67aa-42e4-a89e-2351f35a9fba.png" alt="image.png" /></p>
+
+<p>3）修改线型数据：</p>
+
+<ul>
+  <li>将上文link_shp.db文件拷贝到emme工程文件目录Database下；</li>
+  <li>将link_shp.db文件名称修改为对于sceneria_id的名称，并覆盖之前的db文件；</li>
+  <li><img src="./6.5.5-局部路网更新.assert/1668425292913-2aa96018-2e5e-4477-be4d-eedd18f8dced.png" alt="image.png" />
+4）线型文件坐标系转换
+从shp导入的坐标系为WGS84的经纬度坐标要转化为墨卡托坐标系，转化方法如下：
+源坐标：WGS1984.PRJ
+目标坐标系：WGS 1984 UTM Zone 49N.prj
+路径：emme安装路径下，coordinate systems/project coordinate systems/
+<img src="./6.5.5-局部路网更新.assert/1668425498359-506cb2df-528a-4c89-9fe9-3da629ecd630.png" alt="image.png" /></li>
+</ul>
+
+<p>导入结果：
+<img src="./6.5.5-局部路网更新.assert/1668425757971-e884f2ed-bf31-4f3f-a43e-a485d24b9257.png" alt="image.png" /></p>
+
+<p>​</p>
+<h1 id="emme文件导出">emme文件导出</h1>
+<p>1）完成坐标系转化后导出为中间文件</p>
+
+<ul>
+  <li>
+    <p>导出基础文件<img src="./6.5.5-局部路网更新.assert/1668425855420-a66ff491-b20b-422c-aead-bfb425c8b3b4.png" alt="image.png" /></p>
+  </li>
+  <li>导出线型文件</li>
+  <li><img src="./6.5.5-局部路网更新.assert/1668426045058-7428dbda-270e-436d-9f83-847ee6f75b05.png" alt="image.png" />
+2）新工程场景中导入基础文件
+<img src="./6.5.5-局部路网更新.assert/1668426225407-7ed6057f-98c8-4b4f-99c5-19df5e9fa7a4.png" alt="image.png" /></li>
+</ul>
+
+<p>3）导入线型文件
+<img src="./6.5.5-局部路网更新.assert/1668426314147-d84d7753-baaa-4140-a89b-f0e45f668dbf.png" alt="image.png" /></p>
+
+<h1 id="手动进行边界修改">手动进行边界修改</h1>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T10:39:51+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/emme/transit_skim/" class="pagination--pager" title="公交skim分析
+">上一页</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

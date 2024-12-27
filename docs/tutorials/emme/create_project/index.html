@@ -1,0 +1,475 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>工程创建 - 技术博客</title>
+<meta name="description" content="1、starting emme">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="工程创建">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/emme/create_project/">
+
+
+  <meta property="og:description" content="1、starting emme">
+
+
+
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T10:39:51+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/emme/create_project/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/tutorials/_emme/"><span class="nav__sub-title">入门篇-软件介绍</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/basic-info/">内容概要</a></li>
+            
+              <li><a href="/tutorials/emme/elements-info/">基本要素</a></li>
+            
+              <li><a href="/tutorials/emme/create_project/" class="active">工程创建</a></li>
+            
+              <li><a href="/tutorials/emme/software/">操作界面</a></li>
+            
+              <li><a href="/tutorials/emme/network-edit/">网络编辑</a></li>
+            
+              <li><a href="/tutorials/emme/image_table/">图表展示</a></li>
+            
+              <li><a href="/tutorials/emme/field_calculate/">字段计算</a></li>
+            
+              <li><a href="/tutorials/emme/field_matrix/">属性与矩阵</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-分配与接口开发</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/traffic%20assignment/">道路交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/transit%20assignment/">公交分配</a></li>
+            
+              <li><a href="/tutorials/emme/api/">api开发方法</a></li>
+            
+              <li><a href="/tutorials/emme/api_example/">开发实例</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">高阶篇-案例实施</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/create-emme-project/">快速创建emme工程</a></li>
+            
+              <li><a href="/tutorials/emme/path_analysis/">路径检测分析</a></li>
+            
+              <li><a href="/tutorials/emme/select_link/">select link分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim/">公交skim分析</a></li>
+            
+              <li><a href="/tutorials/emme/network_add/">路网更新</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">应用篇-场景应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/suyuan_analysis/">道路分配-溯源分析</a></li>
+            
+              <li><a href="/tutorials/emme/network-manager/">道路分配-道路管控</a></li>
+            
+              <li><a href="/tutorials/emme/chayihua_fare/">道路分配-差异化收费</a></li>
+            
+              <li><a href="/tutorials/emme/hecheng_road/">道路分配-合乘车道分析</a></li>
+            
+              <li><a href="/tutorials/emme/trip_length/">道路分配-出行距离分析</a></li>
+            
+              <li><a href="/tutorials/emme/jieduan_analysis/">道路分配-截断分析</a></li>
+            
+              <li><a href="/tutorials/emme/list_analysis/">道路分配-遍历分析</a></li>
+            
+              <li><a href="/tutorials/emme/road_fare/">道路分配-道路收费模型</a></li>
+            
+              <li><a href="/tutorials/emme/multi_assigment/">公交分配-多模式交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/must_mode/">公交分配-必须使用某种交通方式</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim_analysis/">公交分配-公交阻抗分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_yingyong/">公交分配-公交应用</a></li>
+            
+              <li><a href="/tutorials/emme/transit_network/">公交分配-公交网络分析</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="工程创建">
+    <meta itemprop="description" content="1、starting emme">
+    <meta itemprop="datePublished" content="2024-12-27T10:39:51+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://tianchaoyu.github.io/tutorials/emme/create_project/" itemprop="url">工程创建
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1starting-emme">1、starting emme</a></li><li><a href="#2脚本化创建emme工程">2、脚本化创建emme工程</a><ul><li><a href="#21主要步骤">2.1、主要步骤</a></li></ul></li><li><a href="#3emme工程文件结构">3、EMME工程文件结构</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="1starting-emme">1、starting emme</h1>
+
+<p>emme工程的创建方法：</p>
+
+<ul>
+  <li>软件界面创建</li>
+  <li>
+    <p>脚本语言</p>
+  </li>
+  <li>
+    <h1 id="2脚本化创建emme工程">2、脚本化创建emme工程</h1>
+  </li>
+</ul>
+
+<h2 id="21主要步骤">2.1、主要步骤</h2>
+
+<ul>
+  <li>创建emme工程数据库（emme bank）
+创建空的emme工程，设置工程位置，名称，定义工程参数维度，
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dimensions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">scalar_matrices</span><span class="sh">"</span><span class="p">:</span><span class="mi">999</span><span class="p">,</span> <span class="sh">'</span><span class="s">origin_matrices</span><span class="sh">'</span><span class="p">:</span><span class="mi">999</span><span class="p">,</span> <span class="sh">'</span><span class="s">destination_matrices</span><span class="sh">'</span><span class="p">:</span><span class="mi">999</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">full_matrices</span><span class="sh">'</span><span class="p">:</span><span class="mi">9999</span><span class="p">,</span> <span class="sh">'</span><span class="s">scenarios</span><span class="sh">'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="sh">'</span><span class="s">centroids</span><span class="sh">'</span><span class="p">:</span><span class="mi">5000</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">regular_nodes</span><span class="sh">'</span><span class="p">:</span><span class="mi">57499</span><span class="p">,</span> <span class="sh">'</span><span class="s">links</span><span class="sh">'</span><span class="p">:</span><span class="mi">250000</span><span class="p">,</span> <span class="sh">'</span><span class="s">turn_entries</span><span class="sh">'</span><span class="p">:</span><span class="mi">400000</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">transit_vehicles</span><span class="sh">'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="sh">'</span><span class="s">transit_lines</span><span class="sh">'</span><span class="p">:</span><span class="mi">20000</span><span class="p">,</span> <span class="sh">'</span><span class="s">transit_segments</span><span class="sh">'</span><span class="p">:</span><span class="mi">800000</span><span class="p">,</span>
+        <span class="sh">'</span><span class="s">extra_attribute_values</span><span class="sh">'</span><span class="p">:</span><span class="mi">40000000</span><span class="p">,</span> <span class="sh">'</span><span class="s">functions</span><span class="sh">'</span><span class="p">:</span><span class="mi">99</span><span class="p">,</span><span class="sh">"</span><span class="s">operators</span><span class="sh">"</span><span class="p">:</span><span class="mi">2000</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>创建基础scenario</li>
+  <li>数据加载：
+    <ul>
+      <li>加载函数</li>
+      <li>创建矩阵</li>
+      <li>添加mode</li>
+      <li>添加车辆信息</li>
+      <li>添加小区</li>
+      <li>添加小区地带属性（zone partition）</li>
+      <li>添加基础网络（node,link)</li>
+      <li>添加线性文件</li>
+      <li>添加公交文件</li>
+      <li>添加额外属性（node,link,transit line,transit segment）</li>
+      <li>空间坐标系指定</li>
+      <li>设定vdf function参数指定</li>
+    </ul>
+  </li>
+  <li>结束</li>
+</ul>
+
+<h1 id="3emme工程文件结构">3、EMME工程文件结构</h1>
+
+<p><img src="/assets/images/emme/file_struck.png" alt="文件结构" /></p>
+<ul>
+  <li>Database:为基础数据库，存放emmebank，matrix等文件；</li>
+  <li>logbook:为日志记录文件夹，存放执行记录；</li>
+  <li>Media:背景文件夹，存放GIS地图目录，可在EMME工程中直接添加自定义背景；</li>
+  <li>Network Build：网络创建文件夹，用户编辑网络记录文件，允许不同工程之间共享；</li>
+  <li>Scripts:脚本文件目录，jupyter notebook下创建的脚本文件存放目录；</li>
+  <li>Worksheets：数据表存放目录；</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T10:39:51+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/emme/elements-info/" class="pagination--pager" title="基本要素
+">上一页</a>
+    
+    
+      <a href="/tutorials/emme/software/" class="pagination--pager" title="操作界面
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

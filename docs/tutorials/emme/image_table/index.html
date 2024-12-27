@@ -1,0 +1,508 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>图标展示 - 技术博客</title>
+<meta name="description" content="功能描述：查看交通分配结果和模板保存 1、 基本图层 emme的desktop上面以tab的形式，会展示多个页面图，表等。利用不同的图层和表和数据，可以配置出不同的效果图，自由度比较高。">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="图标展示">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/emme/image_table/">
+
+
+  <meta property="og:description" content="功能描述：查看交通分配结果和模板保存 1、 基本图层 emme的desktop上面以tab的形式，会展示多个页面图，表等。利用不同的图层和表和数据，可以配置出不同的效果图，自由度比较高。">
+
+
+
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-12-27T10:39:51+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/emme/image_table/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      <nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">切换菜单</label>
+  <ul class="nav__items">
+    
+      
+      
+        <li>
+          
+            <a href="/tutorials/_emme/"><span class="nav__sub-title">入门篇-软件介绍</span></a>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/basic-info/">内容概要</a></li>
+            
+              <li><a href="/tutorials/emme/elements-info/">基本要素</a></li>
+            
+              <li><a href="/tutorials/emme/create_project/">工程创建</a></li>
+            
+              <li><a href="/tutorials/emme/software/">操作界面</a></li>
+            
+              <li><a href="/tutorials/emme/network-edit/">网络编辑</a></li>
+            
+              <li><a href="/tutorials/emme/image_table/" class="active">图表展示</a></li>
+            
+              <li><a href="/tutorials/emme/field_calculate/">字段计算</a></li>
+            
+              <li><a href="/tutorials/emme/field_matrix/">属性与矩阵</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">进阶篇-分配与接口开发</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/traffic%20assignment/">道路交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/transit%20assignment/">公交分配</a></li>
+            
+              <li><a href="/tutorials/emme/api/">api开发方法</a></li>
+            
+              <li><a href="/tutorials/emme/api_example/">开发实例</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">高阶篇-案例实施</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/create-emme-project/">快速创建emme工程</a></li>
+            
+              <li><a href="/tutorials/emme/path_analysis/">路径检测分析</a></li>
+            
+              <li><a href="/tutorials/emme/select_link/">select link分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim/">公交skim分析</a></li>
+            
+              <li><a href="/tutorials/emme/network_add/">路网更新</a></li>
+            
+          </ul>
+          
+        </li>
+      
+        <li>
+          
+            <span class="nav__sub-title">应用篇-场景应用</span>
+          
+
+          
+          <ul>
+            
+              <li><a href="/tutorials/emme/suyuan_analysis/">道路分配-溯源分析</a></li>
+            
+              <li><a href="/tutorials/emme/network-manager/">道路分配-道路管控</a></li>
+            
+              <li><a href="/tutorials/emme/chayihua_fare/">道路分配-差异化收费</a></li>
+            
+              <li><a href="/tutorials/emme/hecheng_road/">道路分配-合乘车道分析</a></li>
+            
+              <li><a href="/tutorials/emme/trip_length/">道路分配-出行距离分析</a></li>
+            
+              <li><a href="/tutorials/emme/jieduan_analysis/">道路分配-截断分析</a></li>
+            
+              <li><a href="/tutorials/emme/list_analysis/">道路分配-遍历分析</a></li>
+            
+              <li><a href="/tutorials/emme/road_fare/">道路分配-道路收费模型</a></li>
+            
+              <li><a href="/tutorials/emme/multi_assigment/">公交分配-多模式交通分配</a></li>
+            
+              <li><a href="/tutorials/emme/must_mode/">公交分配-必须使用某种交通方式</a></li>
+            
+              <li><a href="/tutorials/emme/transit_skim_analysis/">公交分配-公交阻抗分析</a></li>
+            
+              <li><a href="/tutorials/emme/transit_yingyong/">公交分配-公交应用</a></li>
+            
+              <li><a href="/tutorials/emme/transit_network/">公交分配-公交网络分析</a></li>
+            
+          </ul>
+          
+        </li>
+      
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="图标展示">
+    <meta itemprop="description" content="功能描述：查看交通分配结果和模板保存1、 基本图层emme的desktop上面以tab的形式，会展示多个页面图，表等。利用不同的图层和表和数据，可以配置出不同的效果图，自由度比较高。">
+    <meta itemprop="datePublished" content="2024-12-27T10:39:51+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://tianchaoyu.github.io/tutorials/emme/image_table/" itemprop="url">图标展示
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#1-基本图层">1、 基本图层</a></li><li><a href="#2结果展示与模板保存">2、结果展示与模板保存</a><ul><li><a href="#21charts图表">2.1、charts图表</a></li><li><a href="#22矩阵操作">2.2、矩阵操作</a></li><li><a href="#22-网络展示">2.2、 网络展示</a></li><li><a href="#23结果分析">2.3、结果分析</a></li></ul></li><li><a href="#3添加自定义背景图层">3、添加自定义背景图层</a></li></ul>
+            </nav>
+          </aside>
+        
+        <p>功能描述：查看交通分配结果和模板保存</p>
+<h1 id="1-基本图层">1、 基本图层</h1>
+<p>emme的desktop上面以tab的形式，会展示多个页面图，表等。利用不同的图层和表和数据，可以配置出不同的效果图，自由度比较高。</p>
+
+<ul>
+  <li>
+    <p>图层操作位置：<img src="/assets/images/emme/1667298614249-df6e42c6-59e4-4c7d-b489-f4636949d1a6.png" alt="image.png" /></p>
+  </li>
+  <li>保存为模板</li>
+  <li>
+    <p>叠加新图层，或者背景<img src="/assets/images/emme/1667298629335-eb24447e-5c5d-4e68-ae8f-1ebc998595e7.png" alt="image.png" /></p>
+  </li>
+  <li>GIS:叠加互联网地图，OSM,需要软件在维护期才可以</li>
+  <li>node:节点图层</li>
+  <li>link:link图层</li>
+  <li>公交：公交图层</li>
+  <li>其他：直方图，函数曲线等</li>
+  <li>图例显示:以link为例</li>
+  <li>
+    <p><img src="/assets/images/emme/1667298652015-2f9a25d2-1f8b-4332-b300-536251b526c9.png" alt="image.png" /></p>
+  </li>
+  <li>link filter:link筛选，通过属性筛选，内置类别：auto道路，公交道路，连杆connector,接驳连杆等</li>
+  <li>offset:link之间的间隔设置，</li>
+  <li>links:不同link不同的颜色渲染</li>
+  <li>bar value:link的粗细形态，选择link的属性，根据属性调整粗细，常用来显示道路流量；</li>
+  <li>scale:粗细比例尺</li>
+  <li>Bars:属性值的颜色调整：可以归一化处理也可以分段处理</li>
+  <li>
+    <p><img src="/assets/images/emme/1667298668221-294c6013-dc53-4364-ae1c-3c9248d5bf76.png" alt="image.png" /></p>
+  </li>
+  <li>link test:link属性文字显示</li>
+  <li>test values:属性选择，可以选择多个字段，用逗号分隔</li>
+  <li>Text:显示字段大小，格式调整
+    <h1 id="2结果展示与模板保存">2、结果展示与模板保存</h1>
+  </li>
+  <li><img src="/assets/images/emme/1667298697148-3b6873a6-06c6-4129-8d35-205948323c6f.png" alt="image.png" /></li>
+</ul>
+
+<h2 id="21charts图表">2.1、charts图表</h2>
+
+<p>显示函数，直方图，散点图等图表</p>
+
+<ul>
+  <li><img src="/assets/images/emme/1667298728928-692061da-2880-4aba-b95a-ce39724c35e9.png" alt="image.png" /></li>
+</ul>
+
+<h2 id="22矩阵操作">2.2、矩阵操作</h2>
+
+<ul>
+  <li>
+    <p><img src="/assets/images/emme/1667298742233-8fb02df0-8106-4c19-9628-fb51b1109c0b.png" alt="image.png" />
+常用的操作：</p>
+  </li>
+  <li>desire line for select zone:画期望线</li>
+  <li>zone volaus from aggregations:查看矩阵分布</li>
+  <li><img src="/assets/images/emme/1667298766229-1ddec5de-009b-4309-93d9-a4e597c87372.png" alt="image.png" /></li>
+</ul>
+
+<h2 id="22-网络展示">2.2、 网络展示</h2>
+
+<ul>
+  <li><img src="/assets/images/emme/1667298783732-4ac01939-f4e1-4b07-ba85-a52b7c44e06c.png" alt="image.png" />
+网络图层展示，含有固定的模板，常用是不同场景的对比，用于不同方案测试结果比对。</li>
+</ul>
+
+<h2 id="23结果分析">2.3、结果分析</h2>
+
+<ul>
+  <li>道路结果分析</li>
+  <li>
+    <p><img src="/assets/images/emme/1667298804993-9100e2dc-4f38-44c1-b32e-ed54259db6c6.png" alt="image.png" /></p>
+  </li>
+  <li>速度，时间，流量等分配结果显示</li>
+  <li>公交结果分析：图和表，非格子图表为图，格子图表为表</li>
+  <li>
+    <p><img src="/assets/images/emme/1667298818075-c3f1c445-7b20-4655-b50e-1d90b599fbef.png" alt="image.png" /></p>
+  </li>
+  <li>线路信息，线路流量，站点流量；</li>
+  <li>线路流量表，segement 上下客流表等；&gt; 常用的图和表：link volume (for all line);segment results</li>
+</ul>
+
+<h1 id="3添加自定义背景图层">3、添加自定义背景图层</h1>
+
+<p>将自定义的地理空间图层，shapefile文件放在工程目录的media下，在desktop的media会自动加载shp文件；</p>
+
+<ul>
+  <li>
+    <p><img src="/assets/images/emme/1667298832259-b280ec75-ca45-4b8c-a55f-80d1f888c4dd.png" alt="image.png" /></p>
+  </li>
+  <li>鼠标右键点击：add layer to back</li>
+  <li><img src="/assets/images/emme/1667298846029-b9b9e92d-b95d-4bd6-9dbc-0f0d99e68b44.png" alt="image.png" /></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T10:39:51+08:00">December 27, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/tutorials/emme/software/" class="pagination--pager" title="操作界面
+">上一页</a>
+    
+    
+      <a href="/tutorials/emme/field_calculate/" class="pagination--pager" title="字段计算
+">下一页</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
