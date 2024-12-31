@@ -179,18 +179,6 @@ var store = [{
         "url": "/tutorials/emme/network_add/",
         "teaser": null
       },{
-        "title": "Welcome to tianchaoyu",
-        "excerpt":"this is markdown1   这个页面使用page1的布局  ","categories": ["css"],
-        "tags": [],
-        "url": "/css/2024/12/15/page1.html",
-        "teaser": null
-      },{
-        "title": "Welcome to tianchaoyu",
-        "excerpt":"this is page2 markdown   常见应用场景测试分析  ","categories": ["css"],
-        "tags": [],
-        "url": "/css/2024/12/15/page2.html",
-        "teaser": null
-      },{
         "title": "基础语法",
         "excerpt":"   authort:lhy     1、python与地理空间系统       地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。   地理信息系统（GIS，Geographic Information System）是一门综合性学科，结合地理学与地图学以及遥感和计算机科学，已经广泛的应用在不同的领域，是用于输入、存储、查询、分析和显示地理数据的计算机系统，随着GIS的发展，也有称GIS为“地理信息科学”（Geographic Information Science），近年来，也有称GIS为”地理信息服务”（Geographic Information service）。GIS是一种基于计算机的工具，它可以对空间信息进行分析和处理（简而言之，是对地球上存在的现象和发生的事件进行成图和分析）。 GIS 技术把地图这种独特的视觉化效果和地理分析功能与一般的数据库操作（例如查询和统计分析等）集成在一起。      来源于百度百科       常见空间数据标准格式：shapefile,DXF,DWG,DGN,ECW,MrSID,TIFF,JPG2000, KML, GML等   常见gis操作软件：arcgis,Qgis,transcad,emme,cad     2、python开发环境搭建       2.1、geopandas软件包安装      依次下载和安装三方软件包：gdal、Fiona、Pyproj、shapely            注：根据python软件版本下载对应版本的软件包，对于pip install package无法成功，需要手动下载三房软件包，下载网址：https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud            2.2、软件包手册      geopandas：https://geopandas.org/en/stable/getting_started/introduction.html   shapely：https://www.osgeo.cn/shapely/manual.html  ","categories": [],
         "tags": [],
@@ -324,20 +312,20 @@ var store = [{
         "teaser": null
       },{
     "title": "About",
-    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "http://localhost:4000/about/"
+    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "https://tianchaoyu.github.io/about/"
   },{
     "title": "关于",
-    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C++ ⭐️⭐️   c ⭐️⭐️⭐️   js/css ⭐️⭐️️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具       transcad ⭐️⭐️⭐️⭐️⭐️   emme ⭐️⭐️⭐️⭐️⭐️   qgis ⭐️⭐️⭐️⭐️⭐️   Arcgis ⭐️⭐️⭐️...","url": "http://localhost:4000/about/"
+    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 项目经历 |时间段 | 项目名称 | 描述| |—- | —-| —-| | | | | 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C/C++ ⭐️⭐️⭐️   js/css ⭐️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具      ...","url": "https://tianchaoyu.github.io/about/"
   },{
     "title": "分类",
-    "excerpt":" ","url": "http://localhost:4000/categories/"
+    "excerpt":" ","url": "https://tianchaoyu.github.io/categories/"
   },{
     "title": "标签",
-    "excerpt":" ","url": "http://localhost:4000/tags/"
+    "excerpt":" ","url": "https://tianchaoyu.github.io/tags/"
   },{
     "title": "工具",
-    "excerpt":"设计工具          图片处理工具              支持调整图片大小       支持添加水印       rgb转灰度图像           资源下载   ","url": "http://localhost:4000/tools/"
+    "excerpt":"设计工具          图片处理工具              支持调整图片大小       支持添加水印       rgb转灰度图像           资源下载   ","url": "https://tianchaoyu.github.io/tools/"
   },{
     "title": "技术教程",
-    "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "http://localhost:4000/tutorials/"
+    "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
   }]

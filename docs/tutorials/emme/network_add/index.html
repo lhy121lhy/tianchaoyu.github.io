@@ -24,27 +24,27 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="技术博客">
 <meta property="og:title" content="路网更新">
-<meta property="og:url" content="http://localhost:4000/tutorials/emme/network_add/">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/emme/network_add/">
 
 
   <meta property="og:description" content="背景与路线 背景与问题 emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。 技术路线与方法">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
 
 
 
 
 
-  <meta property="article:published_time" content="2024-12-27T11:52:12+08:00">
+  <meta property="article:published_time" content="2024-12-31T16:40:27+08:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/tutorials/emme/network_add/">
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/emme/network_add/">
 
 
 
@@ -288,14 +288,14 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="路网更新">
     <meta itemprop="description" content="背景与路线背景与问题emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。技术路线与方法">
-    <meta itemprop="datePublished" content="2024-12-27T11:52:12+08:00">
+    <meta itemprop="datePublished" content="2024-12-31T16:40:27+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/tutorials/emme/network_add/" itemprop="url">路网更新
+            <a href="https://tianchaoyu.github.io/tutorials/emme/network_add/" itemprop="url">路网更新
 </a>
           </h1>
           
@@ -333,46 +333,46 @@
   <li>2）EMME新建空工程；</li>
   <li>3）使用工具shapefile to emme conversion</li>
   <li>
-    <p><img src="./6.5.5-局部路网更新.assert/1668420387592-db471b6c-9e0c-444d-8b95-1ecec0fb12d6.png" alt="image.png" /></p>
+    <p><img src="/assets/images/emme/1668420387592-db471b6c-9e0c-444d-8b95-1ecec0fb12d6.png" alt="image.png" /></p>
   </li>
   <li>4）选择shp文件</li>
   <li>
-    <p><img src="./6.5.5-局部路网更新.assert/1668423643701-aabd6c92-b481-4bcc-96f3-aa8384b75998.png" alt="image.png" /></p>
+    <p><img src="/assets/images/emme/1668423643701-aabd6c92-b481-4bcc-96f3-aa8384b75998.png" alt="image.png" /></p>
   </li>
   <li>5）属性选择</li>
   <li>
-    <p><img src="./6.5.5-局部路网更新.assert/1668424615300-d63b896f-6ff6-4915-a233-27535c4d8f58.png" alt="image.png" /></p>
+    <p><img src="/assets/images/emme/1668424615300-d63b896f-6ff6-4915-a233-27535c4d8f58.png" alt="image.png" /></p>
   </li>
   <li>6）中间文件保存</li>
   <li>node id编号，最好绕过已有编号区段；</li>
   <li>基础文件保存basenet.in，点层和线层文件；</li>
   <li>shape线型文件保存:link_shp.db；</li>
-  <li><img src="./6.5.5-局部路网更新.assert/1668424682220-36da41d4-c144-4b02-807f-11790a6c103a.png" alt="image.png" />
+  <li><img src="/assets/images/emme/1668424682220-36da41d4-c144-4b02-807f-11790a6c103a.png" alt="image.png" />
     <h1 id="emme文件导入和转换">emme文件导入和转换</h1>
     <p>1）定义方式类型
-<img src="./6.5.5-局部路网更新.assert/1668424985114-00ec168a-db82-499c-8221-b8d500a1e585.png" alt="image.png" /></p>
+<img src="/assets/images/emme/1668424985114-00ec168a-db82-499c-8221-b8d500a1e585.png" alt="image.png" /></p>
   </li>
 </ul>
 
 <p>2）导入基础base文件，见上面basenet.in
-<img src="./6.5.5-局部路网更新.assert/1668425099945-36acbf3d-67aa-42e4-a89e-2351f35a9fba.png" alt="image.png" /></p>
+<img src="/assets/images/emme/1668425099945-36acbf3d-67aa-42e4-a89e-2351f35a9fba.png" alt="image.png" /></p>
 
 <p>3）修改线型数据：</p>
 
 <ul>
   <li>将上文link_shp.db文件拷贝到emme工程文件目录Database下；</li>
   <li>将link_shp.db文件名称修改为对于sceneria_id的名称，并覆盖之前的db文件；</li>
-  <li><img src="./6.5.5-局部路网更新.assert/1668425292913-2aa96018-2e5e-4477-be4d-eedd18f8dced.png" alt="image.png" />
+  <li><img src="/assets/images/emme/1668425292913-2aa96018-2e5e-4477-be4d-eedd18f8dced.png" alt="image.png" />
 4）线型文件坐标系转换
 从shp导入的坐标系为WGS84的经纬度坐标要转化为墨卡托坐标系，转化方法如下：
 源坐标：WGS1984.PRJ
 目标坐标系：WGS 1984 UTM Zone 49N.prj
 路径：emme安装路径下，coordinate systems/project coordinate systems/
-<img src="./6.5.5-局部路网更新.assert/1668425498359-506cb2df-528a-4c89-9fe9-3da629ecd630.png" alt="image.png" /></li>
+<img src="/assets/images/emme/1668425498359-506cb2df-528a-4c89-9fe9-3da629ecd630.png" alt="image.png" /></li>
 </ul>
 
 <p>导入结果：
-<img src="./6.5.5-局部路网更新.assert/1668425757971-e884f2ed-bf31-4f3f-a43e-a485d24b9257.png" alt="image.png" /></p>
+<img src="/assets/images/emme/1668425757971-e884f2ed-bf31-4f3f-a43e-a485d24b9257.png" alt="image.png" /></p>
 
 <p>​</p>
 <h1 id="emme文件导出">emme文件导出</h1>
@@ -380,16 +380,16 @@
 
 <ul>
   <li>
-    <p>导出基础文件<img src="./6.5.5-局部路网更新.assert/1668425855420-a66ff491-b20b-422c-aead-bfb425c8b3b4.png" alt="image.png" /></p>
+    <p>导出基础文件<img src="/assets/images/emme/1668425855420-a66ff491-b20b-422c-aead-bfb425c8b3b4.png" alt="image.png" /></p>
   </li>
   <li>导出线型文件</li>
-  <li><img src="./6.5.5-局部路网更新.assert/1668426045058-7428dbda-270e-436d-9f83-847ee6f75b05.png" alt="image.png" />
+  <li><img src="/assets/images/emme/1668426045058-7428dbda-270e-436d-9f83-847ee6f75b05.png" alt="image.png" />
 2）新工程场景中导入基础文件
-<img src="./6.5.5-局部路网更新.assert/1668426225407-7ed6057f-98c8-4b4f-99c5-19df5e9fa7a4.png" alt="image.png" /></li>
+<img src="/assets/images/emme/1668426225407-7ed6057f-98c8-4b4f-99c5-19df5e9fa7a4.png" alt="image.png" /></li>
 </ul>
 
 <p>3）导入线型文件
-<img src="./6.5.5-局部路网更新.assert/1668426314147-d84d7753-baaa-4140-a89b-f0e45f668dbf.png" alt="image.png" /></p>
+<img src="/assets/images/emme/1668426314147-d84d7753-baaa-4140-a89b-f0e45f668dbf.png" alt="image.png" /></p>
 
 <h1 id="手动进行边界修改">手动进行边界修改</h1>
 
@@ -403,7 +403,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:52:12+08:00">December 27, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-31T16:40:27+08:00">December 31, 2024</time></p>
 
       </footer>
 
@@ -470,7 +470,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

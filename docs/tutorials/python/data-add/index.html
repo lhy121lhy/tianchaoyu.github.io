@@ -24,27 +24,27 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="技术博客">
 <meta property="og:title" content="数据加载">
-<meta property="og:url" content="http://localhost:4000/tutorials/python/data-add/">
+<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/python/data-add/">
 
 
   <meta property="og:description" content="文件路径操作：依赖包os">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
 
 
 
 
 
-  <meta property="article:published_time" content="2024-12-27T11:52:12+08:00">
+  <meta property="article:published_time" content="2024-12-31T16:40:27+08:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/tutorials/python/data-add/">
+<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/python/data-add/">
 
 
 
@@ -246,14 +246,14 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="数据加载">
     <meta itemprop="description" content="文件路径操作：依赖包os">
-    <meta itemprop="datePublished" content="2024-12-27T11:52:12+08:00">
+    <meta itemprop="datePublished" content="2024-12-31T16:40:27+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/tutorials/python/data-add/" itemprop="url">数据加载
+            <a href="https://tianchaoyu.github.io/tutorials/python/data-add/" itemprop="url">数据加载
 </a>
           </h1>
           
@@ -306,17 +306,17 @@ for filename in filenames:
                     <span class="n">shutil</span><span class="p">.</span><span class="nf">copy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">back_name</span><span class="p">)</span>
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">shutil</span><span class="p">.</span><span class="nf">copy</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">back_name</span><span class="p">)</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="n">back_name</span><span class="p">):</span>
-                        <span class="n">os</span><span class="p">.</span><span class="nf">makedirs</span><span class="p">(</span><span class="n">back_name</span><span class="p">)</span>
-                        <span class="nf">copy_files</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">back_name</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">isdir</span><span class="p">(</span><span class="n">back_name</span><span class="p">):</span>
+                    <span class="n">os</span><span class="p">.</span><span class="nf">makedirs</span><span class="p">(</span><span class="n">back_name</span><span class="p">)</span>
+                    <span class="nf">copy_files</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">back_name</span><span class="p">)</span>
                         
-                        <span class="nd">@staticmethod</span>
-                        <span class="k">def</span> <span class="nf">_get_md5_</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
-                            <span class="c1"># 通过校验MD5 判断dest内的文件与src不同
-</span>                            <span class="n">files_md5</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">popen</span><span class="p">(</span><span class="sh">'</span><span class="s">md5 %s</span><span class="sh">'</span> <span class="o">%</span> <span class="n">file_path</span><span class="p">).</span><span class="nf">read</span><span class="p">().</span><span class="nf">strip</span><span class="p">()</span>
-                            <span class="n">file_md5</span> <span class="o">=</span> <span class="n">files_md5</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">MD5 (%s) = </span><span class="sh">'</span> <span class="o">%</span> <span class="n">file_path</span><span class="p">,</span> <span class="sh">''</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">file_md5</span>
+<span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">_get_md5_</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="c1"># 通过校验MD5 判断dest内的文件与src不同
+</span>    <span class="n">files_md5</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="nf">popen</span><span class="p">(</span><span class="sh">'</span><span class="s">md5 %s</span><span class="sh">'</span> <span class="o">%</span> <span class="n">file_path</span><span class="p">).</span><span class="nf">read</span><span class="p">().</span><span class="nf">strip</span><span class="p">()</span>
+    <span class="n">file_md5</span> <span class="o">=</span> <span class="n">files_md5</span><span class="p">.</span><span class="nf">replace</span><span class="p">(</span><span class="sh">'</span><span class="s">MD5 (%s) = </span><span class="sh">'</span> <span class="o">%</span> <span class="n">file_path</span><span class="p">,</span> <span class="sh">''</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">file_md5</span>
 </code></pre></div></div>
 
 <h2 id="常见文件读取">常见文件读取</h2>
@@ -491,7 +491,7 @@ for filename in filenames:
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-27T11:52:12+08:00">December 27, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2024-12-31T16:40:27+08:00">December 31, 2024</time></p>
 
       </footer>
 
@@ -559,7 +559,7 @@ for filename in filenames:
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2024 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
