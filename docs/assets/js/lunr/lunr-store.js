@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "公交分配",
-        "excerpt":"以下，以emme的交通分配为例 1、EMME常见公交分配方法 Emme提供了一系列的交通任务，以评估交通政策，包括车辆容量，拥挤，票价计划，班次，时间表等，并用于模拟世界上一些最复杂的公共交通系统。Emme传输分配包括发布时可用的最快和唯一的基于多线程的基于频率的交通分配。 Extended Transit Assignment多模式，多路径的交通分配，可以概括标准的交通分配（最佳策略），从而可以明确建模起点连接器的选择，对在公共站点选择交通服务的行进时间（除了行进路程）的敏感性等 。 还节省了策略并提供了复杂的分配后分析功能. Congested Transit Assignment:使用流量相关成本函数对车辆拥堵进行建模的公交分配。 link成本对运输量的依赖性可能表示由于乘客数量而导致运输车辆的速度降低，或者包括随车辆变得拥挤而增加的不舒适项的广义成本。 Capacitated Transit Assignment使用连续平均法（MSA）来获得与交通路段拥堵相对应的交通流量的交通分配。 车辆拥挤功能（如在拥挤的交通分配工具中一样）以及由于过境车辆的容量而导致的停车等待时间增加被用于建模降低的舒适度水平以及停车等待时间的增加. Stochastic Transit Assignment一种随机交通分配，可计算多个基于策略的分配的平均值，其中使用选择的分配因子中的一个来干扰路段的行驶时间，感知的行进距离和/或感知因子。 Deterministic Transit Assignment完整的时间表分配，其中将详细的出发和到达信息合并到最佳路径中。 它明确考虑了有关早退和迟到的选择。 对于在整个郊区和城际应用的计划时间内在不同的行程上运行的服务（例如国家或地区服务）很有用。 这对于运筹学也很有用。 尚未在Modeller中实现。 有关更多信息，请参见Emme Prompt手册4.5.9，确定性运输分配。 Disaggregate Transit Assignment允许对各个过境旅行进行详细分析的分配，其中将起点和终点指定为精确的坐标或节点号，而不是区域号。 尚未在Modeller中实现。 有关更多信息，请参见《 Emme Prompt手册4.5.8，公交行程的详细分析》。 2、公交分配设置方法—Extended transit assignment 2.1、网络和需求设置——network and demand 可选多种transit,接驳mode如果多选，可能会出现只选最快速度的那种方式 说明：mode的设置主要包括transit和aux_transit，transit为main modes,aux为辅助公交，即接驳。操作时，根据实际情况进行选择。例如： 2.2、时间和费用——Times and costs 1) 等车时间——waiting time...","categories": [],
+        "excerpt":"以下，以emme的交通分配为例 1、EMME常见公交分配方法 Emme提供了一系列的交通任务，以评估交通政策，包括车辆容量，拥挤，票价计划，班次，时间表等，并用于模拟世界上一些最复杂的公共交通系统。Emme传输分配包括发布时可用的最快和唯一的基于多线程的基于频率的交通分配。 Extended Transit Assignment多模式，多路径的交通分配，可以概括标准的交通分配（最佳策略），从而可以明确建模起点连接器的选择，对在公共站点选择交通服务的行进时间（除了行进路程）的敏感性等 。 还节省了策略并提供了复杂的分配后分析功能. Congested Transit Assignment:使用流量相关成本函数对车辆拥堵进行建模的公交分配。 link成本对运输量的依赖性可能表示由于乘客数量而导致运输车辆的速度降低，或者包括随车辆变得拥挤而增加的不舒适项的广义成本。 Capacitated Transit Assignment使用连续平均法（MSA）来获得与交通路段拥堵相对应的交通流量的交通分配。 车辆拥挤功能（如在拥挤的交通分配工具中一样）以及由于过境车辆的容量而导致的停车等待时间增加被用于建模降低的舒适度水平以及停车等待时间的增加. Stochastic Transit Assignment一种随机交通分配，可计算多个基于策略的分配的平均值，其中使用选择的分配因子中的一个来干扰路段的行驶时间，感知的行进距离和/或感知因子。 Deterministic Transit Assignment完整的时间表分配，其中将详细的出发和到达信息合并到最佳路径中。 它明确考虑了有关早退和迟到的选择。 对于在整个郊区和城际应用的计划时间内在不同的行程上运行的服务（例如国家或地区服务）很有用。 这对于运筹学也很有用。 尚未在Modeller中实现。 有关更多信息，请参见Emme Prompt手册4.5.9，确定性运输分配。 Disaggregate Transit Assignment允许对各个过境旅行进行详细分析的分配，其中将起点和终点指定为精确的坐标或节点号，而不是区域号。 尚未在Modeller中实现。 有关更多信息，请参见《 Emme Prompt手册4.5.8，公交行程的详细分析》。 2、公交分配设置方法—Extended transit assignment 2.1、网络和需求设置——network and demand 可选多种transit,接驳mode如果多选，可能会出现只选最快速度的那种方式 说明：mode的设置主要包括transit和aux_transit，transit为main modes,aux为辅助公交，即接驳。操作时，根据实际情况进行选择。例如： 2.2、时间和费用——Times and costs 2.2.1、 等车时间——waiting time...","categories": [],
         "tags": [],
         "url": "/tutorials/emme/transit%20assignment/",
         "teaser": null
@@ -156,13 +156,13 @@ var store = [{
         "teaser": null
       },{
         "title": "路径检测分析",
-        "excerpt":"   功能描述：道路分配结果分析，通过分析最短路径上的时间距离和费用，从而检查分配结果的正确与否。     1、shortest path analysis       功能入口：   ​  2、指标分析        （1）路径显示；   （2）起终点对于node id;   （3）路径统计指标：距离，时间，费用等，允许统计路径上多个指标，选择第一个指标最短的路径；   （4）指标统计结果，依次对于link cost的选定的指标；  ","categories": [],
+        "excerpt":"   功能描述：道路分配结果分析，通过分析最短路径上的时间距离和费用，从而检查分配结果的正确与否。     1、shortest path analysis       功能入口：   2、指标分析        （1）路径显示；   （2）起终点对于node id;   （3）路径统计指标：距离，时间，费用等，允许统计路径上多个指标，选择第一个指标最短的路径；   （4）指标统计结果，依次对于link cost的选定的指标；  ","categories": [],
         "tags": [],
         "url": "/tutorials/emme/path_analysis/",
         "teaser": null
       },{
         "title": "select link分析",
-        "excerpt":"emme支持单独对某个link进行OD溯源分析，具体操作如下： ​  1、LINK选择      基于link构建额外属性，@select_link,属性默认值为0；   选择待分析link，属性赋值为1；      2、道路交通分配      1）使用sola traffic assignment,选择待分配的出行需求；               2）路径分析               link component：选择额外属性@select_link;   operater:选择max;   阈值上下选择1；   path:选择analyzed demand on selected paths;   OD values:选择结果保存矩阵，该矩阵为经过该link的总需求；   3）结果统计与分析        3、结果展示             ","categories": [],
+        "excerpt":"emme支持单独对某个link进行OD溯源分析，具体操作如下：   1、LINK选择      基于link构建额外属性，@select_link,属性默认值为0；   选择待分析link，属性赋值为1；      2、道路交通分配      1）使用sola traffic assignment,选择待分配的出行需求；               2）路径分析               link component：选择额外属性@select_link;   operater:选择max;   阈值上下选择1；   path:选择analyzed demand on selected paths;   OD values:选择结果保存矩阵，该矩阵为经过该link的总需求；   3）结果统计与分析        3、结果展示             ","categories": [],
         "tags": [],
         "url": "/tutorials/emme/select_link/",
         "teaser": null
@@ -174,7 +174,7 @@ var store = [{
         "teaser": null
       },{
         "title": "路网更新",
-        "excerpt":"背景与路线 背景与问题 emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。 技术路线与方法 三方软件编辑道路网络：可使用arcgis,gsis,Transcad等GIS软件 通过三方软件或者自定义脚本接口，将路网文件转化为中间脚本文件：线路拓扑及线型走向文件； 新建test sceneria 场景，通过EMME modduller工具文件，导入拓扑和线型文件；（也可以直接通过emme工具，将shp文件导入到emme中）； 坐标系转化，将导入的文件从经纬度左边转化为投影坐标； 利用modeller，将文件导出； 更新场景，将拓扑和线型文件导入新场景中， 手动编辑局部区域网络； 道路额外属性更新；# 基础网络处理 1）基于TC、arcgis、路网处理 2）EMME新建空工程； 3）使用工具shapefile to emme conversion 4）选择shp文件 5）属性选择 6）中间文件保存 node id编号，最好绕过已有编号区段； 基础文件保存basenet.in，点层和线层文件； shape线型文件保存:link_shp.db； emme文件导入和转换 1）定义方式类型 2）导入基础base文件，见上面basenet.in 3）修改线型数据： 将上文link_shp.db文件拷贝到emme工程文件目录Database下； 将link_shp.db文件名称修改为对于sceneria_id的名称，并覆盖之前的db文件； 4）线型文件坐标系转换 从shp导入的坐标系为WGS84的经纬度坐标要转化为墨卡托坐标系，转化方法如下： 源坐标：WGS1984.PRJ 目标坐标系：WGS 1984 UTM Zone 49N.prj 路径：emme安装路径下，coordinate systems/project coordinate systems/ 导入结果： ​ emme文件导出...","categories": [],
+        "excerpt":"背景与路线 背景与问题 emme软件因为其在路网编辑方面功能弱，门槛高，技术复杂；在遇到局部路网更新，线路线型调整，属性赋值粘贴等问题时，工程技术人员往往需要在这方面投入巨大工作量，基于此，本文提出一种更新emme工程技术网络的方法。 技术路线与方法 三方软件编辑道路网络：可使用arcgis,gsis,Transcad等GIS软件 通过三方软件或者自定义脚本接口，将路网文件转化为中间脚本文件：线路拓扑及线型走向文件； 新建test sceneria 场景，通过EMME modduller工具文件，导入拓扑和线型文件；（也可以直接通过emme工具，将shp文件导入到emme中）； 坐标系转化，将导入的文件从经纬度左边转化为投影坐标； 利用modeller，将文件导出； 更新场景，将拓扑和线型文件导入新场景中， 手动编辑局部区域网络； 道路额外属性更新；# 基础网络处理 1）基于TC、arcgis、路网处理 2）EMME新建空工程； 3）使用工具shapefile to emme conversion 4）选择shp文件 5）属性选择 6）中间文件保存 node id编号，最好绕过已有编号区段； 基础文件保存basenet.in，点层和线层文件； shape线型文件保存:link_shp.db； emme文件导入和转换 1）定义方式类型 2）导入基础base文件，见上面basenet.in 3）修改线型数据： 将上文link_shp.db文件拷贝到emme工程文件目录Database下； 将link_shp.db文件名称修改为对于sceneria_id的名称，并覆盖之前的db文件； 4）线型文件坐标系转换 从shp导入的坐标系为WGS84的经纬度坐标要转化为墨卡托坐标系，转化方法如下： 源坐标：WGS1984.PRJ 目标坐标系：WGS 1984 UTM Zone 49N.prj 路径：emme安装路径下，coordinate systems/project coordinate systems/ 导入结果： emme文件导出 1）完成坐标系转化后导出为中间文件...","categories": [],
         "tags": [],
         "url": "/tutorials/emme/network_add/",
         "teaser": null
@@ -324,7 +324,7 @@ var store = [{
     "excerpt":" ","url": "https://tianchaoyu.github.io/tags/"
   },{
     "title": "工具",
-    "excerpt":"设计工具          图片处理工具              支持调整图片大小       支持添加水印       rgb转灰度图像           资源下载   ","url": "https://tianchaoyu.github.io/tools/"
+    "excerpt":"设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像           openmatrix viewer   1、读取OMX矩阵，并可视化；   2、计算矩阵的和，平均值，行列的最大最小值   3、对矩阵进行聚合操作   资源下载   ","url": "https://tianchaoyu.github.io/tools/"
   },{
     "title": "技术教程",
     "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
