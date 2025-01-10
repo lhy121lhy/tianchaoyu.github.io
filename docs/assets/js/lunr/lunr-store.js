@@ -197,6 +197,12 @@ var store = [{
         "url": "/tutorials/python/basic-yufa/",
         "teaser": null
       },{
+        "title": "git版本管理",
+        "excerpt":"创建git 1.安装Git 访问Git官方网站下载并安装Git。 安装完成后，在命令行中输入git –version来验证安装。 2. 初始化Git仓库 在项目目录中打开命令行，输入以下命令初始化Git仓库： git init 3. 添加远程仓库 如果你的项目托管在GitHub等平台上，你需要添加远程仓库： git remote add origin &lt;repository-url&gt; 替换为你的远程仓库URL。 4.添加文件到仓库 添加文件到暂存区（staging area）： git add &lt;file&gt; 或者添加所有更改过的文件： git add . 5. 提交更改 提交暂存区的更改到本地仓库： git commit -m \"Your commit message\" 替换”Your commit message”为你的提交信息。 6. 查看状态 查看仓库的状态： git status 7. 查看提交历史 查看提交历史： git...","categories": [],
+        "tags": [],
+        "url": "/tutorials/python/git_branch/",
+        "teaser": null
+      },{
         "title": "数据加载",
         "excerpt":"文件路径操作：依赖包os 文件遍历 import os path = r'G:\\' filenames = os.listdir(path) for filename in filenames: #输出文件名 print(filename) #输出完整路径 print(os.path.join(path,filename)) 判断文件是否存在 if not os.path.exists(\"./images\"): os.makedirs(\"./images\") # 路径拼接 os.path.join(task_folder, \"input/\").replace(\"\\\\\", \"/\") 文件拷贝 def copy_files(input_path, output_path): \"\"\"将一个路径的所有文件拷贝到另一个路径下\"\"\" for files in os.listdir(input_path): name = os.path.join(input_path, files) back_name = os.path.join(output_path, files) if os.path.isfile(name): if os.path.isfile(back_name): if...","categories": [],
         "tags": [],
@@ -327,5 +333,5 @@ var store = [{
     "excerpt":"设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像           openmatrix viewer   1、读取OMX矩阵，并可视化；   2、计算矩阵的和，平均值，行列的最大最小值   3、对矩阵进行聚合操作   资源下载   ","url": "https://tianchaoyu.github.io/tools/"
   },{
     "title": "技术教程",
-    "excerpt":"                                                                                                                     python中文教程                                                    python入门教程及交通行业应用实践。                                                   开始学习                                                                                                                                                    emme从入门到精通                                                    由【入门篇、进阶篇和高级篇】三个章节组成，由浅入深，快速使用规划软件emme。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
+    "excerpt":"                                                                                                                     python中文教程                                                    python入门基础与常规操作。                                                   开始学习                                                                                                                                                    交通规划软件emme使用总结                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，由浅入深，规划软件Emme应用实战。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
   }]
