@@ -24,27 +24,27 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:site_name" content="技术博客">
 <meta property="og:title" content="git版本管理">
-<meta property="og:url" content="https://tianchaoyu.github.io/tutorials/python/git_branch/">
+<meta property="og:url" content="http://localhost:4000/tutorials/python/git_branch/">
 
 
   <meta property="og:description" content="创建git 1.安装Git    访问Git官方网站下载并安装Git。   安装完成后，在命令行中输入git –version来验证安装。">
 
 
 
-  <meta property="og:image" content="https://tianchaoyu.github.io/assets/images/site-logo.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
 
 
 
 
 
-  <meta property="article:published_time" content="2025-01-10T11:08:08+08:00">
+  <meta property="article:published_time" content="2025-01-10T11:16:41+08:00">
 
 
 
 
 
 
-<link rel="canonical" href="https://tianchaoyu.github.io/tutorials/python/git_branch/">
+<link rel="canonical" href="http://localhost:4000/tutorials/python/git_branch/">
 
 
 
@@ -248,14 +248,14 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="git版本管理">
     <meta itemprop="description" content="创建git1.安装Git  访问Git官方网站下载并安装Git。  安装完成后，在命令行中输入git –version来验证安装。">
-    <meta itemprop="datePublished" content="2025-01-10T11:08:08+08:00">
+    <meta itemprop="datePublished" content="2025-01-10T11:16:41+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://tianchaoyu.github.io/tutorials/python/git_branch/" itemprop="url">git版本管理
+            <a href="http://localhost:4000/tutorials/python/git_branch/" itemprop="url">git版本管理
 </a>
           </h1>
           
@@ -336,8 +336,8 @@
 <h2 id="8-拉取远程仓库的更改">8. 拉取远程仓库的更改</h2>
 <ul>
   <li>从远程仓库拉取最新的更改：
-    <pre><code class="language-commandline">git pull origin &lt;branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
     <p>替换<branch-name>为分支名，通常是master。</branch-name></p>
   </li>
 </ul>
@@ -345,35 +345,35 @@
 <h2 id="9推送更改到远程仓库">9.推送更改到远程仓库</h2>
 <ul>
   <li>推送本地更改到远程仓库：
-    <pre><code class="language-commandline">git push origin &lt;branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
     <p>替换<branch-name>为分支名。</branch-name></p>
     <h2 id="10-创建和切换分支">10. 创建和切换分支</h2>
   </li>
   <li>创建新分支：
-    <pre><code class="language-commandline">git branch &lt;new-branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">branch</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
   <li>切换到新分支：
-    <pre><code class="language-commandline">git checkout &lt;new-branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
 <h2 id="11-合并分支">11. 合并分支</h2>
 <ul>
   <li>将一个分支的更改合并到当前分支：
-    <pre><code class="language-commandline">git merge &lt;branch-to-merge&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">merge</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">merge</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
 <p>#e 12. 解决合并冲突</p>
 <ul>
   <li>如果合并时出现冲突，需要手动编辑冲突文件，然后：
-    <pre><code class="language-commandline">git add &lt;resolved-file&gt;
-git commit
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">resolved</span><span class="o">-</span><span class="nb">file</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">commit</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -382,34 +382,34 @@ git commit
   <li>删除本地分支：</li>
 </ul>
 
-<pre><code class="language-commandline">git branch -d &lt;branch-name&gt;
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div></div>
 <h2 id="删除远程分支">删除远程分支：</h2>
-<pre><code class="language-commandline">git push origin --delete &lt;branch-name&gt;
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div></div>
 
 <h2 id="14-撤销操作">14. 撤销操作</h2>
 <ul>
   <li>放弃工作目录中的所有更改：
-    <pre><code class="language-commandline">git reset --hard
-git clean -fd
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span>
+<span class="n">git</span> <span class="n">clean</span> <span class="o">-</span><span class="n">fd</span>
+</code></pre></div>    </div>
   </li>
   <li>撤销最后一次提交，保留文件更改：
-    <pre><code class="language-commandline">git reset --soft HEAD~1
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">soft</span> <span class="n">HEAD</span><span class="o">~</span><span class="mi">1</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
 <h2 id="15-标签管理">15. 标签管理</h2>
 <ul>
   <li>创建标签：
-    <pre><code class="language-commandline">git tag &lt;tag-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">tag</span> <span class="o">&lt;</span><span class="n">tag</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
   <li>推送标签到远程仓库：
-    <pre><code class="language-commandline">git push origin &lt;tag-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">tag</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
 </ul>
 
@@ -418,39 +418,39 @@ git clean -fd
 <p>如果您已经对项目进行了修改，并且希望将这些更改更新到GitHub，您可以按照以下步骤操作：</p>
 <h2 id="1-添加更改到暂存区">1. 添加更改到暂存区</h2>
 <p>首先，您需要将更改添加到Git的暂存区。如果您想要添加所有更改过的文件，可以使用：</p>
-<pre><code class="language-commandline">git add .
-git add &lt;file1&gt; &lt;file2&gt; ...
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">file1</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">file2</span><span class="o">&gt;</span> <span class="bp">...</span>
+</code></pre></div></div>
 
 <h2 id="2-提交更改到本地仓库">2. 提交更改到本地仓库</h2>
 <p>将暂存区的更改提交到本地仓库：</p>
-<pre><code class="language-commandline">git commit -m "Your commit message"
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="sh">"</span><span class="s">Your commit message</span><span class="sh">"</span>
+</code></pre></div></div>
 <p>请将”Your commit message”替换为您的提交信息，描述您所做的更改。</p>
 <h2 id="3-推送更改到远程仓库">3. 推送更改到远程仓库</h2>
 <p>将本地的更改推送到远程仓库（通常是GitHub）：</p>
-<pre><code class="language-commandline">git push origin &lt;branch-name&gt;
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div></div>
 <p>请将<branch-name>替换为您当前所在的分支名，如果您在项目的主分支上工作，这通常是master或main。</branch-name></p>
 <h2 id="4-处理可能的合并冲突">4. 处理可能的合并冲突</h2>
 <p>如果您在推送时遇到合并冲突，Git会提示您。您需要先在本地解决这些冲突，然后再次提交和推送。解决冲突的步骤通常包括：</p>
 <ul>
   <li>打开冲突的文件，解决所有标记为冲突的区域。</li>
   <li>将解决冲突后的文件添加到暂存区：
-    <pre><code class="language-commandline">git add &lt;resolved-file&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">resolved</span><span class="o">-</span><span class="nb">file</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
   </li>
   <li>提交解决冲突后的更改：
-    <pre><code class="language-commandline">git commit -m "Resolve merge conflicts"
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="sh">"</span><span class="s">Resolve merge conflicts</span><span class="sh">"</span>
+</code></pre></div>    </div>
   </li>
   <li>再次推送到远程仓库：
-    <pre><code class="language-commandline">git push origin &lt;branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
     <h2 id="5拉取远程更改">5.拉取远程更改</h2>
     <p>如果您在提交之前想要确保您的本地仓库是最新的，可以首先拉取远程仓库的更改：</p>
-    <pre><code class="language-commandline">git pull origin &lt;branch-name&gt;
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</code></pre></div>    </div>
     <p>这会将远程分支的更改合并到您的本地分支中。如果有冲突，您需要解决它们，然后再次提交。
 注意事项
 ● 确保您在正确的分支上工作。
@@ -465,21 +465,21 @@ git add &lt;file1&gt; &lt;file2&gt; ...
 
 <p>步骤一：删除 GitHub 上的所有分支
 ● 删除远程分支：</p>
-<pre><code class="language-commandline">git branch -r
-git push origin --delete dev
-git push origin --delete feature-branch
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">r</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">dev</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">--</span><span class="n">delete</span> <span class="n">feature</span><span class="o">-</span><span class="n">branch</span>
+</code></pre></div></div>
 
 <p>步骤二：初始化本地新main分支</p>
-<pre><code class="language-commandline">git checkout --orphan main
-git rm -rf .
-git add .
-git commit -m "Initial commit"
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">orphan</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="sh">"</span><span class="s">Initial commit</span><span class="sh">"</span>
+</code></pre></div></div>
 
 <p>步骤三：强制推送新的 main 分支到 GitHub</p>
-<pre><code class="language-commandline"> git push -u origin main --force
-</code></pre>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">main</span> <span class="o">--</span><span class="n">force</span>
+</code></pre></div></div>
 
 <p>本地为master分支，远程为main分支，如何将本地替换远程的？</p>
 <ul>
@@ -493,8 +493,8 @@ git push origin master:main –force</li>
 <ul>
   <li>确保本地master为最新版本</li>
   <li>使用git push命令将本地master分支的内容推送到远程main分支。如果你希望强制推送（覆盖远程main分支的内容），可以使用–force或-f选项。但请注意，强制推送会覆盖远程分支上的所有更改，这可能会导致数据丢失。
-    <pre><code class="language-commandline">git push origin master:main --force
-</code></pre>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span><span class="p">:</span><span class="n">main</span> <span class="o">--</span><span class="n">force</span>
+</code></pre></div>    </div>
     <h2 id="上传更新遇见-everything-up-to-date">上传更新遇见 Everything up-to-date</h2>
   </li>
   <li>是因为没有执行git commi -m “update”</li>
@@ -510,7 +510,7 @@ git push origin master:main –force</li>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2025-01-10T11:08:08+08:00">January 10, 2025</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2025-01-10T11:16:41+08:00">January 10, 2025</time></p>
 
       </footer>
 
@@ -578,7 +578,7 @@ git push origin master:main –force</li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://tianchaoyu.github.io">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

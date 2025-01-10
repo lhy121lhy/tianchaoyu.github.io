@@ -318,20 +318,20 @@ var store = [{
         "teaser": null
       },{
     "title": "About",
-    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "https://tianchaoyu.github.io/about/"
+    "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "http://localhost:4000/about/"
   },{
     "title": "关于",
-    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 项目经历 |时间段 | 项目名称 | 描述| |—- | —-| —-| | | | | 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C/C++ ⭐️⭐️⭐️   js/css ⭐️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具      ...","url": "https://tianchaoyu.github.io/about/"
+    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 项目经历 |时间段 | 项目名称 | 描述| |—- | —-| —-| | | | | 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C/C++ ⭐️⭐️⭐️   js/css ⭐️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具      ...","url": "http://localhost:4000/about/"
   },{
     "title": "分类",
-    "excerpt":" ","url": "https://tianchaoyu.github.io/categories/"
+    "excerpt":" ","url": "http://localhost:4000/categories/"
   },{
     "title": "标签",
-    "excerpt":" ","url": "https://tianchaoyu.github.io/tags/"
+    "excerpt":" ","url": "http://localhost:4000/tags/"
   },{
     "title": "工具",
-    "excerpt":"设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像           openmatrix viewer   1、读取OMX矩阵，并可视化；   2、计算矩阵的和，平均值，行列的最大最小值   3、对矩阵进行聚合操作   资源下载   ","url": "https://tianchaoyu.github.io/tools/"
+    "excerpt":"设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像           openmatrix viewer   1、读取OMX矩阵，并可视化；   2、计算矩阵的和，平均值，行列的最大最小值   3、对矩阵进行聚合操作   资源下载   ","url": "http://localhost:4000/tools/"
   },{
     "title": "技术教程",
-    "excerpt":"                                                                                                                     python中文教程                                                    python入门基础与常规操作。                                                   开始学习                                                                                                                                                    交通规划软件emme使用总结                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，由浅入深，规划软件Emme应用实战。                                                   开始学习                                        ","url": "https://tianchaoyu.github.io/tutorials/"
+    "excerpt":"                                                                                                                     python中文教程                                                    python入门基础与常规操作。                                                   开始学习                                                                                                                                                    交通规划软件emme使用总结                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，由浅入深，规划软件Emme应用实战。                                                   开始学习                                        ","url": "http://localhost:4000/tutorials/"
   }]
