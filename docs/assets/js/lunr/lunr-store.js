@@ -179,6 +179,12 @@ var store = [{
         "url": "/tutorials/emme/network_add/",
         "teaser": null
       },{
+        "title": "基于AI算法的视频检测工具",
+        "excerpt":"基于AI算法，实现基于视频、图片等的目标检测，涵盖标注，训练，识别等过程。 样本标注 界面与功能 本软件支持直接从视频、图片夹、单个图片中选择图标进行目标标注，软件界面与功能如下。 功能介绍 功能1：菜单选项，选择样本标记下的样本标记 功能2：通过视频进行标注，点击open,选择视频 功能3：对多张图片进行标注，选择文件夹，对文件夹中的图片进行标注，点击open,选择文件夹 功能4：对单张图片进行标注 功能5：选择标注类型，点击open class,选择class.txt文件 功能6：视频帧调整，滑动控件，自动调整视频帧；选择上一帧 or 下一帧，进行单张图片调整 功能7：预训练识别，选择已训练好的模型，进行预识别，提高标注效率 功能8：标注结果保存，选择保存路径和保存图片起点编号 功能9：交互画框标注，鼠标绘制方框，弹出类型，双击确认 功能10：显示标注结果，可进行手动修改与删除；点击结果保存，自动存下当前照片和标注结果。 软件操作步骤 通过视频进行标注 操作步骤如下： 1-&gt;2-&gt;5-&gt;6-&gt;8-9-10 步骤1：使用功能1，菜单样本标记下选择样本标记 步骤2：使用功能2，加载视频，自动显示加载视频名称 步骤3：使用功能5，加载标注类型文件class.txt,选择输出数据集格式yolo format 步骤4：使用功能6，调整视频帧，选择要标注的图片 步骤5：使用功能8，选择保存路径和设置图片起点编号（自然数） 步骤6，使用功能9，鼠标绘制方框，弹出类型，双击确认 步骤7，使用功能10，保存标注结果。 步骤8，回到步骤6，循环。 操作流程如下： 多张图片标注 操作步骤如下： 1-&gt;3-&gt;5-&gt;6-&gt;8-&gt;9-&gt;10 步骤1：使用功能1，菜单样本标记下选择样本标记 步骤2：使用功能3，选择图片所在文件夹，下方自动显示该文件夹的图片及名称，双击图片，自动在窗口11中显示 步骤3：使用功能5，加载标注类型文件class.txt,选择输出数据集格式yolo format 步骤4：使用功能6，调整视频帧，选择要标注的图片 步骤5：使用功能8，选择保存路径和设置图片起点编号（自然数） 步骤6，使用功能9，鼠标绘制方框，弹出类型，双击确认 步骤7，使用功能10，保存标注结果。 步骤8，回到步骤6，循环。 补充说明： 步骤3，选择含图片的文件夹 选择含图片的文件夹，下面方框中会显示所有的图片，滑动窗口，双击需要标注的图片，窗口11自动显示选择图片 单张图片进行标注 操作步骤如下： 1-&gt;4-&gt;5-&gt;6-&gt;8-&gt;9-&gt;10...","categories": ["tools"],
+        "tags": [],
+        "url": "/tools/Perspective/",
+        "teaser": null
+      },{
         "title": "基础语法",
         "excerpt":"   authort:lhy     1、python与地理空间系统       地理信息系统（Geographic Information System或 Geo－Information system，GIS）有时又称为“地学信息系统”。它是一种特定的十分重要的空间信息系统。它是在计算机硬、软件系统支持下，对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。   地理信息系统（GIS，Geographic Information System）是一门综合性学科，结合地理学与地图学以及遥感和计算机科学，已经广泛的应用在不同的领域，是用于输入、存储、查询、分析和显示地理数据的计算机系统，随着GIS的发展，也有称GIS为“地理信息科学”（Geographic Information Science），近年来，也有称GIS为”地理信息服务”（Geographic Information service）。GIS是一种基于计算机的工具，它可以对空间信息进行分析和处理（简而言之，是对地球上存在的现象和发生的事件进行成图和分析）。 GIS 技术把地图这种独特的视觉化效果和地理分析功能与一般的数据库操作（例如查询和统计分析等）集成在一起。      来源于百度百科       常见空间数据标准格式：shapefile,DXF,DWG,DGN,ECW,MrSID,TIFF,JPG2000, KML, GML等   常见gis操作软件：arcgis,Qgis,transcad,emme,cad     2、python开发环境搭建       2.1、geopandas软件包安装      依次下载和安装三方软件包：gdal、Fiona、Pyproj、shapely            注：根据python软件版本下载对应版本的软件包，对于pip install package无法成功，需要手动下载三房软件包，下载网址：https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud            2.2、软件包手册      geopandas：https://geopandas.org/en/stable/getting_started/introduction.html   shapely：https://www.osgeo.cn/shapely/manual.html  ","categories": [],
         "tags": [],
@@ -321,7 +327,7 @@ var store = [{
     "excerpt":"This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb.com You can find the source code for Minima at GitHub: jekyll / minima You can find the source code for Jekyll at GitHub: jekyll...","url": "http://localhost:4000/about/"
   },{
     "title": "关于",
-    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 项目经历 |时间段 | 项目名称 | 描述| |—- | —-| —-| | | | | 技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C/C++ ⭐️⭐️⭐️   js/css ⭐️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具      ...","url": "http://localhost:4000/about/"
+    "excerpt":"交通行业从业十年，精通多款交通规划软件和交通模型与仿真业务，擅长python数据分析。 职业经历 时间段 雇主公司 职位 2018 ~ 至今 深城交 模型与仿真 项目经历 时间段 项目名称 描述       技能 分类 技能 熟练程度 编程语言       python ⭐️⭐️⭐️⭐️⭐️   C/C++ ⭐️⭐️⭐️   js/css ⭐️   嵌入式系统 ⭐️⭐️⭐️   cv ⭐️⭐️⭐️️ 软件工具       transcad ⭐️⭐️⭐️⭐️⭐️   emme ⭐️⭐️⭐️⭐️⭐️   qgis...","url": "http://localhost:4000/about/"
   },{
     "title": "分类",
     "excerpt":" ","url": "http://localhost:4000/categories/"
@@ -330,8 +336,8 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/tags/"
   },{
     "title": "工具",
-    "excerpt":"设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像           openmatrix viewer   1、读取OMX矩阵，并可视化；   2、计算矩阵的和，平均值，行列的最大最小值   3、对矩阵进行聚合操作   资源下载   ","url": "http://localhost:4000/tools/"
+    "excerpt":"开源设计工具          图片定制化工具              支持图片大小定制，修改图片像素大小       支持添加水印，添加文字，设置文字颜色和位置       rgb转灰度图像                openmatrix viewer              读取OMX矩阵，并可视化；       计算矩阵的和，平均值，行列的最大最小值       对矩阵进行聚合操作           自主研发软件     基于AI算法的视频检测工具AI_Perspective            基于视频、图片的样本标注       基于自定义标注的样本集进行训练       基于训练的模型进行视频检测           资源下载   ","url": "http://localhost:4000/tools/"
   },{
     "title": "技术教程",
-    "excerpt":"                                                                                                                     python中文教程                                                    python入门基础与常规操作。                                                   开始学习                                                                                                                                                    交通规划软件emme使用总结                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，由浅入深，规划软件Emme应用实战。                                                   开始学习                                        ","url": "http://localhost:4000/tutorials/"
+    "excerpt":"                                                                                                                     Python入门基础                                                    python环境配置，项目管理，版本控制等入门基础与系统开发常用功能总结。                                                   开始学习                                                                                                                                                    交通规划软件Emme使用                                                    本教材是对之前使用Emme4的技术总结，由【入门篇、进阶篇、高级篇和应用篇】四个章节组成。                                                   开始学习                                                                                                                                                    交通规划软件Transcad使用                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，简述TransCAD应用。                                                   开始学习                                                                                                                                                    交通模型技术总结                                                    由【入门篇、进阶篇、高级篇和应用篇】四个章节组成，交通模型理论基础。                                                   开始学习                                        ","url": "http://localhost:4000/tutorials/"
   }]

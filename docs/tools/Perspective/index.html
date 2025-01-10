@@ -1,0 +1,482 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="zh-CN" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>基于AI算法的视频检测工具 - 技术博客</title>
+<meta name="description" content="基于AI算法，实现基于视频、图片等的目标检测，涵盖标注，训练，识别等过程。">
+
+
+  <meta name="author" content="tianchaoyu">
+  
+  <meta property="article:author" content="tianchaoyu">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:title" content="基于AI算法的视频检测工具">
+<meta property="og:url" content="http://localhost:4000/tools/Perspective/">
+
+
+  <meta property="og:description" content="基于AI算法，实现基于视频、图片等的目标检测，涵盖标注，训练，识别等过程。">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/site-logo.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-01-10T00:00:00+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/tools/Perspective/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="技术博客 Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">转到主导航栏</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">转到内容</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">转到底部</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          技术博客
+          <span class="site-subtitle">一名交通模数师的日常</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/tools/"
+                 title="工具软件介绍"
+                
+              >Tools</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tutorials/"
+                 title="知识库"
+                
+              >Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                 title="关于我"
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">切换搜索</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">切换菜单</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="基于AI算法的视频检测工具">
+    <meta itemprop="description" content="基于AI算法，实现基于视频、图片等的目标检测，涵盖标注，训练，识别等过程。">
+    <meta itemprop="datePublished" content="2025-01-10T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/tools/Perspective/" itemprop="url">基于AI算法的视频检测工具
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> 目录</h4></header>
+              <ul class="toc__menu"><li><a href="#样本标注">样本标注</a><ul><li><a href="#界面与功能">界面与功能</a></li><li><a href="#功能介绍">功能介绍</a></li><li><a href="#软件操作步骤">软件操作步骤</a><ul><li><a href="#通过视频进行标注">通过视频进行标注</a></li><li><a href="#多张图片标注">多张图片标注</a></li><li><a href="#单张图片进行标注">单张图片进行标注</a></li><li><a href="#基于已训练的模型快速标注">基于已训练的模型快速标注</a></li></ul></li></ul></li><li><a href="#模型训练">模型训练</a><ul><li><a href="#功能界面">功能界面</a></li><li><a href="#1数据集划分">1、数据集划分：</a></li><li><a href="#2模型训练">2、模型训练</a></li></ul></li><li><a href="#基于视频的目标检测">基于视频的目标检测</a><ul><li><a href="#界面与功能-1">界面与功能</a></li><li><a href="#功能介绍-1">功能介绍</a></li><li><a href="#软件操作步骤-1">软件操作步骤</a></li><li><a href="#操作流程如下">操作流程如下：</a></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <p>基于AI算法，实现基于视频、图片等的目标检测，涵盖标注，训练，识别等过程。</p>
+
+<h1 id="样本标注">样本标注</h1>
+
+<h2 id="界面与功能">界面与功能</h2>
+<p>本软件支持直接从视频、图片夹、单个图片中选择图标进行目标标注，软件界面与功能如下。</p>
+
+<p><img src="/assets/images/tools/perspective/video_label1.JPG" alt="操作界面" /></p>
+
+<h2 id="功能介绍">功能介绍</h2>
+
+<ul>
+  <li>功能1：菜单选项，选择样本标记下的样本标记</li>
+  <li>功能2：通过视频进行标注，点击open,选择视频</li>
+  <li>功能3：对多张图片进行标注，选择文件夹，对文件夹中的图片进行标注，点击open,选择文件夹</li>
+  <li>功能4：对单张图片进行标注</li>
+  <li>功能5：选择标注类型，点击open class,选择class.txt文件</li>
+  <li>功能6：视频帧调整，滑动控件，自动调整视频帧；选择上一帧 or 下一帧，进行单张图片调整</li>
+  <li>功能7：预训练识别，选择已训练好的模型，进行预识别，提高标注效率</li>
+  <li>功能8：标注结果保存，选择保存路径和保存图片起点编号</li>
+  <li>功能9：交互画框标注，鼠标绘制方框，弹出类型，双击确认</li>
+  <li>功能10：显示标注结果，可进行手动修改与删除；点击结果保存，自动存下当前照片和标注结果。</li>
+</ul>
+
+<h2 id="软件操作步骤">软件操作步骤</h2>
+
+<h3 id="通过视频进行标注">通过视频进行标注</h3>
+<p>操作步骤如下：</p>
+<blockquote>
+  <p>1-&gt;2-&gt;5-&gt;6-&gt;8-9-10</p>
+</blockquote>
+
+<ul>
+  <li>步骤1：使用功能1，菜单样本标记下选择样本标记</li>
+  <li>步骤2：使用功能2，加载视频，自动显示加载视频名称</li>
+  <li>步骤3：使用功能5，加载标注类型文件class.txt,选择输出数据集格式yolo format</li>
+  <li>步骤4：使用功能6，调整视频帧，选择要标注的图片</li>
+  <li>步骤5：使用功能8，选择保存路径和设置图片起点编号（自然数）</li>
+  <li>步骤6，使用功能9，鼠标绘制方框，弹出类型，双击确认</li>
+  <li>步骤7，使用功能10，保存标注结果。</li>
+  <li>步骤8，回到步骤6，循环。</li>
+</ul>
+
+<p>操作流程如下：
+<img src="/assets/images/tools/perspective/model_label.gif" alt="操作示意" /></p>
+
+<h3 id="多张图片标注">多张图片标注</h3>
+<p>操作步骤如下：</p>
+<blockquote>
+  <p>1-&gt;3-&gt;5-&gt;6-&gt;8-&gt;9-&gt;10</p>
+</blockquote>
+
+<ul>
+  <li>步骤1：使用功能1，菜单样本标记下选择样本标记</li>
+  <li>步骤2：使用功能3，选择图片所在文件夹，下方自动显示该文件夹的图片及名称，双击图片，自动在窗口11中显示</li>
+  <li>步骤3：使用功能5，加载标注类型文件class.txt,选择输出数据集格式yolo format</li>
+  <li>步骤4：使用功能6，调整视频帧，选择要标注的图片</li>
+  <li>步骤5：使用功能8，选择保存路径和设置图片起点编号（自然数）</li>
+  <li>步骤6，使用功能9，鼠标绘制方框，弹出类型，双击确认</li>
+  <li>步骤7，使用功能10，保存标注结果。</li>
+  <li>步骤8，回到步骤6，循环。</li>
+</ul>
+
+<p>补充说明：
+步骤3，选择含图片的文件夹</p>
+<ul>
+  <li>选择含图片的文件夹，下面方框中会显示所有的图片，滑动窗口，双击需要标注的图片，窗口11自动显示选择图片</li>
+</ul>
+
+<h3 id="单张图片进行标注">单张图片进行标注</h3>
+<p>操作步骤如下：</p>
+<blockquote>
+  <p>1-&gt;4-&gt;5-&gt;6-&gt;8-&gt;9-&gt;10</p>
+</blockquote>
+
+<p>通过功能4，选择单张图片，其他如上。</p>
+
+<h3 id="基于已训练的模型快速标注">基于已训练的模型快速标注</h3>
+<p>操作步骤如下：</p>
+<blockquote>
+  <p>1-&gt;2 or 3 or 4-&gt;5-&gt;6-&gt;8-&gt;7-&gt;10</p>
+</blockquote>
+
+<ul>
+  <li>步骤1：使用功能1，菜单样本标记下选择样本标记</li>
+  <li>步骤2：使用功能2或3或4，在窗口11中显示图像</li>
+  <li>步骤3：使用功能5，加载标注类型文件class.txt,选择输出数据集格式yolo format</li>
+  <li>步骤4：使用功能6，调整视频帧，选择要标注的图片</li>
+  <li>步骤5：使用功能8，选择保存路径和设置图片起点编号（自然数）</li>
+  <li>步骤6，使用功能7，加载已训练的模型，下方显示预训练模型名称点击预训练识别，窗口11自动显示检测效果，并将结果保存到功能10中</li>
+  <li>步骤7，使用功能10，修改完善监测结果，并保存。</li>
+</ul>
+
+<p>操作流程示意：
+<img src="/assets/images/tools/perspective/model_auto_label.gif" alt="操作示意" /></p>
+
+<p>特别说明：</p>
+
+<ul>
+  <li>步骤7，选择已训练的模型，点击预训练识别即自动当前图片中的检测对象，并安序号显示在窗口10中</li>
+  <li>注意：检测结果的序号，对应于窗口10中的行号</li>
+  <li>注意: 已训练的模型检测结果对应的编号需与步骤5中国的class.txt中类型的编号一直</li>
+  <li>允许继续使用功能9进行标准增加，允许手动删除窗口10中的行</li>
+</ul>
+
+<h1 id="模型训练">模型训练</h1>
+
+<h2 id="功能界面">功能界面</h2>
+<p>本软件支持基于数据集划分与模型训练，软件界面与具体操作如下。</p>
+
+<p><img src="/assets/images/tools/perspective/model_train.png" alt="操作界面" /></p>
+
+<h2 id="1数据集划分">1、数据集划分：</h2>
+<ul>
+  <li>选择原始样本集位置</li>
+  <li>选择输出样本集位置</li>
+  <li>选择划分比例</li>
+  <li>点击OK确认</li>
+</ul>
+
+<h2 id="2模型训练">2、模型训练</h2>
+<ul>
+  <li>选择模型训练的配置参数表，文件data_set.yaml，参数如下：
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># 模型数据集的位置</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">E:\datasets\mydata</span> <span class="c1"># dataset root dir</span>
+  <span class="na">train</span><span class="pi">:</span>
+    <span class="pi">-</span>  <span class="s">images/train</span> <span class="c1"># </span>
+  <span class="na">val</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">images/val</span> <span class="c1"># </span>
+  <span class="na">test</span><span class="pi">:</span>  <span class="c1"># </span>
+      <span class="pi">-</span> <span class="s">images/test</span>
+  <span class="c1"># Classes</span>
+  <span class="na">names</span><span class="pi">:</span>
+    <span class="na">0</span><span class="pi">:</span> <span class="s">person</span>
+    <span class="na">1</span><span class="pi">:</span> <span class="s">bicycle</span>
+    <span class="na">2</span><span class="pi">:</span> <span class="s">e-bike</span>
+    <span class="na">3</span><span class="pi">:</span> <span class="s">motorcycle</span>
+    <span class="na">4</span><span class="pi">:</span> <span class="s">car</span>
+    <span class="na">5</span><span class="pi">:</span> <span class="s">bus</span>
+    <span class="na">6</span><span class="pi">:</span> <span class="s">lgv</span>
+    <span class="na">7</span><span class="pi">:</span> <span class="s">hgv</span>
+    <span class="na">8</span><span class="pi">:</span> <span class="s">bus2</span>
+    <span class="na">9</span><span class="pi">:</span> <span class="s">traffic light</span>
+    <span class="na">10</span><span class="pi">:</span> <span class="s">three veh</span>
+    
+</code></pre></div>    </div>
+  </li>
+  <li>选择预训练权值（*.pt），如无则不选。</li>
+  <li>选择epochs参数，默认30</li>
+  <li>选择imgsz参数，确定输入图片大小，默认640</li>
+  <li>选择batch参数，默认8</li>
+</ul>
+
+<p>操作流程示意：
+<img src="/assets/images/tools/perspective/model_train.gif" alt="操作示意" /></p>
+
+<h1 id="基于视频的目标检测">基于视频的目标检测</h1>
+
+<h2 id="界面与功能-1">界面与功能</h2>
+<p>本软件支持基于基于视频的目标检测，软件界面与具体操作如下。</p>
+
+<p><img src="/assets/images/tools/perspective/model_detect.png" alt="操作界面" /></p>
+
+<h2 id="功能介绍-1">功能介绍</h2>
+<ul>
+  <li>功能1：菜单栏点击目标检测下的视频检测</li>
+  <li>功能2：视频加载，点击控件，选择视频，下方自动显示选择的视频名称</li>
+  <li>功能3：视频开始时间，系统默认生成视频开始时间，需要用户修改，帮助用户统计视频时长</li>
+  <li>功能4：显示视频帧率，一秒多少帧图像</li>
+  <li>功能5：选择视频保存位置，点击控件，选择目录，下方自动显示选择的文件夹</li>
+  <li>功能6：加载已经训练好的模型，点击加载控件，选择模型，下方自动显示加载的模型名称，系统自动生成模型参数IOU,CONF，支持用户手动修改；</li>
+  <li>功能7：图像预览和视频帧调整，</li>
+  <li>功能8：系统检测功能运行按钮</li>
+  <li>功能9：添加虚拟线圈，支持添加检测直线和面，下方自动生成ID,类型和坐标</li>
+  <li>功能10，添加检测逻辑，点击add.根据需要生成检测逻辑，下面自动生成ID,检测备注，检测线圈的排列方式</li>
+  <li>功能11：显示实时监测对象</li>
+  <li>功能12：显示实时监测结果</li>
+  <li>功能13：导出监测结果</li>
+</ul>
+
+<h2 id="软件操作步骤-1">软件操作步骤</h2>
+<p>正常操作功能项如下：</p>
+<blockquote>
+  <p>1-&gt;2-&gt;7-&gt;3,4-&gt;5-&gt;6-&gt;9-&gt;10-&gt;8-&gt;13</p>
+  <ul>
+    <li>步骤1：使用功能1，选择目标检测菜单下的视频检测</li>
+    <li>步骤2：使用功能2，加载视频</li>
+    <li>步骤3：使用功能7，点击预览，在窗口11中显示图片，可根据视频原始时间修改功能3中的视频开始时间，帮助用户统计视频时长</li>
+    <li>步骤4：使用功能5，选择视频检测保存位置，自动输入检测后的视频</li>
+    <li>步骤5：使用功能6，加载模型，输入模型参数IOU和conf</li>
+    <li>步骤6：使用功能9，添加虚拟线圈
+      <ul>
+        <li>添加线，点击add,鼠标绘制直线，点击结束，保存绘制的直线坐标</li>
+        <li>添加面，点击add,鼠标绘制面域，点击结束，自动保存绘制面域坐标，基于面域的检测，该功能1.0版本未完成</li>
+        <li>选择已已添加的虚拟线，点击删除，自动删除</li>
+      </ul>
+    </li>
+    <li>步骤7：使用功能10，设置检测逻辑，点击add，自动弹出检测逻辑设置窗口
+      <ul>
+        <li>添加备注，注释检测目标，例如，东向西，进城，出城，左转，直行等</li>
+        <li>添加轨迹方向，选择步骤6中添加的虚拟线圈编号，支持单线圈检测和多线圈检测，例如0,0-1等。点击ok，自动记录到窗口10，点击右上角，关闭窗口。</li>
+      </ul>
+    </li>
+    <li>步骤8：使用功能8，点击模型运行，软件自动运行，在窗口12，自动显示统计结果。</li>
+    <li>步骤9：使用功能13，在运行结束后，点击13，选择检测结果保存位置。</li>
+  </ul>
+</blockquote>
+
+<h2 id="操作流程如下">操作流程如下：</h2>
+<p><img src="/assets/images/tools/perspective/model_detect.gif" alt="操作示意" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 更新时间:</strong> <time class="dt-published" datetime="2025-01-10T00:00:00+08:00">January 10, 2025</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      输入您要搜索的关键词...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="输入您要搜索的关键词..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>关注:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/tianchaoyu" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">技术博客</a>. 技术来自于 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
